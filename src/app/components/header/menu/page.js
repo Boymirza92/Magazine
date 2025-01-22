@@ -24,6 +24,7 @@ const Header = styled.div`
   font-family: "Roboto", sans-serif;
   margin-top: 1rem;
 `;
+
 //Search qatori
 const Menu = styled.div`
   display: flex;
@@ -35,8 +36,10 @@ const Menu = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     border: none;
+    width: 100%;
   }
 
   .SearchIcon {
@@ -53,6 +56,9 @@ const Menu = styled.div`
       background-color: rgb(230, 224, 224);
       border: 0px solid rgb(188, 179, 179);
       border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 `;
@@ -75,6 +81,8 @@ const DropdownMenu = styled.ul`
   @media (max-width: 768px) {
     width: 5rem;
     line-height: 0.1;
+    top: 3rem;
+    left: 0.3rem;
   }
 `;
 
@@ -99,11 +107,25 @@ const Section = styled.div`
   justify-content: center;
   width: 10rem;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 1rem;
+  }
 `;
 
 const Icon = styled.span`
   width: 1.5rem;
   height: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: inline-block;
+    justify-content: start;
+    width: 0.5rem;
+    height: 0.5rem;
+  }
 `;
 
 const Title = styled.div`
@@ -115,6 +137,10 @@ const Title = styled.div`
     &:active {
       color: rgb(51, 44, 44);
     }
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -128,8 +154,8 @@ const InputSearch = styled.input`
   @media (max-width: 768px) {
     width: 10rem;
     height: 1.5rem;
-    margin: 0.5rem;
-    font-size: 0.8rem;
+    margin-top: -0.4rem;
+    font-size: 0.6rem;
   }
 
   &:hover {
@@ -175,7 +201,9 @@ const SignIn = styled.p`
   cursor: pointer;
 
   @media (max-width: 768px) {
-    margin: 0.5rem;
+    margin-top: -5.5rem;
+    margin-left: 15rem;
+    font-size: 0.6rem;
   }
 
   &:hover {
@@ -187,8 +215,12 @@ const SignIn = styled.p`
     color: #d3baba;
   }
 
-  .svg-signin {
+  .signIn {
     margin-right: 1rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -204,7 +236,6 @@ const MenuTwo = styled.div`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    
   }
 
   .freedom {
@@ -214,15 +245,30 @@ const MenuTwo = styled.div`
     margin-left: 7rem;
     gap: 0px;
     opacity: 0px;
+
+    @media (max-width: 768px) {
+      display: flex;
+      margin-top: 1rem;
+      margin-right: 7rem;
+      border: 1px solid aqua;
+      border-radius: 4px;
+      box-shadow: 1px 1px 10px 0.3px rgb(210, 203, 203);
+    }
   }
 `;
 const TextBoston = styled.p`
   display: inline-block;
   margin: 0.5rem 11rem 0 0;
-
+  font-family: "lato" sans-serif;
   font-size: 0.9rem;
   line-height: 1.3rem;
   color: #4b5157;
+
+  @media (max-width: 768px) {
+    width: 15rem;
+    margin-left: 15rem;
+    font-size: 0.7rem;
+  }
 `;
 const TextHeader = styled.h1`
   font-size: 3rem bold;
@@ -230,12 +276,25 @@ const TextHeader = styled.h1`
   height: 40px;
   font-weight: 600;
   margin-right: 10rem;
+
+  @media (max-width: 768px) {
+    margin-left: 15rem;
+    font-size: 1.5rem;
+  }
 `;
 const Data = styled.p`
   margin-right: 2rem;
   font-size: 0.9rem;
   line-height: 1.3rem;
   color: #4b5157;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-left: 2rem;
+    font-size: 0.8rem;
+  }
 `;
 const TheWeather = styled.p`
   font-size: 0.9rem;
@@ -243,7 +302,10 @@ const TheWeather = styled.p`
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 
-
+@media (max-width: 768px) {
+margin-top: -2.3rem;
+margin-left: 11rem;
+}
 
   .Sun {
     margin-right: 0.7rem;
@@ -300,8 +362,8 @@ const App = () => {
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M17.4354 16.3951L13.146 11.9395C14.2489 10.6301 14.8532 8.98262 14.8532 7.26749C14.8532 3.26026 11.5888 0 7.57659 0C3.56433 0 0.299988 3.26026 0.299988 7.26749C0.299988 11.2747 3.56433 14.535 7.57659 14.535C9.08284 14.535 10.5182 14.0812 11.7454 13.2199L16.0674 17.7093C16.2481 17.8967 16.4911 18 16.7514 18C16.9979 18 17.2317 17.9062 17.4092 17.7355C17.7863 17.3731 17.7983 16.7721 17.4354 16.3951ZM7.57659 1.89587C10.5423 1.89587 12.9549 4.30552 12.9549 7.26749C12.9549 10.2295 10.5423 12.6391 7.57659 12.6391C4.6109 12.6391 2.19823 10.2295 2.19823 7.26749C2.19823 4.30552 4.6109 1.89587 7.57659 1.89587Z"
             fill="#BCBFC2"
           />
@@ -311,6 +373,7 @@ const App = () => {
             src={NavIcon}
             className="Image" // Rasmni next/image yordamida qo'shamiz
             alt="Nav Icon"
+            priority
           />
           <TitleSubscribe>
             Subscribe Now <br />
@@ -319,7 +382,7 @@ const App = () => {
         </Subscribe>
         <SignIn>
           <svg
-            className="svg-signin"
+            className="signIn"
             margin="15"
             width="20"
             height="20"
@@ -328,8 +391,8 @@ const App = () => {
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
+              fillRule="evenodd"
+              clipRule="evenodd"
               d="M18 16.6316C16.3675 18.2105 13.7008 19 10 19C6.29917 19 3.63251 18.2105 2 16.6316C2 13.3481 3.90591 10.9832 6.70588 10C7.60059 10.4169 8.59455 11 10 11C11.4054 11 12.3311 10.3926 13.2941 10C16.0575 10.9965 18 13.3748 18 16.6316ZM10 9C7.79086 9 6 7.20914 6 5C6 2.79086 7.79086 1 10 1C12.2091 1 14 2.79086 14 5C14 7.20914 12.2091 9 10 9Z"
               fill="#BCBFC2"
             />
