@@ -6,13 +6,17 @@ import { Lato } from "next/font/google";
 
 const lato = Lato({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "700", "900"], // Kerakli qalinliklar
-  style: ["normal", "italic"], // Oddiy va kursiv
+  weight: ["100", "300", "400", "700", "900"],
+  style: ["normal", "italic"],
 });
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import NavIcon from "../../rasmlar/NavIcon.jpg";
 import Ozodlik from "../../rasmlar/Ozodlik.png";
+import Gitara from "../../rasmlar/gitara.png";
+import Kapalak from "../../rasmlar/kapalak.png";
+import Odam from "../../rasmlar/odam.png";
+import Yol from "../../rasmlar/yol.png";
 
 // Header bo'limi
 const Header = styled.div`
@@ -76,7 +80,8 @@ const DropdownMenu = styled.ul`
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   width: 200px;
-  display: ${({ isVisible }) => (isVisible ? "block" : "none")};
+  display: ${(props) => (props.$isVisible ? "block" : "none")};
+  // display: ${({ isVisible }) => (isVisible ? "block" : "none")};
 
   @media (max-width: 768px) {
     width: 5rem;
@@ -298,18 +303,91 @@ const Data = styled.p`
 `;
 const TheWeather = styled.p`
   font-size: 0.9rem;
-  color: #4B5157
-  font-family: 'Lato', sans-serif;
+  color: #4b5157;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 
-@media (max-width: 768px) {
-margin-top: -2.3rem;
-margin-left: 11rem;
-}
+  @media (max-width: 768px) {
+    margin-top: -2.3rem;
+    margin-left: 11rem;
+  }
 
   .Sun {
     margin-right: 0.7rem;
   }
+`;
+
+//Navigatsiya bo'limi
+const Navbars = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 29rem;
+  background-color: #262d33;
+`;
+
+const Nav = styled.div`
+  display: flex;
+  justify-content: center
+  border-top: 1.5px solid #204677;
+  width: 80%;
+  background-color: #262d33;
+ 
+
+  .navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: rowrap;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    background-color: #262d33;
+
+  }
+  @media (max-width: 768px) {
+    display: none;
+  }
+`;
+
+const Advertising = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: rowrap;
+  width: 80%;
+`;
+
+const Music = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const TitleMusic = styled.p`
+  font-weight: bold;
+  color: white;
+  padding-right: 1rem;
+`;
+const Butterfly = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const ButterflyTitle = styled.p`
+  padding-right: 1rem;
+`;
+const MusicTwo = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const MusicTwoTitle = styled.p`
+  padding-right: 1rem;
+`;
+const Mystery = styled.div`
+  display: flex;
+  justify-content: space-between;
+`;
+const MysteryTitle = styled.p`
+  padding-right: 1rem;
 `;
 
 const App = () => {
@@ -336,7 +414,7 @@ const App = () => {
                 fill="#BCBFC2"
               />
             </svg>
-            <DropdownMenu isVisible={isDropdownVisible}>
+            <DropdownMenu $isVisible={isDropdownVisible}>
               <DropdownItem>NEWS</DropdownItem>
               <DropdownItem>OPINION</DropdownItem>
               <DropdownItem>SCINCE</DropdownItem>
@@ -402,13 +480,133 @@ const App = () => {
       </Menu>
       <MenuTwo>
         <Image src={Ozodlik} className="freedom" alt="Freedom.jpg" />
-        <TextBoston>Boston and New York Brean Rrunt</TextBoston>
+        <TextBoston>Boston and New York Brean Brunt</TextBoston>
         <TextHeader>Universal</TextHeader>
         <Data>Monday, January 1,2018</Data>
         <TheWeather>
           <FontAwesomeIcon icon={faSun} className="Sun" /> - 23 °C
         </TheWeather>
       </MenuTwo>
+      <Navbars>
+        <Nav className="navbar navbar-expand-md navbar-light bg-light">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          ></button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item active">
+                <a className="nav-link" href="#">
+                  NAWS <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item active">
+                <a className="nav-link" href="#">
+                  OPINION <span className="sr-only">(current)</span>
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  SCIENCE
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  LIFE
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  TREVEL
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  MONEYS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  ART & DESIGN
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  SPORTS
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  PEOPLE
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  HEALTH
+                </a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="#">
+                  EDUCATION
+                </a>
+              </li>
+            </ul>
+          </div>
+        </Nav>
+        <Advertising>
+          <Music>
+            <TitleMusic>
+              25 Songs That <br /> Tell Us Whare Music Is <br /> Going
+            </TitleMusic>
+            <Image
+              src={Gitara}
+              className="picture"
+              placeholder="blur"
+              alt="gitara.jpg"
+            />
+          </Music>
+          <Butterfly>
+            <ButterflyTitle>
+              These Ancient <br /> Assassins Eat Their <br /> Own Kind
+            </ButterflyTitle>
+            <Image
+              src={Kapalak}
+              className="picture"
+              placeholder="blur"
+              alt="kapalak.jpg"
+            />
+          </Butterfly>
+          <MusicTwo>
+            <MusicTwoTitle>
+              How Do You Teach <br /> People to Love <br /> Difficult Music?
+            </MusicTwoTitle>
+            <Image
+              src={Odam}
+              className="picture"
+              placeholder="blur"
+              alt="Odam.jpg"
+            />
+          </MusicTwo>
+          <Mystery>
+            <MysteryTitle>
+              International <br />
+              Soccer's Man of <br />
+              Mystery
+            </MysteryTitle>
+            <Image
+              src={Yol}
+              className="picture"
+              placeholder="blur"
+              alt="yol.jpg"
+            />
+          </Mystery>
+        </Advertising>
+      </Navbars>
     </Header>
   );
 };
