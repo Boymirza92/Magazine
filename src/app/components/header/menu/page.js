@@ -333,6 +333,7 @@ const Nav = styled.div`
   border-top: 1.5px solid #204677;
   width: 80%;
   background-color: #262d33;
+
  
 
   .navbar-nav {
@@ -341,9 +342,29 @@ const Nav = styled.div`
     flex-direction: row;
     flex-wrap: rowrap;
     width: 100%;
-    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1rem;
     color: #fff;
     background-color: #262d33;
+
+     &:hover {
+    color: rgb(105, 100, 112);
+    &:active {
+      color: rgb(51, 44, 44);
+    }
+  }
+
+    a {
+      color: #fff;   
+    &:hover {
+     color: rgb(155, 151, 161);
+      font-size: 1.1rem;
+    &:active {
+      color: rgb(51, 44, 44);
+    }
+  }
+   
+    }
 
   }
   @media (max-width: 768px) {
@@ -353,10 +374,23 @@ const Nav = styled.div`
 
 const Advertising = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: row;
   flex-wrap: rowrap;
   width: 80%;
+  height: 8rem;
+  margin-top: 3rem;
+  background-color: #30363d;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    background-color: inherit;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 `;
 
 const Music = styled.div`
@@ -364,7 +398,6 @@ const Music = styled.div`
   justify-content: space-between;
 `;
 const TitleMusic = styled.p`
-  font-weight: bold;
   color: white;
   padding-right: 1rem;
 `;
@@ -374,6 +407,7 @@ const Butterfly = styled.div`
 `;
 const ButterflyTitle = styled.p`
   padding-right: 1rem;
+  color: #fff;
 `;
 const MusicTwo = styled.div`
   display: flex;
@@ -381,6 +415,7 @@ const MusicTwo = styled.div`
 `;
 const MusicTwoTitle = styled.p`
   padding-right: 1rem;
+  color: #fff;
 `;
 const Mystery = styled.div`
   display: flex;
@@ -388,6 +423,7 @@ const Mystery = styled.div`
 `;
 const MysteryTitle = styled.p`
   padding-right: 1rem;
+  color: #fff;
 `;
 
 const App = () => {
@@ -488,7 +524,7 @@ const App = () => {
         </TheWeather>
       </MenuTwo>
       <Navbars>
-        <Nav className="navbar navbar-expand-md navbar-light bg-light">
+        <Nav className="navbar navbar-expand-md navbar-light">
           <button
             className="navbar-toggler"
             type="button"
@@ -502,7 +538,7 @@ const App = () => {
             <ul className="navbar-nav">
               <li className="nav-item active">
                 <a className="nav-link" href="#">
-                  NAWS <span className="sr-only">(current)</span>
+                  NAWS <span className="sr-only"></span>
                 </a>
               </li>
               <li className="nav-item active">
