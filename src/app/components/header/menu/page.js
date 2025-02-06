@@ -11,12 +11,15 @@ const lato = Lato({
 });
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
-import NavIcon from "../../rasmlar/NavIcon.jpg";
-import Ozodlik from "../../rasmlar/Ozodlik.png";
-import Gitara from "../../rasmlar/gitara.png";
-import Kapalak from "../../rasmlar/kapalak.png";
-import Odam from "../../rasmlar/odam.png";
-import Yol from "../../rasmlar/yol.png";
+import NavIcon from "../../public/NavIcon.jpg";
+import Ozodlik from "../../public/Ozodlik.png";
+import Gitara from "../../public/gitara.png";
+import Kapalak from "../../public/kapalak.png";
+import Odam from "../../public/odam.png";
+import Yol from "../../public/yol.png";
+import Benjamin from "../../public/Benjamin.png";
+import Tog from "../../public/Tog.png";
+// import Tog from "/public/Tog.png";
 
 // Header bo'limi
 const Header = styled.div`
@@ -27,6 +30,7 @@ const Header = styled.div`
   height: 100vh;
   font-family: "Roboto", sans-serif;
   margin-top: 1rem;
+  z-index: 3;
 `;
 
 //Search qatori
@@ -318,20 +322,21 @@ const TheWeather = styled.p`
 `;
 
 //Navigatsiya bo'limi
+
 const Navbars = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 29rem;
+  height: 35rem;
   background-color: #262d33;
+  z-index: 1;
 `;
 
 const Nav = styled.div`
   display: flex;
   justify-content: center
-  border-top: 1.5px solid #204677;
-  width: 80%;
+  width: 100%;
   background-color: #262d33;
 
  
@@ -346,6 +351,7 @@ const Nav = styled.div`
     font-size: 1rem;
     color: #fff;
     background-color: #262d33;
+    border-bottom: 2px solid rgb(69, 70, 71);
 
      &:hover {
     color: rgb(105, 100, 112);
@@ -358,7 +364,7 @@ const Nav = styled.div`
       color: #fff;   
     &:hover {
      color: rgb(155, 151, 161);
-      font-size: 1.1rem;
+      
     &:active {
       color: rgb(51, 44, 44);
     }
@@ -380,10 +386,11 @@ const Advertising = styled.div`
   flex-wrap: rowrap;
   width: 80%;
   height: 8rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
   background-color: #30363d;
   border-radius: 0.7rem;
   font-size: 1rem;
+  z-index: 1;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -396,6 +403,8 @@ const Advertising = styled.div`
 const Music = styled.div`
   display: flex;
   justify-content: space-between;
+  border-right: 3px solid #423c3c;
+  padding-right: 1rem;
 `;
 const TitleMusic = styled.p`
   color: white;
@@ -404,6 +413,8 @@ const TitleMusic = styled.p`
 const Butterfly = styled.div`
   display: flex;
   justify-content: space-between;
+  border-right: 3px solid #423c3c;
+  padding-right: 1rem;
 `;
 const ButterflyTitle = styled.p`
   padding-right: 1rem;
@@ -412,6 +423,8 @@ const ButterflyTitle = styled.p`
 const MusicTwo = styled.div`
   display: flex;
   justify-content: space-between;
+  border-right: 3px solid #423c3c;
+  padding-right: 1rem;
 `;
 const MusicTwoTitle = styled.p`
   padding-right: 1rem;
@@ -425,6 +438,46 @@ const MysteryTitle = styled.p`
   padding-right: 1rem;
   color: #fff;
 `;
+
+//RECOMMENDET
+
+const Recommendet = styled.div`
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 36rem;
+  z-index: 10;
+  position: absolute;
+  margin-top: 25rem;
+  border-radius: 1rem;
+`;
+const Photo = styled.div`
+  margin-top: 2rem;
+  margin-left: 2rem;
+
+  .benjamin {
+    border-radius: 50%;
+  }
+
+  .link{
+  display: inline-block;
+  color: #7c5df7;
+  font-size: 0.9rem;
+  margin-top: 10rem;
+  }
+`;
+const ByBenjaminTurner = styled.div`
+  display: flex;
+  
+`;
+const BebjaminText = styled.p`
+  color: rgb(234, 233, 235);
+  margin-left: 0.7rem;
+  font-size: 1rem;
+`;
+const TextPhoto = styled.p``;
+const Button = styled.button``;
+const Movie = styled.div``;
 
 const App = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -643,6 +696,32 @@ const App = () => {
           </Mystery>
         </Advertising>
       </Navbars>
+      <Recommendet
+        style={{
+          backgroundImage: "url('/Tog.png')",
+        }}
+      >
+        <Photo>
+          <ByBenjaminTurner>
+            <Image
+              className="benjamin"
+              src={Benjamin}
+              placeholder="blur"
+              alt="Benjamin.jpg"
+            />
+            <BebjaminText>
+              By benjamin Tunner <br />
+              <spam style={{ color: "#c7c5ccd", fontSize: "0.8rem" }}>
+                Traveler
+              </spam>
+            </BebjaminText>
+          </ByBenjaminTurner>
+          <a href="#" className="link">DESTINATIONS</a>
+          <TextPhoto></TextPhoto>
+          <Button></Button>
+          <Movie></Movie>
+        </Photo>
+      </Recommendet>
     </Header>
   );
 };
