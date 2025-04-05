@@ -28,7 +28,7 @@ const Header = styled.div`
   flex-direction: column;
   width: 100%;
   height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: ${lato.style.fontFamily}, sans-serif;
   margin-top: 1rem;
   z-index: 3;
 `;
@@ -441,15 +441,27 @@ const MysteryTitle = styled.p`
 
 //RECOMMENDET
 
-const Recommendet = styled.div`
-  background-size: cover;
-  background-position: center;
-  width: 50%;
-  height: 36rem;
-  z-index: 10;
-  position: absolute;
-  margin-top: 25rem;
-  border-radius: 1rem;
+//RECOMMENDET
+// const Recommendet = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   max-width: 1200px; /* Juda keng bo‘lsa, cheklash uchun */
+//   width: 100%;
+//   height: 100%;
+//   position: relative; /* absolute emas! */
+//   z-index: 20; /* Agar boshqa elementlar ustiga chiqishini istasangiz */
+//   margin-top: 6rem; /* Agar tepadagi element bilan oraliq bo‘lishini istasangiz */
+// `;
+
+const RecomendetPhoto = styled.div`
+  width: 70%;
+  height: 40rem;
+  border-radius: 0.2rem;
+  margin-top: 24rem; /*  */
+  z-index: 15; /* Rasm va elementlarni ustun qilish */
+  position: absolute; /* absolute emas! */
+  max-width: 75rem;
+  background-size: cover; 
 `;
 const Photo = styled.div`
   margin-top: 2rem;
@@ -459,25 +471,81 @@ const Photo = styled.div`
     border-radius: 50%;
   }
 
-  .link{
-  display: inline-block;
-  color: #7c5df7;
-  font-size: 0.9rem;
-  margin-top: 10rem;
+  .link {
+    display: inline-block;
+    color: #7c5df7;
+    font-size: 0.9rem;
+    padding-top: 14rem;
   }
 `;
 const ByBenjaminTurner = styled.div`
   display: flex;
-  
 `;
 const BebjaminText = styled.p`
-  color: rgb(234, 233, 235);
+  color: rgb(255, 255, 255);
   margin-left: 0.7rem;
   font-size: 1rem;
+  span {
+    color: ;
+  }
 `;
-const TextPhoto = styled.p``;
-const Button = styled.button``;
-const Movie = styled.div``;
+const TextPhoto = styled.h1`
+  font-size: 3rem;
+  color: rgb(255, 255, 255);
+  margin-top: 1rem;
+`;
+
+const Movie = styled.div`
+  display: flex; /* Flexbox qo'shildi */
+  align-items: center; /* Elementlarni vertikal markazlash */
+  gap: 1rem; /* Elementlar orasidagi bo'shliq */
+`;
+const Button = styled.button`
+  width: 8rem;
+  height: 2.5rem;
+  margin-top: 2rem;
+  border-radius: 3rem;
+  border: 1px solid blue;
+  background-color: rgb(84, 92, 242);
+  color: white;
+  font-size: 0.9rem;
+
+  &:hover {
+    background-color: rgb(86, 122, 201);
+  }
+`;
+const IconMovie = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid #ffffff;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: rgb(132, 161, 247);
+  }
+`;
+
+const MovieName = styled.p`
+  width: 20rem;
+`;
+
+const MenuItem = styled.p`
+`;
+
+//RecommendetForYour
+
+const RecommendetForYour = styled.div``;
+const Food = styled.p`
+color: red
+font-siae: 5rem;
+z-index: 50;
+`;
 
 const App = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -696,7 +764,9 @@ const App = () => {
           </Mystery>
         </Advertising>
       </Navbars>
-      <Recommendet
+      {/* RECOMMENDET */}
+      
+      <RecomendetPhoto
         style={{
           backgroundImage: "url('/Tog.png')",
         }}
@@ -711,17 +781,28 @@ const App = () => {
             />
             <BebjaminText>
               By benjamin Tunner <br />
-              <spam style={{ color: "#c7c5ccd", fontSize: "0.8rem" }}>
+              <span style={{ color: "rgb(229, 218, 218)", fontSize: "0.8rem" }}>
                 Traveler
-              </spam>
+              </span>
             </BebjaminText>
           </ByBenjaminTurner>
-          <a href="#" className="link">DESTINATIONS</a>
-          <TextPhoto></TextPhoto>
-          <Button></Button>
-          <Movie></Movie>
+          <a href="#" className="link">
+            DESTINATIONS
+          </a>
+          <TextPhoto>
+            In Southeast England, White <br /> Cliffs and Fish
+          </TextPhoto>
+          <Movie>
+            <Button>Read more ➡</Button>
+            <IconMovie>▶</IconMovie>
+            <MovieName>
+              <br />
+              The chalk cliff of Beachy Head <br /> 18:05
+            </MovieName>
+          </Movie>
         </Photo>
-      </Recommendet>
+      </RecomendetPhoto>
+      <MenuItem>jhdndnnhedsnseh</MenuItem>
     </Header>
   );
 };
