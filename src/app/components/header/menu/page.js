@@ -11,6 +11,7 @@ const lato = Lato({
 });
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
+import { play } from "@fortawesome/free-solid-svg-icons";
 import NavIcon from "../../public/NavIcon.jpg";
 import Ozodlik from "../../public/Ozodlik.png";
 import Gitara from "../../public/gitara.png";
@@ -18,8 +19,7 @@ import Kapalak from "../../public/kapalak.png";
 import Odam from "../../public/odam.png";
 import Yol from "../../public/yol.png";
 import Benjamin from "../../public/Benjamin.png";
-import Tog from "../../public/Tog.png";
-// import Tog from "/public/Tog.png";
+import { height } from "@fortawesome/free-solid-svg-icons/fa0";
 
 // Header bo'limi
 const Header = styled.div`
@@ -31,6 +31,7 @@ const Header = styled.div`
   font-family: ${lato.style.fontFamily}, sans-serif;
   margin-top: 1rem;
   z-index: 3;
+  background-color: #fff;
 `;
 
 //Search qatori
@@ -41,6 +42,8 @@ const Menu = styled.div`
   width: 80%;
   height: 4rem;
   border-bottom: 2px solid rgb(241, 241, 241);
+  background-color: #fff;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     display: flex;
@@ -85,7 +88,6 @@ const DropdownMenu = styled.ul`
   z-index: 1000;
   width: 200px;
   display: ${(props) => (props.$isVisible ? "block" : "none")};
-  // display: ${({ isVisible }) => (isVisible ? "block" : "none")};
 
   @media (max-width: 768px) {
     width: 5rem;
@@ -116,6 +118,7 @@ const Section = styled.div`
   justify-content: center;
   width: 10rem;
   cursor: pointer;
+  color: black;
 
   @media (max-width: 768px) {
     display: flex;
@@ -159,6 +162,8 @@ const InputSearch = styled.input`
   border: none;
   border-radius: 4px;
   color: black;
+  background-color: #fff;
+  border: 1px solid aqua;
 
   @media (max-width: 768px) {
     width: 10rem;
@@ -241,6 +246,8 @@ const MenuTwo = styled.div`
   width: 80%;
   height: 5rem;
   margin-top: 0.6rem;
+  background-color: #fff;
+  cursor: pointer;
 
   @media (max-width: 768px) {
     display: flex;
@@ -285,6 +292,7 @@ const TextHeader = styled.h1`
   height: 40px;
   font-weight: 600;
   margin-right: 10rem;
+  color: black;
 
   @media (max-width: 768px) {
     margin-left: 15rem;
@@ -441,19 +449,9 @@ const MysteryTitle = styled.p`
 
 //RECOMMENDET
 
-//RECOMMENDET
-// const Recommendet = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   max-width: 1200px; /* Juda keng bo‘lsa, cheklash uchun */
-//   width: 100%;
-//   height: 100%;
-//   position: relative; /* absolute emas! */
-//   z-index: 20; /* Agar boshqa elementlar ustiga chiqishini istasangiz */
-//   margin-top: 6rem; /* Agar tepadagi element bilan oraliq bo‘lishini istasangiz */
-// `;
-
 const RecomendetPhoto = styled.div`
+  display: flex;
+  justify-content: space-between;
   width: 70%;
   height: 40rem;
   border-radius: 0.2rem;
@@ -461,7 +459,7 @@ const RecomendetPhoto = styled.div`
   z-index: 15; /* Rasm va elementlarni ustun qilish */
   position: absolute; /* absolute emas! */
   max-width: 75rem;
-  background-size: cover; 
+  background-size: cover;
 `;
 const Photo = styled.div`
   margin-top: 2rem;
@@ -496,24 +494,72 @@ const TextPhoto = styled.h1`
 `;
 
 const Movie = styled.div`
-  display: flex; /* Flexbox qo'shildi */
-  align-items: center; /* Elementlarni vertikal markazlash */
-  gap: 1rem; /* Elementlar orasidagi bo'shliq */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
 `;
 const Button = styled.button`
   width: 8rem;
   height: 2.5rem;
   margin-top: 2rem;
   border-radius: 3rem;
-  border: 1px solid blue;
-  background-color: rgb(84, 92, 242);
-  color: white;
-  font-size: 0.9rem;
+  // border: 1px solid blue;
+  // background-color: rgb(84, 92, 242);
+  // color: white;
+  // font-size: 0.9rem;
+  // overflow: hiden:
+  // z-index: 1;
+  // box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 
-  &:hover {
-    background-color: rgb(86, 122, 201);
+  // &::before{
+  // content: '';
+  // position: absolute;
+  // top: 0;
+  // left: -100%;
+  // width: 100%;
+  // height: 100%
+  // background-color: #e74c3c;
+  // transition: left 0.5s ease;
+  // z-index- 0;
+  // }
+  // &:hover::before {
+  //  left: 100%
+  // }
+  position: relative;
+  // padding: 1rem 2rem;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  // border-radius: 0.5rem;
+  background-color: #3498db;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* QALIN soyani qo‘shdik */
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(231, 221, 220); /* QIZIL – kesib o‘tadigan rang */
+    transition: left 0.2s ease;
+    z-index: 0;
+  }
+
+  &:hover::before {
+    left: 100%; /* Qizil rang chapdan o‘ngga o‘tib ketadi */
+  }
+  span {
+    position: relative;
+    z-index: 1; /* Matn ustida ko‘rinadi */
   }
 `;
+
 const IconMovie = styled.div`
   display: flex;
   justify-content: center;
@@ -535,16 +581,126 @@ const MovieName = styled.p`
   width: 20rem;
 `;
 
-const MenuItem = styled.p`
-`;
-
 //RecommendetForYour
 
-const RecommendetForYour = styled.div``;
+const RecommendetForYour = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 22%;
+  background-color:rgb(246, 227, 227);
+  color: #333;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+`;
+const RecommendetParagraph = styled.p`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-bottom: 1px solid aqua;
+  cursor: pointer;
+`;
 const Food = styled.p`
-color: red
-font-siae: 5rem;
-z-index: 50;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 7rem;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid aqua;
+  color: #6e99ae;
+
+  .food {
+    font-weight: 500;
+    color: #333;
+
+   
+  }
+   .player {
+   display: inline-block
+      width: 2rem;
+      background-color: green;
+      border-radius: 3px solid blue;
+      border: 50%;
+
+    }
+  
+`;
+
+const Cars = styled.p`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 7rem;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid aqua;
+  color: #6e99ae;
+
+  .cars {
+    font-weight: 500;
+    color: #333;
+  }
+`;
+
+const Videos = styled.p`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 7rem;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid aqua;
+  color: #6e99ae;
+
+  .movies {
+    font-weight: 500;
+    color: #333;
+  }
+`;
+
+const Nfl = styled.p`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 7rem;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-bottom: 1px solid aqua;
+  color: #6e99ae;
+
+  .nfl {
+    font-weight: 500;
+    color: #333;
+  }
+`;
+
+const TechReviews = styled.p`
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 7rem;
+  gap: 0.5rem;
+  padding-left: 1.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6e99ae;
+
+  .reviews {
+    font-weight: 500;
+    color: #333;
+  }
 `;
 
 const App = () => {
@@ -765,7 +921,7 @@ const App = () => {
         </Advertising>
       </Navbars>
       {/* RECOMMENDET */}
-      
+
       <RecomendetPhoto
         style={{
           backgroundImage: "url('/Tog.png')",
@@ -793,7 +949,10 @@ const App = () => {
             In Southeast England, White <br /> Cliffs and Fish
           </TextPhoto>
           <Movie>
-            <Button>Read more ➡</Button>
+            <Button>
+              {" "}
+              <span>Read more ➡</span>
+            </Button>
             <IconMovie>▶</IconMovie>
             <MovieName>
               <br />
@@ -801,8 +960,45 @@ const App = () => {
             </MovieName>
           </Movie>
         </Photo>
+
+        {/* RecommendetForYour */}
+        <RecommendetForYour>
+          <RecommendetParagraph>RECOMMENDET FOR YOU</RecommendetParagraph>
+          <Food>
+            FOOD
+            <span className="food">
+              For Chicken-Fried Steak, Too <br /> Much Is Just{" "}
+            </span>
+          </Food>
+          <Cars>
+            CARS
+            <span className="cars">
+              Storm Has Car Dealers Doing <br />
+              Swift Business
+            </span>
+          </Cars>
+          <Videos>
+            MOVIES
+            <span className="movies">
+              War Is Hell? In New Military <br />
+              Dramas, It’s One-Dimensional
+            </span>
+          </Videos>
+          <Nfl>
+            NFL
+            <span className="nfl">
+              11 surprising stat rankings for <br /> active NFL players
+            </span>
+          </Nfl>
+          <TechReviews>
+            TECH REVIEWS
+            <span className="reviews">
+              The bookcases you can buy online
+              <br /> and assemble yourself
+            </span>
+          </TechReviews>
+        </RecommendetForYour>
       </RecomendetPhoto>
-      <MenuItem>jhdndnnhedsnseh</MenuItem>
     </Header>
   );
 };
