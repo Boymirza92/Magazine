@@ -32,6 +32,10 @@ const Header = styled.div`
   margin-top: 1rem;
   z-index: 3;
   background-color: #fff;
+
+  @media (max-width: 768px) {
+    padding-top: 0.5rem;
+  }
 `;
 
 //Search qatori
@@ -257,7 +261,6 @@ const MenuTwo = styled.div`
   .freedom {
     width: 6.2rem;
     height: 5.2rem;
-    margi-top: 3rem;
     margin-left: 7rem;
     gap: 0px;
     opacity: 0px;
@@ -287,7 +290,8 @@ const TextBoston = styled.p`
   }
 `;
 const TextHeader = styled.h1`
-  font-size: 3rem bold;
+  font-size: 3rem;
+  font-weight: bold;
   width: 184px;
   height: 40px;
   font-weight: 600;
@@ -339,21 +343,35 @@ const Navbars = styled.div`
   height: 35rem;
   background-color: #262d33;
   z-index: 1;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: initial;
+    border: none;
+    margin-top: 1.2rem;
+  }
 `;
 
 const Nav = styled.div`
   display: flex;
-  justify-content: center
+  justify-content: center;
   width: 100%;
   background-color: #262d33;
 
- 
+  @media (max-width: 768px) {
+    display: none;
+  }
 
   .navbar-nav {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    flex-wrap: rowrap;
+    flex-wrap: wrap;
     width: 100%;
     letter-spacing: 1px;
     font-size: 1rem;
@@ -361,28 +379,23 @@ const Nav = styled.div`
     background-color: #262d33;
     border-bottom: 2px solid rgb(69, 70, 71);
 
-     &:hover {
-    color: rgb(105, 100, 112);
-    &:active {
-      color: rgb(51, 44, 44);
+    &:hover {
+      color: rgb(105, 100, 112);
+      &:active {
+        color: rgb(51, 44, 44);
+      }
     }
-  }
 
     a {
-      color: #fff;   
-    &:hover {
-     color: rgb(155, 151, 161);
-      
-    &:active {
-      color: rgb(51, 44, 44);
-    }
-  }
-   
-    }
+      color: #fff;
+      &:hover {
+        color: rgb(155, 151, 161);
 
-  }
-  @media (max-width: 768px) {
-    display: none;
+        &:active {
+          color: rgb(51, 44, 44);
+        }
+      }
+    }
   }
 `;
 
@@ -391,7 +404,7 @@ const Advertising = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  flex-wrap: rowrap;
+  flex-wrap: wrap;
   width: 80%;
   height: 8rem;
   margin-top: 1rem;
@@ -399,20 +412,30 @@ const Advertising = styled.div`
   border-radius: 0.7rem;
   font-size: 1rem;
   z-index: 1;
+  gap: 1rem;
 
   @media (max-width: 768px) {
-    flex-direction: column;
-    background-color: inherit;
-    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     align-items: flex-start;
+    background-color: inherit;
+    flex-wrap: wrap;
+    z-index: initial;
+    height: auto;
   }
 `;
 
 const Music = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 17rem;
   border-right: 3px solid #423c3c;
   padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    border: none;
+  }
 `;
 const TitleMusic = styled.p`
   color: white;
@@ -421,8 +444,13 @@ const TitleMusic = styled.p`
 const Butterfly = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 17rem;
   border-right: 3px solid #423c3c;
   padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    border: none;
+  }
 `;
 const ButterflyTitle = styled.p`
   padding-right: 1rem;
@@ -431,8 +459,13 @@ const ButterflyTitle = styled.p`
 const MusicTwo = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 17rem;
   border-right: 3px solid #423c3c;
   padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    border: none;
+  }
 `;
 const MusicTwoTitle = styled.p`
   padding-right: 1rem;
@@ -441,7 +474,15 @@ const MusicTwoTitle = styled.p`
 const Mystery = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 17rem;
+  border-right: 3px solid #423c3c;
+  padding-right: 1rem;
+
+  @media (max-width: 768px) {
+    border: none;
+  }
 `;
+
 const MysteryTitle = styled.p`
   padding-right: 1rem;
   color: #fff;
@@ -460,6 +501,18 @@ const RecomendetPhoto = styled.div`
   position: absolute; /* absolute emas! */
   max-width: 75rem;
   background-size: cover;
+
+  @media (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    z-index: initial;
+    margin-top: 23.8rem;
+  }
+
+  @media (max-width: 702px) {
+    margin-top: 36.81rem;
+  }
+
 `;
 const Photo = styled.div`
   margin-top: 2rem;
@@ -504,34 +557,10 @@ const Button = styled.button`
   height: 2.5rem;
   margin-top: 2rem;
   border-radius: 3rem;
-  // border: 1px solid blue;
-  // background-color: rgb(84, 92, 242);
-  // color: white;
-  // font-size: 0.9rem;
-  // overflow: hiden:
-  // z-index: 1;
-  // box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-
-  // &::before{
-  // content: '';
-  // position: absolute;
-  // top: 0;
-  // left: -100%;
-  // width: 100%;
-  // height: 100%
-  // background-color: #e74c3c;
-  // transition: left 0.5s ease;
-  // z-index- 0;
-  // }
-  // &:hover::before {
-  //  left: 100%
-  // }
   position: relative;
-  // padding: 1rem 2rem;
   color: white;
   font-size: 1.2rem;
   border: none;
-  // border-radius: 0.5rem;
   background-color: #3498db;
   overflow: hidden;
   cursor: pointer;
@@ -587,7 +616,7 @@ const RecommendetForYour = styled.div`
   display: flex;
   flex-direction: column;
   width: 22%;
-  background-color:rgb(246, 227, 227);
+  background-color: rgb(246, 227, 227);
   color: #333;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
