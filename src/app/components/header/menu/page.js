@@ -496,15 +496,17 @@ const RecomendetPhoto = styled.div`
   width: 70%;
   height: 40rem;
   border-radius: 0.2rem;
-  margin-top: 24rem; /*  */
-  z-index: 15; /* Rasm va elementlarni ustun qilish */
-  position: absolute; /* absolute emas! */
+  margin-top: 24rem;
+  z-index: 15;
+  position: absolute;
   max-width: 75rem;
   background-size: cover;
 
   @media (max-width: 768px) {
     display: flex;
+    flex-direction: column;
     width: 100%;
+    height: 20rem
     z-index: initial;
     margin-top: 23.8rem;
   }
@@ -513,6 +515,7 @@ const RecomendetPhoto = styled.div`
     margin-top: 36.81rem;
   }
 
+ 
 `;
 const Photo = styled.div`
   margin-top: 2rem;
@@ -544,6 +547,10 @@ const TextPhoto = styled.h1`
   font-size: 3rem;
   color: rgb(255, 255, 255);
   margin-top: 1rem;
+
+  @media (max-width: 550px) {
+  font-size: 2rem;
+  } 
 `;
 
 const Movie = styled.div`
@@ -587,6 +594,10 @@ const Button = styled.button`
     position: relative;
     z-index: 1; /* Matn ustida ko‘rinadi */
   }
+
+  @media (max-width: 550px) {
+  font-size: 0.8rem;
+  }
 `;
 
 const IconMovie = styled.div`
@@ -598,16 +609,31 @@ const IconMovie = styled.div`
   height: 3rem;
   border: 2px solid #ffffff;
   margin-left: 3rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   border-radius: 50%;
 
   &:hover {
     background-color: rgb(132, 161, 247);
   }
+
+  @media (max-width: 550px) {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+  } 
 `;
 
 const MovieName = styled.p`
   width: 20rem;
+  margin-top: 1.2rem;
+
+   @media (max-width: 550px) {
+    height: 2rem;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  } 
 `;
 
 //RecommendetForYour
@@ -620,6 +646,23 @@ const RecommendetForYour = styled.div`
   color: #333;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 0.5rem;
+    border: none;
+    margin-top: 4.5rem;
+    padding: 0.5rem;
+  }
+
+  @media (max-width: 624px) {
+    margin-top: 0.5rem;
+  }
 `;
 const RecommendetParagraph = styled.p`
   display: flex;
@@ -631,6 +674,13 @@ const RecommendetParagraph = styled.p`
   font-weight: bold;
   border-bottom: 1px solid aqua;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    border: none;
+    width: 100%;
+    height: 2rem;
+  }
 `;
 const Food = styled.p`
   display: flex;
@@ -648,17 +698,18 @@ const Food = styled.p`
     font-weight: 500;
     color: #333;
 
-   
-  }
-   .player {
-   display: inline-block
-      width: 2rem;
-      background-color: green;
-      border-radius: 3px solid blue;
-      border: 50%;
-
+    @media (max-width: 768px) {
+      text-align: start;
     }
-  
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    border: none;
+    width: 8rem;
+  }
 `;
 
 const Cars = styled.p`
@@ -676,6 +727,18 @@ const Cars = styled.p`
   .cars {
     font-weight: 500;
     color: #333;
+
+    @media (max-width: 768px) {
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    border: none;
+    width: 8rem;
   }
 `;
 
@@ -694,6 +757,18 @@ const Videos = styled.p`
   .movies {
     font-weight: 500;
     color: #333;
+
+    @media (max-width: 768px) {
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    border: none;
+    width: 8rem;
   }
 `;
 
@@ -712,6 +787,18 @@ const Nfl = styled.p`
   .nfl {
     font-weight: 500;
     color: #333;
+
+    @media (max-width: 768px) {
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    border: none;
+    width: 8rem;
   }
 `;
 
@@ -729,6 +816,18 @@ const TechReviews = styled.p`
   .reviews {
     font-weight: 500;
     color: #333;
+
+    @media (max-width: 768px) {
+      text-align: start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+    border: none;
+    width: 8rem;
   }
 `;
 
