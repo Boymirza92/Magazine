@@ -549,8 +549,8 @@ const TextPhoto = styled.h1`
   margin-top: 1rem;
 
   @media (max-width: 550px) {
-  font-size: 2rem;
-  } 
+    font-size: 2rem;
+  }
 `;
 
 const Movie = styled.div`
@@ -596,7 +596,7 @@ const Button = styled.button`
   }
 
   @media (max-width: 550px) {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
   }
 `;
 
@@ -622,18 +622,18 @@ const IconMovie = styled.div`
     font-size: 0.8rem;
     margin-left: 1rem;
     margin-top: 2rem;
-  } 
+  }
 `;
 
 const MovieName = styled.p`
   width: 20rem;
   margin-top: 1.2rem;
 
-   @media (max-width: 550px) {
+  @media (max-width: 550px) {
     height: 2rem;
     font-size: 0.8rem;
     margin-top: 0.5rem;
-  } 
+  }
 `;
 
 //RecommendetForYour
@@ -831,6 +831,7 @@ const TechReviews = styled.p`
   }
 `;
 
+
 const App = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
   const toggleDropdown = () => {
@@ -890,7 +891,7 @@ const App = () => {
         <Subscribe className="d-flex align-items-center gap-3">
           <Image
             src={NavIcon}
-            className="Image" // Rasmni next/image yordamida qo'shamiz
+            className="Image" 
             alt="Nav Icon"
             priority
           />
@@ -1127,6 +1128,7 @@ const App = () => {
           </TechReviews>
         </RecommendetForYour>
       </RecomendetPhoto>
+     
     </Header>
   );
 };
