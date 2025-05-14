@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
           padding: "0",
           width: "100%",
           overflowX: "hidden",
-          backgroundColor: "white"
+          backgroundColor: "#EDEFF0"
         }}
       >
           <Head>

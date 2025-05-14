@@ -22,7 +22,8 @@ const StyledCar = styled.div`
   flex-direction: column;
   width: 34rem;
   height: 23rem;
-  border: 3px solid blue;
+  background-color: #fff;
+  border-radius: 1rem;
   padding: 2rem;
 
   .cars {
@@ -49,35 +50,54 @@ const StyledCar = styled.div`
     font-weight: 400;
     font-size: 0.9rem;
   }
-`;
-const Image = styled.img`
 
+  .carImage {
+    width: 16rem;
+    margin-left: 15.7rem;
+    margin-top: -18.3rem;
+    border-radius: 1rem;
+  }
 `;
-
 
 const MessageText = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 0rem;
-  margin-left: 0rem;
+  width: 100%;
+  height: 4rem;
+  border-top: 1px solid #ccc;
+  margin-top: 3rem;
 
   .avatar {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
     border-radius: 50%;
     margin-right: 1rem;
   }
 
   h4 {
+    display: inline-block
     margin-right: 1rem;
-    font-size: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
     color: #333;
+
+  span {
+      width: 1rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+  }
+  .smsicon {
+    width: 1rem;
+    
   }
 
   p {
-    font-size: 1.2rem;
+  ;
+    font-size: 0.7rem;
+    padding-top: 0.8rem;
     color: #666;
+   
   }
 `;
 
@@ -111,16 +131,16 @@ const New = () => {
             his days building artful recreations of one of most iconic sports
             cars
           </p>
-          <img
-            src="/auto.png"
-            alt="Car"
-            className="carImage"
-          />
+          <img src="/auto.png" alt="Car" className="carImage" />
           <MessageText>
-            <img src="" alt="Avatarka" className="avatar" />
-            <h4>Jessica Miller:</h4>
-            <p>Even as the ride-hailing services future remem…</p>
-            <p>🗨 342</p>
+            <img src="/avatarka.png" alt="Avatarka" className="avatar" />
+            <h4>
+              Jessica Miller: 
+              <span> Even as the ride-hailing services future remem… &nbsp;</span>
+            </h4> {" "}
+            <img src="/sms.png" alt="Sms" className="smsicon" />
+            {" "}
+            <p className="sms">&nbsp;342</p>
           </MessageText>
         </StyledCar>
         <Popular></Popular>
