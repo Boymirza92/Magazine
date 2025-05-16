@@ -8,16 +8,18 @@ import styled from "styled-components";
 
 const Newbies = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 70%;
   height: 50rem;
   border: 3px solid red;
   margin-top: 21rem;
   margin-left: 15%;
+  gap: 1rem;
 `;
 
 const Messages = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  width: 52rem;
   gap: 1.5rem;
 `;
 
@@ -167,11 +169,11 @@ const Like = styled.div`
     color: rgb(211, 222, 198);
     margin-top: 0.01rem;
   }
-    p{
-      font-size: 0.6rem;
-      color: rgb(145, 147, 142);
-      margin-top: -1rem;
-    }
+  p {
+    font-size: 0.6rem;
+    color: rgb(145, 147, 142);
+    margin-top: -1rem;
+  }
 
   .message {
     width: 1rem;
@@ -179,7 +181,6 @@ const Like = styled.div`
     background-color: rgb(130, 134, 125);
     border-radius: 3px;
     margin-top: -1rem;
-
   }
   p {
     font-size: 0.6rem;
@@ -189,21 +190,189 @@ const Like = styled.div`
     width: 1rem;
     height: 1.2rem;
     margin-top: -1.1rem;
-
   }
 `;
 
-const MessagTwo = styled.div``;
+const MessagTwo = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 52rem;
+  gap: 1rem;
+`;
 
-const Cats = styled.div``;
+const Cats = styled.div`
+  display: flex;
 
-const Cofee = styled.div``;
+  flex-direction: column;
+  width: 16.4rem;
+  height: 23.1rem;
+  background-color: #fff;
+  border-radius: 1rem;
 
-const Manufactura = styled.div``;
+  .cat {
+    border-radius: 1rem 1rem 0 0;
+  }
 
-const Stressful = styled.div``;
+  h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: black;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+`;
 
-const Lemon = styled.div``;
+const Info = styled.div`
+  display: flex;
+  justify-content: end;
+  flex-wrap: wrap;
+  width: 34rem;
+  height: 24rem;
+  margin-left: 0.6rem;
+  gap: 1rem;
+`;
+
+const Cofee = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 16.4rem;
+  height: 10.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+
+  h4 {
+    gap: 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+     letter-spacing: 0.2px;
+    color: rgb(28, 32, 36);
+    font-weight: bold;
+    margin: 1.5rem 0 0 1rem;
+  }
+
+  .text {
+    line-height: 1.2;
+     letter-spacing: 0.2px;
+    color: rgb(29, 32, 35);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .data {
+    color: rgb(120, 126, 132);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+`;
+
+const Manufactura = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 16.4rem;
+  height: 10.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+
+  .header {
+    letter-spacing: 0.2px;
+    line-height: 1.4;
+    color: rgb(28, 32, 36);
+    font-weight: bold;
+    margin: 1.5rem 0 0 1rem;
+    font-size: 1rem;
+  }
+
+  .text {
+  font-size: 0.8rem;
+    line-height: 1.2;
+     letter-spacing: 0.2px;
+    color: rgb(29, 32, 35);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+  }
+
+  .data {
+    color: rgb(120, 126, 132);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+`;
+
+const Stressful = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 16.4rem;
+  height: 10.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+     letter-spacing: 0.2px;
+    color: rgb(28, 32, 36);
+    font-weight: bold;
+    margin: 1.5rem 0 0 1rem;
+  }
+
+  .text {
+    line-height: 1.2;
+     letter-spacing: 0.2px;
+    color: rgb(29, 32, 35);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .data {
+    color: rgb(120, 126, 132);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+`;
+
+const Lemon = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 16.4rem;
+  height: 10.6rem;
+  background-color: #fff;
+  border-radius: 1rem;
+
+  h4 {
+    font-size: 1rem;
+    line-height: 1.4;
+     letter-spacing: 0.2px;
+    color: rgb(28, 32, 36);
+    font-weight: bold;
+    margin: 1.5rem 0 0 1rem;
+  }
+
+  .text {
+    line-height: 1.2;
+     letter-spacing: 0.2px;
+    color: rgb(29, 32, 35);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .data {
+    color: rgb(120, 126, 132);
+    margin: 1rem 0 0 1rem;
+    padding-right: 1rem;
+    font-size: 0.8rem;
+  }
+`;
 
 const Columns = styled.div``;
 
@@ -227,10 +396,9 @@ const New = () => {
             <h4>
               Jessica Miller:
               <span>
-                {" "}
-                Even as the ride-hailing services future remem… &nbsp;
+                &nbsp; Even as the ride-hailing services future remem… &nbsp;
               </span>
-            </h4>{" "}
+            </h4>
             <img src="/sms.png" alt="Sms" className="smsicon" />{" "}
             <p className="sms">&nbsp;342</p>
           </MessageText>
@@ -256,11 +424,45 @@ const New = () => {
         </Popular>
       </Messages>
       <MessagTwo>
-        <Cats></Cats>
-        <Cofee></Cofee>
-        <Manufactura></Manufactura>
-        <Stressful></Stressful>
-        <Lemon></Lemon>
+        <Cats>
+          <img src="/cat.png" alt="Cat" className="cat" />
+          <h3>200+ Doomed Cats Saved From Euthanization</h3>
+        </Cats>
+        <Info>
+          <Cofee>
+            <h4>Is Coffee Bad for Bones?</h4>
+            <p className="text">
+              Coffee drinkers may excrete more calcium, but it doesn’t appear to
+              weaken bones
+            </p>
+            <p className="data">Oct 14</p>
+          </Cofee>
+          <Manufactura>
+            <h4 className="header">What We Manufacture</h4>
+            <p className="text">
+              A global history of the factory and the modern world that all
+              should read
+            </p>
+            <p className="data">Oct 15</p>
+          </Manufactura>
+          <Stressful>
+            <h4>It’s a Stressful World</h4>
+            <p className="text">
+              Can a cruise skeptic enjoy four days on the seas with his family
+              and a bunch of princesses?
+            </p>
+            <p className="data">oct 15</p>
+          </Stressful>
+          <Lemon>
+            <h4>A Treat for Lemon Lovers</h4>
+            <p className="text">
+              This tangerine, ginger and chocolate tart has verve, depth and a
+              hint of spice
+            </p>
+            <p className="data">Oct 14</p>
+          </Lemon>
+        </Info>
+
         <Columns></Columns>
       </MessagTwo>
     </Newbies>
