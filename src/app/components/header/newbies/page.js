@@ -8,12 +8,13 @@ import styled from "styled-components";
 
 const Newbies = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  width: 70%;
+  width: 72%;
   height: 50rem;
-  border: 3px solid red;
   margin-top: 21rem;
-  margin-left: 15%;
+  margin-left: 14.2%;
   gap: 1rem;
 `;
 
@@ -35,7 +36,6 @@ const StyledCar = styled.div`
   .cars {
     font-size: 0.9rem;
     color: #6e99ae;
-    weight: 400;
     letter-spacing: 0.5px;
   }
 
@@ -81,7 +81,7 @@ const MessageText = styled.div`
   }
 
   h4 {
-    display: inline-block
+    display: inline-block;
     margin-right: 1rem;
     font-size: 0.9rem;
     font-weight: 600;
@@ -99,7 +99,6 @@ const MessageText = styled.div`
   }
 
   p {
-  ;
     font-size: 0.7rem;
     padding-top: 0.8rem;
     color: #666;
@@ -120,7 +119,7 @@ const Popular = styled.div`
     text-align: center;
     font-size: 0.9rem;
     background-color: #3dc47e;
-    color: cef0de;
+    color: #cef0de;
     border-radius: 0.2rem;
     letter-spacing: 0.3px;
   }
@@ -178,12 +177,9 @@ const Like = styled.div`
   .message {
     width: 1rem;
     height: 0.9rem;
-    background-color: rgb(130, 134, 125);
+    background-color: rgb(205, 219, 187);
     border-radius: 3px;
     margin-top: -1rem;
-  }
-  p {
-    font-size: 0.6rem;
   }
 
   .like {
@@ -198,6 +194,13 @@ const MessagTwo = styled.div`
   flex-wrap: wrap;
   width: 52rem;
   gap: 1rem;
+`;
+
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  gap: 2rem;
 `;
 
 const Cats = styled.div`
@@ -249,7 +252,7 @@ const Cofee = styled.div`
     gap: 1rem;
     font-size: 1rem;
     line-height: 1.4;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(28, 32, 36);
     font-weight: bold;
     margin: 1.5rem 0 0 1rem;
@@ -257,7 +260,7 @@ const Cofee = styled.div`
 
   .text {
     line-height: 1.2;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(29, 32, 35);
     margin: 1rem 0 0 1rem;
     padding-right: 1rem;
@@ -290,9 +293,9 @@ const Manufactura = styled.div`
   }
 
   .text {
-  font-size: 0.8rem;
+    font-size: 0.8rem;
     line-height: 1.2;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(29, 32, 35);
     margin: 1rem 0 0 1rem;
     padding-right: 1rem;
@@ -317,7 +320,7 @@ const Stressful = styled.div`
   h4 {
     font-size: 1rem;
     line-height: 1.4;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(28, 32, 36);
     font-weight: bold;
     margin: 1.5rem 0 0 1rem;
@@ -325,7 +328,7 @@ const Stressful = styled.div`
 
   .text {
     line-height: 1.2;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(29, 32, 35);
     margin: 1rem 0 0 1rem;
     padding-right: 1rem;
@@ -351,7 +354,7 @@ const Lemon = styled.div`
   h4 {
     font-size: 1rem;
     line-height: 1.4;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(28, 32, 36);
     font-weight: bold;
     margin: 1.5rem 0 0 1rem;
@@ -359,7 +362,7 @@ const Lemon = styled.div`
 
   .text {
     line-height: 1.2;
-     letter-spacing: 0.2px;
+    letter-spacing: 0.2px;
     color: rgb(29, 32, 35);
     margin: 1rem 0 0 1rem;
     padding-right: 1rem;
@@ -374,97 +377,225 @@ const Lemon = styled.div`
   }
 `;
 
-const Columns = styled.div``;
+const Right = styled.div``;
+
+const Columns = styled.div`
+  width: 12.5rem;
+  height: 48.2rem;
+  background-color: #6e99ae;
+  margin-left: 6.12rem;
+  border-radius: 1rem;
+`;
+
+const ColumsHeader = styled.h4`
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(195, 209, 222);
+  padding: 1rem;
+  border-bottom: 1px solid #fff;
+`;
+
+const Aforizm = styled.div`
+  padding: 1rem;
+`;
+
+const Devid = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 13rem;
+  border-bottom: 2px solid #ccc;
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .devid {
+    width: 3rem;
+    border-radius: 50%;
+  }
+  .name {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+  .specialist {
+    font-size: 0.7rem;
+    color: #fff;
+  }
+`;
+
+const Alexandra = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  border-bottom: 2px solid #ccc;
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .green {
+    width: 3rem;
+    border-radius: 50%;
+  }
+  .name {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+  .specialist {
+    font-size: 0.7rem;
+    color: #fff;
+  }
+`;
+
+const Olivia = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 15rem;
+  border-bottom: 2px solid #ccc;
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  .olivia {
+    width: 3rem;
+    border-radius: 50%;
+  }
+  .name {
+    font-size: 0.8rem;
+    color: #fff;
+  }
+  .specialist {
+    font-size: 0.7rem;
+    color: #fff;
+  }
+`;
+
+const Buttons = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #aaa;
+`;
+
+// HTML QISMI
 
 const New = () => {
   return (
     <Newbies>
-      <Messages>
-        <StyledCar>
-          <p className="cars">CARS</p>
-          <h1 className="replicas">
-            The joy oblicase: <br /> A $ 5 million car <br /> for $ 50,000
-          </h1>
-          <p className="text">
-            The 31-year-old self-taught engineer and former amateur racer spends
-            his days building artful recreations of one of most iconic sports
-            cars
-          </p>
-          <img src="/auto.png" alt="Car" className="carImage" />
-          <MessageText>
-            <img src="/avatarka.png" alt="Avatarka" className="avatar" />
+      <Left>
+        <Messages>
+          <StyledCar>
+            <p className="cars">CARS</p>
+            <h1 className="replicas">
+              The joy oblicase: <br /> A $ 5 million car <br /> for $ 50,000
+            </h1>
+            <p className="text">
+              The 31-year-old self-taught engineer and former amateur racer
+              spends his days building artful recreations of one of most iconic
+              sports cars
+            </p>
+            <img src="/auto.png" alt="Car" className="carImage" />
+            <MessageText>
+              <img src="/avatarka.png" alt="Avatarka" className="avatar" />
+              <h4>
+                Jessica Miller:
+                <span>
+                  &nbsp; Even as the ride-hailing services future remem… &nbsp;
+                </span>
+              </h4>
+              <img src="/sms.png" alt="Sms" className="smsicon" />{" "}
+              <p className="sms">&nbsp;342</p>
+            </MessageText>
+          </StyledCar>
+          <Popular>
+            <p className="popular">Popular</p>
+            <p className="art">ART & DESIGN</p>
             <h4>
-              Jessica Miller:
-              <span>
-                &nbsp; Even as the ride-hailing services future remem… &nbsp;
-              </span>
+              INVISIBLE INK: THE <br /> WEIRD WORLD OF <br />
+              TATTOO REMOVAL - <br /> IN PICTURES
             </h4>
-            <img src="/sms.png" alt="Sms" className="smsicon" />{" "}
-            <p className="sms">&nbsp;342</p>
-          </MessageText>
-        </StyledCar>
-        <Popular>
-          <p className="popular">Popular</p>
-          <p className="art">ART & DESIGN</p>
-          <h4>
-            INVISIBLE INK: THE <br /> WEIRD WORLD OF <br />
-            TATTOO REMOVAL - <br /> IN PICTURES
-          </h4>
-          <Price>
-            <img src="/avatarka.png" alt="Avatarka" className="price" />
-            <Like>
-              <p className="name">By Sarah Jencins</p>
-              <p>Sep 26 &nbsp;</p>
-              <img src="/sms1.png" alt="sms" className="message" />
-              <p>16 &nbsp;</p>&nbsp;
-              <img src="/ola.png" alt="Like" className="like" />
-              <p>832</p>
-            </Like>
-          </Price>
-        </Popular>
-      </Messages>
-      <MessagTwo>
-        <Cats>
-          <img src="/cat.png" alt="Cat" className="cat" />
-          <h3>200+ Doomed Cats Saved From Euthanization</h3>
-        </Cats>
-        <Info>
-          <Cofee>
-            <h4>Is Coffee Bad for Bones?</h4>
-            <p className="text">
-              Coffee drinkers may excrete more calcium, but it doesn’t appear to
-              weaken bones
-            </p>
-            <p className="data">Oct 14</p>
-          </Cofee>
-          <Manufactura>
-            <h4 className="header">What We Manufacture</h4>
-            <p className="text">
-              A global history of the factory and the modern world that all
-              should read
-            </p>
-            <p className="data">Oct 15</p>
-          </Manufactura>
-          <Stressful>
-            <h4>It’s a Stressful World</h4>
-            <p className="text">
-              Can a cruise skeptic enjoy four days on the seas with his family
-              and a bunch of princesses?
-            </p>
-            <p className="data">oct 15</p>
-          </Stressful>
-          <Lemon>
-            <h4>A Treat for Lemon Lovers</h4>
-            <p className="text">
-              This tangerine, ginger and chocolate tart has verve, depth and a
-              hint of spice
-            </p>
-            <p className="data">Oct 14</p>
-          </Lemon>
-        </Info>
+            <Price>
+              <img src="/avatarka.png" alt="Avatarka" className="price" />
+              <Like>
+                <p className="name">By Sarah Jencins</p>
+                <p>Sep 26 &nbsp;</p>
+                <img src="/sms1.png" alt="sms" className="message" />
+                <p>16 &nbsp;</p>&nbsp;
+                <img src="/ola.png" alt="Like" className="like" />
+                <p>832</p>
+              </Like>
+            </Price>
+          </Popular>
+        </Messages>
+        <MessagTwo>
+          <Cats>
+            <img src="/cat.png" alt="Cat" className="cat" />
+            <h3>200+ Doomed Cats Saved From Euthanization</h3>
+          </Cats>
+          <Info>
+            <Cofee>
+              <h4>Is Coffee Bad for Bones?</h4>
+              <p className="text">
+                Coffee drinkers may excrete more calcium, but it doesn’t appear
+                to weaken bones
+              </p>
+              <p className="data">Oct 14</p>
+            </Cofee>
+            <Manufactura>
+              <h4 className="header">What We Manufacture</h4>
+              <p className="text">
+                A global history of the factory and the modern world that all
+                should read
+              </p>
+              <p className="data">Oct 15</p>
+            </Manufactura>
+            <Stressful>
+              <h4>It’s a Stressful World</h4>
+              <p className="text">
+                Can a cruise skeptic enjoy four days on the seas with his family
+                and a bunch of princesses?
+              </p>
+              <p className="data">oct 15</p>
+            </Stressful>
+            <Lemon>
+              <h4>A Treat for Lemon Lovers</h4>
+              <p className="text">
+                This tangerine, ginger and chocolate tart has verve, depth and a
+                hint of spice
+              </p>
+              <p className="data">Oct 14</p>
+            </Lemon>
+          </Info>
+        </MessagTwo>
+      </Left>
 
-        <Columns></Columns>
-      </MessagTwo>
+      <Columns>
+        <ColumsHeader>COLUMNS</ColumsHeader>
+        <Aforizm>
+          <Devid>
+            <h4>Architecture is the thoughtful making of space</h4>
+            <img src="/devid.png" alt="Devid" className="devid" />
+            <p className="name">Devid Williams</p>
+            <p className="specialist">Architect</p>
+          </Devid>
+          <Alexandra>
+            <h4>The details are not the details. They make the design.</h4>
+            <img src="/green.png" alt="Green" className="green" />
+            <p className="name">Alexandra Green</p>
+            <p className="specialist">Interior desinger</p>
+          </Alexandra>
+          <Olivia>
+            <h4>Live life to the fullest, and focus on the positive</h4>
+            <img src="/olivia.png" alt="Olivia" className="olivia" />
+            <p className="name">Olivia Thompson</p>
+            <p className="specialist">Coacher</p>
+          </Olivia>
+        </Aforizm>
+        <Buttons>Read more</Buttons>
+      </Columns>
     </Newbies>
   );
 };

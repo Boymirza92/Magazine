@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
       <body
         style={{
           display: "flex",
+          justifyContent: "center",
           flexDirection: "column",
           minHeight: "100vh",
           margin: "0",
