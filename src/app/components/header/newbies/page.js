@@ -2,8 +2,6 @@
 import React from "react";
 import styled from "styled-components";
 
-// import AutoCar from "../..public/auto.png";
-
 //NEWBIES
 
 const Newbies = styled.div`
@@ -78,16 +76,23 @@ const MessageText = styled.div`
     width: 2rem;
     border-radius: 50%;
     margin-right: 1rem;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      transform: scale(1.3);
+    }
   }
 
   h4 {
     display: inline-block;
-    margin-right: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
     font-size: 0.9rem;
     font-weight: 600;
     color: #333;
 
-  span {
+    span {
       width: 1rem;
       font-size: 0.8rem;
       font-weight: 400;
@@ -95,14 +100,19 @@ const MessageText = styled.div`
   }
   .smsicon {
     width: 1rem;
-    
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      transform: scale(1.3);
+    }
   }
 
   p {
     font-size: 0.7rem;
-    padding-top: 0.8rem;
+    padding-top: 1.5rem;
     color: #666;
-   
   }
 `;
 
@@ -150,7 +160,12 @@ const Price = styled.div`
   .price {
     width: 2.5rem;
     border-radius: 50%;
-    // margin-left: -5rem;
+    cursor: pointer;
+
+    &:hover {
+      transition: all 0.2s ease;
+      transform: scale(1.1);
+    }
   }
 `;
 const Like = styled.div`
@@ -180,12 +195,26 @@ const Like = styled.div`
     background-color: rgb(205, 219, 187);
     border-radius: 3px;
     margin-top: -1rem;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      transform: scale(1.1);
+    }
+    }
+
   }
 
   .like {
     width: 1rem;
     height: 1.2rem;
     margin-top: -1.1rem;
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      transform: scale(1.1);
+    }
   }
 `;
 
@@ -205,12 +234,18 @@ const Left = styled.div`
 
 const Cats = styled.div`
   display: flex;
-
   flex-direction: column;
   width: 16.4rem;
   height: 23.1rem;
   background-color: #fff;
   border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d9dbd9;
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+  }
 
   .cat {
     border-radius: 1rem 1rem 0 0;
@@ -247,6 +282,13 @@ const Cofee = styled.div`
   height: 10.6rem;
   background-color: #fff;
   border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d9dbd9;
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+  }
 
   h4 {
     gap: 1rem;
@@ -282,6 +324,13 @@ const Manufactura = styled.div`
   height: 10.6rem;
   background-color: #fff;
   border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d9dbd9;
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+  }
 
   .header {
     letter-spacing: 0.2px;
@@ -316,6 +365,13 @@ const Stressful = styled.div`
   height: 10.6rem;
   background-color: #fff;
   border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d9dbd9;
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+  }
 
   h4 {
     font-size: 1rem;
@@ -350,6 +406,13 @@ const Lemon = styled.div`
   height: 10.6rem;
   background-color: #fff;
   border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d9dbd9;
+    transition: all 0.2s ease;
+    transform: scale(1.05);
+  }
 
   h4 {
     font-size: 1rem;
@@ -377,7 +440,7 @@ const Lemon = styled.div`
   }
 `;
 
-const Right = styled.div``;
+// COLUMNS
 
 const Columns = styled.div`
   width: 12.5rem;
@@ -385,6 +448,7 @@ const Columns = styled.div`
   background-color: #6e99ae;
   margin-left: 6.12rem;
   border-radius: 1rem;
+  margin-top: -0.6rem;
 `;
 
 const ColumsHeader = styled.h4`
@@ -400,24 +464,43 @@ const ColumsHeader = styled.h4`
 const Aforizm = styled.div`
   padding: 1rem;
 `;
+// Devid
 
 const Devid = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   height: 13rem;
-  border-bottom: 2px solid #ccc;
+  border-bottom: 1px solid #ccc;
 
   h4 {
     font-size: 1rem;
   }
+`;
 
+const InfoDevid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1rem;
+`;
+const DevidImg = styled.div`
   .devid {
     width: 3rem;
     border-radius: 50%;
   }
+`;
+
+const DevidName = styled.div`
+  width: 60%;
+  margin-left: 4rem;
+  margin-top: -2.5rem;
+
   .name {
+    margin: 0rem;
     font-size: 0.8rem;
     color: #fff;
+    width: 6rem;
   }
   .specialist {
     font-size: 0.7rem;
@@ -425,59 +508,117 @@ const Devid = styled.div`
   }
 `;
 
+//ALEXANDRA
+
 const Alexandra = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  height: 15rem;
-  border-bottom: 2px solid #ccc;
+  height: 13rem;
+  border-bottom: 1px solid #ccc;
+  margin-top: 1rem;
 
   h4 {
     font-size: 1rem;
   }
+`;
 
+const InfoAlexandr = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1rem;
+`;
+const AlexImg = styled.div`
   .green {
     width: 3rem;
     border-radius: 50%;
   }
+`;
+
+const AlexName = styled.div`
+  width: 70%;
+  height: 3rem;
+  margin-left: 4rem;
+  margin-top: -2.5rem;
+  gap: 0.5rem;
+
   .name {
+    margin: 0rem;
     font-size: 0.8rem;
     color: #fff;
+    width: auto;
   }
   .specialist {
     font-size: 0.7rem;
     color: #fff;
   }
 `;
+
+// OLIVIA
 
 const Olivia = styled.div`
   display: flex;
   flex-direction: column;
-  height: 15rem;
-  border-bottom: 2px solid #ccc;
+  justify-content: center;
+  height: 13rem;
+  // border-bottom: 1px solid #aaa;
 
   h4 {
     font-size: 1rem;
   }
+`;
 
+const InfoOlivia = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+`;
+const OliviImg = styled.div`
   .olivia {
+  disolay-inline-block;
     width: 3rem;
     border-radius: 50%;
   }
+`;
+
+const OliviaName = styled.div`
+  width: 60%;
+  margin-left: 4rem;
+  margin-top: -2.5rem;
+
   .name {
+    margin: 0rem;
     font-size: 0.8rem;
     color: #fff;
+    width: 6rem;
   }
   .specialist {
     font-size: 0.7rem;
     color: #fff;
   }
 `;
+
+// BUTTONS
 
 const Buttons = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #aaa;
+  width: 100%;
+  height: 2.5rem;
+  background-color: inherit;
+  border: none;
+  border-radius: 0 0 1rem 1rem;
+  border-top: 1px solid #abd;
+
+  &:hover {
+    background-color: #919fa5;
+    animation: 0.3s;
+    color: black;
+    transition: all 0.2s ease;
+  }
 `;
 
 // HTML QISMI
@@ -577,21 +718,39 @@ const New = () => {
         <Aforizm>
           <Devid>
             <h4>Architecture is the thoughtful making of space</h4>
-            <img src="/devid.png" alt="Devid" className="devid" />
-            <p className="name">Devid Williams</p>
-            <p className="specialist">Architect</p>
+            <InfoDevid>
+              <DevidImg>
+                <img src="/devid.png" alt="Devid" className="devid" />
+              </DevidImg>
+              <DevidName>
+                <p className="name">Devid Williams</p>
+                <p className="specialist">Architect</p>
+              </DevidName>
+            </InfoDevid>
           </Devid>
           <Alexandra>
-            <h4>The details are not the details. They make the design.</h4>
-            <img src="/green.png" alt="Green" className="green" />
-            <p className="name">Alexandra Green</p>
-            <p className="specialist">Interior desinger</p>
+            <h4>Architecture is the thoughtful making of space</h4>
+            <InfoAlexandr>
+              <AlexImg>
+                <img src="/green.png" alt="Green" className="green" />
+              </AlexImg>
+              <AlexName>
+                <p className="name">Alexandra Green</p>
+                <p className="specialist">Interrior desinger</p>
+              </AlexName>
+            </InfoAlexandr>
           </Alexandra>
           <Olivia>
-            <h4>Live life to the fullest, and focus on the positive</h4>
-            <img src="/olivia.png" alt="Olivia" className="olivia" />
-            <p className="name">Olivia Thompson</p>
-            <p className="specialist">Coacher</p>
+            <h4>Architecture is the thoughtful making of space</h4>
+            <InfoOlivia>
+              <OliviImg>
+                <img src="/olivia.png" alt="Olivia" className="olivia" />
+              </OliviImg>
+              <OliviaName>
+                <p className="name">Olivia Thomson</p>
+                <p className="specialist">Coach</p>
+              </OliviaName>
+            </InfoOlivia>
           </Olivia>
         </Aforizm>
         <Buttons>Read more</Buttons>
