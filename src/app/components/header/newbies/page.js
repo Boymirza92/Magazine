@@ -111,7 +111,7 @@ const MessageText = styled.div`
 
   p {
     font-size: 0.7rem;
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
     color: #666;
   }
 `;
@@ -712,7 +712,6 @@ const New = () => {
           </Info>
         </MessagTwo>
       </Left>
-
       <Columns>
         <ColumsHeader>COLUMNS</ColumsHeader>
         <Aforizm>
@@ -755,6 +754,7 @@ const New = () => {
         </Aforizm>
         <Buttons>Read more</Buttons>
       </Columns>
+      
     </Newbies>
   );
 };
