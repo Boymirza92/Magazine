@@ -40,7 +40,7 @@ const Button = styled.button`
 
   &:hover {
     background-color: rgb(25, 155, 210);
-    animation: 0.3s;
+    transition: all 0.2s ease;
     color: black;
     // transition: all 0.2s ease;
   }
@@ -51,7 +51,7 @@ const Button = styled.button`
 const InterestingNews = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 72%;
+  width: 73%;
   border-radius: 1rem;
   margin-top: 3rem;
   margin-left: 12.4rem;
@@ -60,7 +60,7 @@ const InterestingNews = styled.div`
 const News = styled.div`
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 78%;
   border-radius: 1rem;
   background-color: #fff;
   padding: 1.5rem;
@@ -279,7 +279,7 @@ const SciancText = styled.div`
   }
 `;
 
-const ScianText= styled.div`
+const ScianText = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -420,7 +420,6 @@ const FlowerCart = styled.div`
 `;
 
 const FlowerImg = styled.div`
-
   .airlines {
     width: 21rem;
     height: 15rem;
@@ -584,12 +583,104 @@ const CommentArt = styled.div`
 //RECOMMENDET
 
 const Recommendet = styled.div`
-  width: 12rem;
+  width: 13.5rem;
   height: 48rem;
   background-color: #fff;
   border-radius: 1rem;
   margin-left: 1.5rem;
 `;
+
+const RecomYou = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  border-bottom: 0.01px solid #aaa;
+
+  h4 {
+    font-weight: bold;
+    color: rgb(24, 30, 38);
+    letter-spacing: 0.02px;
+    font-size: 0.8rem;
+  }
+`;
+
+const Posts = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0.5rem;
+`;
+
+const Office = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(198, 198, 222);
+`;
+
+const OfficeImage = styled.div`
+
+.avatarka {
+    width: 3.5rem;
+  }
+}
+`;
+
+const PostText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
+
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
+
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
+
+const Muzic = styled.div``;
+
+const BirImage = styled.div``;
+
+const MuzicText = styled.div``;
+
+const Google = styled.div``;
+
+const HandImage = styled.div``;
+
+const GooglText = styled.div``;
+
+const Homes = styled.div``;
+
+const ManImage = styled.div``;
+
+const HomesText = styled.div``;
+
+const AreYou = styled.div``;
+
+const TableImage = styled.div``;
+
+const YouText = styled.div``;
+
+const TheNew = styled.div``;
+
+const FenceImage = styled.div``;
+
+const TheNewText = styled.div``;
+
+const Sunday = styled.div``;
+
+const BattleImage = styled.div``;
+
+const SundayText = styled.div``;
+
+const ButtonMore = styled.button``;
 
 const Flower = () => {
   return (
@@ -703,7 +794,9 @@ const Flower = () => {
                 <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
               </HealtText>
               <TextHealt>
-                <h2 className="header">How the Shape of Your Ears Affects What You Hear</h2>
+                <h2 className="header">
+                  How the Shape of Your Ears Affects What You Hear
+                </h2>
                 <p className="text">
                   We’re able to locate sound because our brains grasp the shape
                   of our ears. When that shape changes, we need time and
@@ -731,7 +824,6 @@ const Flower = () => {
               </ScianseText>
               <TextFlower>
                 <h2 className="header">
-                  
                   Watch the High-Flying Physics of a Plant’s Exploding Fruits
                 </h2>
                 <p className="text">
@@ -780,79 +872,77 @@ const Flower = () => {
             </Art>
           </ArtCart>
         </News>
-        {/* <Recommendet>
+        <Recommendet>
           <RecomYou>
-            <h3></h3>
+            <h4>RECOMMENDET FOR YOU</h4>
           </RecomYou>
           <Posts>
             <Office>
-              <OfficeIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </OfficeIMage>
+              <OfficeImage>
+                <img src="/rec office.png" alt="" className="avatarka" />
+              </OfficeImage>
               <PostText>
-                <h3></h3>
-                <p></p>
+                <p className="text">Office Meetings Leave the Office</p>
+                <p className="time">32 minuts ago</p>
               </PostText>
             </Office>
             <Muzic>
-              <BirIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </BirIMage>
+              <BirImage>
+                <img src="/rec exper.png" alt="" className="avatarka" />
+              </BirImage>
               <MuzicText>
-                <h3></h3>
-                <p></p>
+                <p className="text">Experimental Vocal Music in Brooklyn</p>
+                <p className="time">32 minuts ago</p>
               </MuzicText>
             </Muzic>
             <Google>
-              <HandIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </HandIMage>
+              <HandImage>
+                <img src="/rec googles.png" alt="" className="avatarka" />
+              </HandImage>
               <GooglText>
-                <h3></h3>
-                <p></p>
+                <p className="text">Google’s Influence Over Think Tanks</p>
+                <p className="title">38 minuts ago</p>
               </GooglText>
             </Google>
             <Homes>
-              <ManIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </ManIMage>
+              <ManImage>
+                <img src="/rec homens.png" alt="" className="avatarka" />
+              </ManImage>
               <HomesText>
-                <h3></h3>
-                <p></p>
+                <p className="text">Homes for Sale in NYC and Connecticut</p>
+                <p className="time">53 minuts ago</p>
               </HomesText>
             </Homes>
             <AreYou>
-              <TableIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </TableIMage>
+              <TableImage>
+                <img src="/rec are you.png" alt="" className="avatarka" />
+              </TableImage>
               <YouText>
-                <h3></h3>
-                <p></p>
+                <p className="text">Are You There, Dad? It’s Me, Alice</p>
+                <p className="time">1 hour ago</p>
               </YouText>
             </AreYou>
             <TheNew>
-              <FenceIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </FenceIMage>
+              <FenceImage>
+                <img src="/rec sunday.png" alt="" className="avatarka" />
+              </FenceImage>
               <TheNewText>
-                <h3></h3>
-                <p></p>
+                <p className="text">The New Punk Look: Lacy and Colorful</p>
+                <p className="time">1 hour ago</p>
               </TheNewText>
             </TheNew>
             <Sunday>
-              <BattleIMage>
-                <img src="/.png" alt="" className="avatarka" />
-              </BattleIMage>
+              <BattleImage>
+                <img src="/rec shisha.png" alt="" className="avatarka" />
+              </BattleImage>
               <SundayText>
-                <h3></h3>
-                <p></p>
+                <p className="text">Sunday Best in Harlem and Brooklyn</p>
+                <p className="time">2 hours ago</p>
               </SundayText>
             </Sunday>
           </Posts>
-          <Button>ReadMore</Button>
-
-
-        </Recommendet> */}
+          <ButtonMore>ReadMore</ButtonMore>
+        </Recommendet>
       </InterestingNews>
     </NewsContainer>
   );
