@@ -72,7 +72,6 @@ const FlightCart = styled.div`
   width: 53rem;
   height: 17rem;
   margin: 0 1rem 1rem 0;
-  border-bottom: 2px solid rgb(202, 209, 212);
 `;
 
 const Image = styled.div`
@@ -104,6 +103,12 @@ const FlightText = styled.div`
     width: 0.8rem;
     height: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+    }
   }
 `;
 
@@ -158,7 +163,6 @@ const FoodCart = styled.div`
   width: 53rem;
   height: 17rem;
   margin: 0 1rem 1rem 0;
-  border-bottom: 2px solid rgb(202, 209, 212);
 `;
 
 const ImageFood = styled.div`
@@ -190,6 +194,12 @@ const FoodText = styled.div`
     width: 0.8rem;
     height: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+    }
   }
 `;
 
@@ -244,7 +254,6 @@ const ScienceCart = styled.div`
   width: 53rem;
   height: 17rem;
   margin: 0 1rem 1rem 0;
-  border-bottom: 2px solid rgb(202, 209, 212);
 `;
 
 const ImageScience = styled.div`
@@ -276,6 +285,12 @@ const SciancText = styled.div`
     width: 0.8rem;
     height: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease;
+    }
   }
 `;
 
@@ -330,7 +345,6 @@ const HealtCart = styled.div`
   width: 53rem;
   height: 17rem;
   margin: 0 1rem 1rem 0;
-  border-bottom: 2px solid rgb(202, 209, 212);
 `;
 
 const ImageHealt = styled.div`
@@ -362,6 +376,12 @@ const HealtText = styled.div`
     width: 0.8rem;
     height: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.2s ease;
+    }
   }
 `;
 
@@ -416,7 +436,6 @@ const FlowerCart = styled.div`
   width: 53rem;
   height: 17rem;
   margin: 0 1rem 1rem 0;
-  border-bottom: 2px solid rgb(202, 209, 212);
 `;
 
 const FlowerImg = styled.div`
@@ -448,6 +467,12 @@ const ScianseText = styled.div`
     width: 0.8rem;
     height: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.2s ease;
+    }
   }
 `;
 
@@ -502,7 +527,6 @@ const ArtCart = styled.div`
   width: 53rem;
   height: 17rem;
   margin: 0 1rem 1rem 0;
-  border-bottom: 2px solid rgb(202, 209, 212);
 `;
 
 const ArtImage = styled.div`
@@ -534,6 +558,12 @@ const ArtDesinger = styled.div`
     width: 0.8rem;
     height: 1rem;
     margin-left: 1rem;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.2s ease;
+    }
   }
 `;
 
@@ -617,14 +647,19 @@ const Office = styled.div`
   display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid rgb(198, 198, 222);
+  height: 5rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
 `;
 
 const OfficeImage = styled.div`
-
-.avatarka {
+  .avatarka {
     width: 3.5rem;
   }
-}
 `;
 
 const PostText = styled.div`
@@ -644,43 +679,241 @@ const PostText = styled.div`
   }
 `;
 
-const Muzic = styled.div``;
+const Muzic = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(198, 198, 222);
+  height: 5rem;
+  cursor: pointer;
 
-const BirImage = styled.div``;
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+`;
 
-const MuzicText = styled.div``;
+const BirImage = styled.div`
+  .avatarka {
+    width: 3.5rem;
+  }
+`;
 
-const Google = styled.div``;
+const MuzicText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
 
-const HandImage = styled.div``;
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
 
-const GooglText = styled.div``;
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
 
-const Homes = styled.div``;
+const Google = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(198, 198, 222);
+  height: 5rem;
+  cursor: pointer;
 
-const ManImage = styled.div``;
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+`;
 
-const HomesText = styled.div``;
+const HandImage = styled.div`
+  .avatarka {
+    width: 3.5rem;
+  }
+`;
 
-const AreYou = styled.div``;
+const GooglText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
 
-const TableImage = styled.div``;
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
 
-const YouText = styled.div``;
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
 
-const TheNew = styled.div``;
+const Homes = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(198, 198, 222);
+  height: 5rem;
+  cursor: pointer;
 
-const FenceImage = styled.div``;
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+`;
 
-const TheNewText = styled.div``;
+const ManImage = styled.div`
+  .avatarka {
+    width: 3.5rem;
+  }
+`;
 
-const Sunday = styled.div``;
+const HomesText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
 
-const BattleImage = styled.div``;
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
 
-const SundayText = styled.div``;
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
 
-const ButtonMore = styled.button``;
+const AreYou = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(198, 198, 222);
+  height: 5rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+`;
+
+const TableImage = styled.div`
+  .avatarka {
+    width: 3.5rem;
+  }
+`;
+
+const YouText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
+
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
+
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
+
+const TheNew = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgb(198, 198, 222);
+  height: 5rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+`;
+
+const FenceImage = styled.div`
+  .avatarka {
+    width: 3.5rem;
+  }
+`;
+
+const TheNewText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
+
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
+
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
+
+const Sunday = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  height: 5rem;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.2s ease;
+  }
+
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
+
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+`;
+
+const BattleImage = styled.div`
+  .avatarka {
+    width: 3.5rem;
+  }
+`;
+
+const SundayText = styled.div`
+  width: 7.5rem;
+  padding-left: 0.5rem;
+  letter-spacing: 0.3px;
+`;
+
+const ButtonMore = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  font-size: 0.9rem;
+  background-color: inherit;
+  border: none;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgb(198, 198, 222);
+
+  color: rgb(18, 19, 20);
+
+  &:hover {
+    font-size: 1rem;
+    color: rgb(65, 74, 84);
+    transition: all 0.2s ease;
+  }
+`;
 
 const Flower = () => {
   return (
@@ -901,7 +1134,7 @@ const Flower = () => {
               </HandImage>
               <GooglText>
                 <p className="text">Google’s Influence Over Think Tanks</p>
-                <p className="title">38 minuts ago</p>
+                <p className="time">38 minuts ago</p>
               </GooglText>
             </Google>
             <Homes>
@@ -940,8 +1173,8 @@ const Flower = () => {
                 <p className="time">2 hours ago</p>
               </SundayText>
             </Sunday>
+            <ButtonMore>Read more ➡</ButtonMore>
           </Posts>
-          <ButtonMore>ReadMore</ButtonMore>
         </Recommendet>
       </InterestingNews>
     </NewsContainer>
