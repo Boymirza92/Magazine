@@ -1,7 +1,11 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import WineCarouselcard from "./leftCard/page";
+import WineCarouselCard from "./leftCard/page";
 // FLOWER
 
 const NewsContainer = styled.div`
@@ -106,8 +110,8 @@ const FlightText = styled.div`
     cursor: pointer;
 
     &:hover {
-    transform: scale(1.2);
-    transition: all 0.2s ease;
+      transform: scale(1.2);
+      transition: all 0.2s ease;
     }
   }
 `;
@@ -197,8 +201,8 @@ const FoodText = styled.div`
     cursor: pointer;
 
     &:hover {
-    transform: scale(1.2);
-    transition: all 0.2s ease;
+      transform: scale(1.2);
+      transition: all 0.2s ease;
     }
   }
 `;
@@ -288,8 +292,8 @@ const SciancText = styled.div`
     cursor: pointer;
 
     &:hover {
-    transform: scale(1.2);
-    transition: all 0.2s ease;
+      transform: scale(1.2);
+      transition: all 0.2s ease;
     }
   }
 `;
@@ -915,270 +919,406 @@ const ButtonMore = styled.button`
   }
 `;
 
+//CARD CONTAINER
+
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height:43rem;
+`;
+
+const LeftCard = styled.div``;
+
+const Hot = styled.div``;
+
+const HotClick = styled.div``;
+
+const Avatar = styled.div``;
+
+const HeaderText = styled.div``;
+
+const Carousel = styled.div``;
+
+const SliderAlt = styled.div``;
+
+const ImageOne = styled.div``;
+
+const ImageTwo = styled.div``;
+
+const ImageThree = styled.div``;
+
+const RightCard = styled.div``;
+
+const Careers = styled.div``;
+
+const InfoCard = styled.div``;
+
+const IsCofee = styled.div``;
+
+const Manufaktura = styled.div``;
+
 const Flower = () => {
-  return (
-    <NewsContainer>
-      <FlowerImage>
-        <Header>
-          The Big Bloom or «How Flowering <br />
-          Plants Changed the World»
-        </Header>
-        <Button>Read more ➡</Button>
-      </FlowerImage>
-      <InterestingNews>
-        <News>
-          <FlightCart>
-            <Image>
-              <img src="/airlans.png" alt="Flower" className="airlines" />
-            </Image>
-            <Flight>
-              <FlightText>
-                <p>FLIGHTS</p>
-                <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
-              </FlightText>
+  
+   
+    //   return (
+    //     <LeftCard>
+    //       <Hot>
+    //         <HotClick>Hot</HotClick>
+    //       </Hot>
+    //       <Avatar>
+    //         <img src="/rec office.png" alt="Avatar" className="avatarka" />
+    //         <p className="name">By Sarah Jenkins</p>
+    //         <p className="work">Photographer</p>
+    //       </Avatar>
+    //       <HeaderText>
+    //         Readers' Choice winners: Your wine country favorites
+    //       </HeaderText>
+    //       <Carousel>
+    //         <h3>Photo carousel</h3>
+    //         <SliderAlt {...settings}>
+    //           <ImageOne>
+    //             <img src="" alt="Slide 1" />
+    //           </ImageOne>
+    //           <ImageTwo>
+    //             <img src="" alt="Slide 1" />
+    //           </ImageTwo>
+    //           <ImageThree>
+    //             <img src="" alt="Slide 1" />
+    //           </ImageThree>
+    //         </SliderAlt>
+    //       </Carousel>
+    //     </LeftCard>
+    //   );
+    // };
 
-              <TextHeader>
-                <h2 className="header">
-                  Passengers Suffer as Crowded Field Puts Pressure on Europe’s
-                  Airlines
-                </h2>
-                <p className="text">
-                  Weaker carriers have fallen by the wayside amid fierce
-                  competition, while others have been hit by bad luck. The
-                  result: thousands of canceled flights.
-                </p>
-                <Comment>
-                  <span>Aug 6</span>
-                  <img src="/Comment.png" alt="Comment" className="comment" />
-                  <span>27</span>
-                  <img src="/like icon.png" alt="Like" className="like" />
-                  <span>233</span>
-                </Comment>
-              </TextHeader>
-            </Flight>
-          </FlightCart>
-          <FoodCart>
-            <ImageFood>
-              <img src="/non.png" alt="non" className="airlines" />
-            </ImageFood>
-            <Food>
-              <FoodText>
-                <p>Food</p>
-                <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
-              </FoodText>
-              <FoodHeader>
-                <h2 className="header">
-                  Three Courses, 20 Euros: The Affordable Dining Renaissance in
-                  Paris
-                </h2>
-                <p className="text">
-                  The Los Angeles area, for all of its culinary diversity, has
-                  not historically been thought of as a haven for bread lovers.
-                  The area has a reputation as a place where gluten fears to
-                  tread.
-                </p>
-                <CommentFood>
-                  <span>Noy 3</span>
+    
+    return (
+      <NewsContainer>
+        <FlowerImage>
+          <Header>
+            The Big Bloom or «How Flowering <br />
+            Plants Changed the World»
+          </Header>
+          <Button>Read more ➡</Button>
+        </FlowerImage>
+        <InterestingNews>
+          <News>
+            <FlightCart>
+              <Image>
+                <img src="/airlans.png" alt="Flower" className="airlines" />
+              </Image>
+              <Flight>
+                <FlightText>
+                  <p>FLIGHTS</p>
+                  <img
+                    src="/Bookmark.png"
+                    alt="Bookmark"
+                    className="bookmark"
+                  />
+                </FlightText>
 
-                  <img src="/Comment.png" alt="Comment" className="comment" />
-                  <span>12</span>
-                  <img src="/like icon.png" alt="Like" className="like" />
-                  <span>133</span>
-                </CommentFood>
-              </FoodHeader>
-            </Food>
-          </FoodCart>
-          <ScienceCart>
-            <ImageScience>
-              <img src="/daraxtlar.png" alt="Daraxtlar" className="airlines" />
-            </ImageScience>
-            <Science>
-              <SciancText>
-                <p>SCIENCE</p>
-                <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
-              </SciancText>
-              <ScianText>
-                <h2 className="header">
-                  Forests Protect the Climate. A Future With More Storms Would
-                  Mean Trouble.
-                </h2>
-                <p className="text">
-                  With an increase in extreme weather expected in the years to
-                  come, forests could be changed permanently as the world
-                  continues to warm
-                </p>
-                <CommentScian>
-                  <span>Jan 12</span>
-                  <img src="/Comment.png" alt="Comment" className="comment" />
-                  <span>21</span>
-                  <img src="/like icon.png" alt="Like" className="like" />
-                  <span>323</span>
-                </CommentScian>
-              </ScianText>
-            </Science>
-          </ScienceCart>
-          <HealtCart>
-            <ImageHealt>
-              <img src="/chomilish.png" alt="cho'milish" className="airlines" />
-            </ImageHealt>
-            <Healt>
-              <HealtText>
-                <p>HEALTH</p>
-                <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
-              </HealtText>
-              <TextHealt>
-                <h2 className="header">
-                  How the Shape of Your Ears Affects What You Hear
-                </h2>
-                <p className="text">
-                  We’re able to locate sound because our brains grasp the shape
-                  of our ears. When that shape changes, we need time and
-                  practice to adapt. Ears are a peculiarly individual piece of
-                  anatomy.
-                </p>
-                <CommentHealt>
-                  <span>Feb 2</span>
-                  <img src="/Comment.png" alt="Comment" className="comment" />
-                  <span>12</span>
-                  <img src="/like icon.png" alt="Like" className="like" />
-                  <span>12,3</span>
-                </CommentHealt>
-              </TextHealt>
-            </Healt>
-          </HealtCart>
-          <FlowerCart>
-            <FlowerImg>
-              <img src="/gul.png" alt="Flower" className="airlines" />
-            </FlowerImg>
-            <Flowers>
-              <ScianseText>
-                <p>SCIENCE</p>
-                <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
-              </ScianseText>
-              <TextFlower>
-                <h2 className="header">
-                  Watch the High-Flying Physics of a Plant’s Exploding Fruits
-                </h2>
-                <p className="text">
-                  Three undergradute physics majors and their professor worked
-                  out how the hairyflower wild petunia shoots tiny seeds more
-                  than 20 feet through the air
-                </p>
-                <CommentFlower>
-                  <span>Mar 21</span>
-                  <img src="/Comment.png" alt="Comment" className="comment" />
-                  <span>30</span>
-                  <img src="/like icon.png" alt="Like" className="like" />
-                  <span>155</span>
-                </CommentFlower>
-              </TextFlower>
-            </Flowers>
-          </FlowerCart>
-          <ArtCart>
-            <ArtImage>
-              <img src="/bino.png" alt="Bino" className="airlines" />
-            </ArtImage>
-            <Art>
-              <ArtDesinger>
-                <p>ART & DESINGER</p>
-                <img src="/Bookmark.png" alt="Bookmark" className="bookmark" />
-              </ArtDesinger>
-              <DesingText>
-                <h2 className="header">
-                  New Contemporary Institute Reverberates in Richmond’s Historic
-                  Landscape
-                </h2>
-                <p className="text">
-                  The center, which will open in April, takes a bold look at
-                  race and other social issues that still resonate in the region
-                  as well as the nation. A new Institute for Contemporary Art is
-                  set to open.
-                </p>
-                <CommentArt>
-                  <span>Aug 28</span>
-                  <img src="/Comment.png" alt="Comment" className="comment" />
-                  <span>199</span>
-                  <img src="/like icon.png" alt="Like" className="like" />
-                  <span>512</span>
-                </CommentArt>
-              </DesingText>
-            </Art>
-          </ArtCart>
-        </News>
-        <Recommendet>
-          <RecomYou>
-            <h4>RECOMMENDET FOR YOU</h4>
-          </RecomYou>
-          <Posts>
-            <Office>
-              <OfficeImage>
-                <img src="/rec office.png" alt="" className="avatarka" />
-              </OfficeImage>
-              <PostText>
-                <p className="text">Office Meetings Leave the Office</p>
-                <p className="time">32 minuts ago</p>
-              </PostText>
-            </Office>
-            <Muzic>
-              <BirImage>
-                <img src="/rec exper.png" alt="" className="avatarka" />
-              </BirImage>
-              <MuzicText>
-                <p className="text">Experimental Vocal Music in Brooklyn</p>
-                <p className="time">32 minuts ago</p>
-              </MuzicText>
-            </Muzic>
-            <Google>
-              <HandImage>
-                <img src="/rec googles.png" alt="" className="avatarka" />
-              </HandImage>
-              <GooglText>
-                <p className="text">Google’s Influence Over Think Tanks</p>
-                <p className="time">38 minuts ago</p>
-              </GooglText>
-            </Google>
-            <Homes>
-              <ManImage>
-                <img src="/rec homens.png" alt="" className="avatarka" />
-              </ManImage>
-              <HomesText>
-                <p className="text">Homes for Sale in NYC and Connecticut</p>
-                <p className="time">53 minuts ago</p>
-              </HomesText>
-            </Homes>
-            <AreYou>
-              <TableImage>
-                <img src="/rec are you.png" alt="" className="avatarka" />
-              </TableImage>
-              <YouText>
-                <p className="text">Are You There, Dad? It’s Me, Alice</p>
-                <p className="time">1 hour ago</p>
-              </YouText>
-            </AreYou>
-            <TheNew>
-              <FenceImage>
-                <img src="/rec sunday.png" alt="" className="avatarka" />
-              </FenceImage>
-              <TheNewText>
-                <p className="text">The New Punk Look: Lacy and Colorful</p>
-                <p className="time">1 hour ago</p>
-              </TheNewText>
-            </TheNew>
-            <Sunday>
-              <BattleImage>
-                <img src="/rec shisha.png" alt="" className="avatarka" />
-              </BattleImage>
-              <SundayText>
-                <p className="text">Sunday Best in Harlem and Brooklyn</p>
-                <p className="time">2 hours ago</p>
-              </SundayText>
-            </Sunday>
-            <ButtonMore>Read more ➡</ButtonMore>
-          </Posts>
-        </Recommendet>
-      </InterestingNews>
-    </NewsContainer>
-  );
-};
+                <TextHeader>
+                  <h2 className="header">
+                    Passengers Suffer as Crowded Field Puts Pressure on Europe’s
+                    Airlines
+                  </h2>
+                  <p className="text">
+                    Weaker carriers have fallen by the wayside amid fierce
+                    competition, while others have been hit by bad luck. The
+                    result: thousands of canceled flights.
+                  </p>
+                  <Comment>
+                    <span>Aug 6</span>
+                    <img src="/Comment.png" alt="Comment" className="comment" />
+                    <span>27</span>
+                    <img src="/like icon.png" alt="Like" className="like" />
+                    <span>233</span>
+                  </Comment>
+                </TextHeader>
+              </Flight>
+            </FlightCart>
+            <FoodCart>
+              <ImageFood>
+                <img src="/non.png" alt="non" className="airlines" />
+              </ImageFood>
+              <Food>
+                <FoodText>
+                  <p>Food</p>
+                  <img
+                    src="/Bookmark.png"
+                    alt="Bookmark"
+                    className="bookmark"
+                  />
+                </FoodText>
+                <FoodHeader>
+                  <h2 className="header">
+                    Three Courses, 20 Euros: The Affordable Dining Renaissance
+                    in Paris
+                  </h2>
+                  <p className="text">
+                    The Los Angeles area, for all of its culinary diversity, has
+                    not historically been thought of as a haven for bread
+                    lovers. The area has a reputation as a place where gluten
+                    fears to tread.
+                  </p>
+                  <CommentFood>
+                    <span>Noy 3</span>
+
+                    <img src="/Comment.png" alt="Comment" className="comment" />
+                    <span>12</span>
+                    <img src="/like icon.png" alt="Like" className="like" />
+                    <span>133</span>
+                  </CommentFood>
+                </FoodHeader>
+              </Food>
+            </FoodCart>
+            <ScienceCart>
+              <ImageScience>
+                <img
+                  src="/daraxtlar.png"
+                  alt="Daraxtlar"
+                  className="airlines"
+                />
+              </ImageScience>
+              <Science>
+                <SciancText>
+                  <p>SCIENCE</p>
+                  <img
+                    src="/Bookmark.png"
+                    alt="Bookmark"
+                    className="bookmark"
+                  />
+                </SciancText>
+                <ScianText>
+                  <h2 className="header">
+                    Forests Protect the Climate. A Future With More Storms Would
+                    Mean Trouble.
+                  </h2>
+                  <p className="text">
+                    With an increase in extreme weather expected in the years to
+                    come, forests could be changed permanently as the world
+                    continues to warm
+                  </p>
+                  <CommentScian>
+                    <span>Jan 12</span>
+                    <img src="/Comment.png" alt="Comment" className="comment" />
+                    <span>21</span>
+                    <img src="/like icon.png" alt="Like" className="like" />
+                    <span>323</span>
+                  </CommentScian>
+                </ScianText>
+              </Science>
+            </ScienceCart>
+            <HealtCart>
+              <ImageHealt>
+                <img
+                  src="/chomilish.png"
+                  alt="cho'milish"
+                  className="airlines"
+                />
+              </ImageHealt>
+              <Healt>
+                <HealtText>
+                  <p>HEALTH</p>
+                  <img
+                    src="/Bookmark.png"
+                    alt="Bookmark"
+                    className="bookmark"
+                  />
+                </HealtText>
+                <TextHealt>
+                  <h2 className="header">
+                    How the Shape of Your Ears Affects What You Hear
+                  </h2>
+                  <p className="text">
+                    We’re able to locate sound because our brains grasp the
+                    shape of our ears. When that shape changes, we need time and
+                    practice to adapt. Ears are a peculiarly individual piece of
+                    anatomy.
+                  </p>
+                  <CommentHealt>
+                    <span>Feb 2</span>
+                    <img src="/Comment.png" alt="Comment" className="comment" />
+                    <span>12</span>
+                    <img src="/like icon.png" alt="Like" className="like" />
+                    <span>12,3</span>
+                  </CommentHealt>
+                </TextHealt>
+              </Healt>
+            </HealtCart>
+            <FlowerCart>
+              <FlowerImg>
+                <img src="/gul.png" alt="Flower" className="airlines" />
+              </FlowerImg>
+              <Flowers>
+                <ScianseText>
+                  <p>SCIENCE</p>
+                  <img
+                    src="/Bookmark.png"
+                    alt="Bookmark"
+                    className="bookmark"
+                  />
+                </ScianseText>
+                <TextFlower>
+                  <h2 className="header">
+                    Watch the High-Flying Physics of a Plant’s Exploding Fruits
+                  </h2>
+                  <p className="text">
+                    Three undergradute physics majors and their professor worked
+                    out how the hairyflower wild petunia shoots tiny seeds more
+                    than 20 feet through the air
+                  </p>
+                  <CommentFlower>
+                    <span>Mar 21</span>
+                    <img src="/Comment.png" alt="Comment" className="comment" />
+                    <span>30</span>
+                    <img src="/like icon.png" alt="Like" className="like" />
+                    <span>155</span>
+                  </CommentFlower>
+                </TextFlower>
+              </Flowers>
+            </FlowerCart>
+            <ArtCart>
+              <ArtImage>
+                <img src="/bino.png" alt="Bino" className="airlines" />
+              </ArtImage>
+              <Art>
+                <ArtDesinger>
+                  <p>ART & DESINGER</p>
+                  <img
+                    src="/Bookmark.png"
+                    alt="Bookmark"
+                    className="bookmark"
+                  />
+                </ArtDesinger>
+                <DesingText>
+                  <h2 className="header">
+                    New Contemporary Institute Reverberates in Richmond’s
+                    Historic Landscape
+                  </h2>
+                  <p className="text">
+                    The center, which will open in April, takes a bold look at
+                    race and other social issues that still resonate in the
+                    region as well as the nation. A new Institute for
+                    Contemporary Art is set to open.
+                  </p>
+                  <CommentArt>
+                    <span>Aug 28</span>
+                    <img src="/Comment.png" alt="Comment" className="comment" />
+                    <span>199</span>
+                    <img src="/like icon.png" alt="Like" className="like" />
+                    <span>512</span>
+                  </CommentArt>
+                </DesingText>
+              </Art>
+            </ArtCart>
+          </News>
+          <Recommendet>
+            <RecomYou>
+              <h4>RECOMMENDET FOR YOU</h4>
+            </RecomYou>
+            <Posts>
+              <Office>
+                <OfficeImage>
+                  <img src="/rec office.png" alt="" className="avatarka" />
+                </OfficeImage>
+                <PostText>
+                  <p className="text">Office Meetings Leave the Office</p>
+                  <p className="time">32 minuts ago</p>
+                </PostText>
+              </Office>
+              <Muzic>
+                <BirImage>
+                  <img src="/rec exper.png" alt="" className="avatarka" />
+                </BirImage>
+                <MuzicText>
+                  <p className="text">Experimental Vocal Music in Brooklyn</p>
+                  <p className="time">32 minuts ago</p>
+                </MuzicText>
+              </Muzic>
+              <Google>
+                <HandImage>
+                  <img src="/rec googles.png" alt="" className="avatarka" />
+                </HandImage>
+                <GooglText>
+                  <p className="text">Google’s Influence Over Think Tanks</p>
+                  <p className="time">38 minuts ago</p>
+                </GooglText>
+              </Google>
+              <Homes>
+                <ManImage>
+                  <img src="/rec homens.png" alt="" className="avatarka" />
+                </ManImage>
+                <HomesText>
+                  <p className="text">Homes for Sale in NYC and Connecticut</p>
+                  <p className="time">53 minuts ago</p>
+                </HomesText>
+              </Homes>
+              <AreYou>
+                <TableImage>
+                  <img src="/rec are you.png" alt="" className="avatarka" />
+                </TableImage>
+                <YouText>
+                  <p className="text">Are You There, Dad? It’s Me, Alice</p>
+                  <p className="time">1 hour ago</p>
+                </YouText>
+              </AreYou>
+              <TheNew>
+                <FenceImage>
+                  <img src="/rec sunday.png" alt="" className="avatarka" />
+                </FenceImage>
+                <TheNewText>
+                  <p className="text">The New Punk Look: Lacy and Colorful</p>
+                  <p className="time">1 hour ago</p>
+                </TheNewText>
+              </TheNew>
+              <Sunday>
+                <BattleImage>
+                  <img src="/rec shisha.png" alt="" className="avatarka" />
+                </BattleImage>
+                <SundayText>
+                  <p className="text">Sunday Best in Harlem and Brooklyn</p>
+                  <p className="time">2 hours ago</p>
+                </SundayText>
+              </Sunday>
+              <ButtonMore>Read more ➡</ButtonMore>
+            </Posts>
+          </Recommendet>
+        </InterestingNews>
+        {/* <CardContainer>
+          <RightCard>
+            <Careers>
+              <p className="careers">CAREERS</p>
+              <h3 className="Interview">
+                Had a Job Interview but No Callback? Here’s What to Do
+              </h3>
+              <p>
+                Try to understand the culture of the company where you want to
+                work and be authentic in your interview, experts emphasize
+              </p>
+              <ButtonCareers>Read more ➡</ButtonCareers>
+            </Careers>
+            <InfoCard>
+              <IsCofee>
+                <h5 className="header"></h5>
+                <p className="info"></p>
+                <p className="data"></p>
+              </IsCofee>
+              <Manufaktura>
+                <h5 className="header"></h5>
+                <p className="info"></p>
+                <p className="data"></p>
+              </Manufaktura>
+            </InfoCard>
+          </RightCard>
+        </CardContainer> */}
+        <WineCarouselCard />
+      </NewsContainer>
+    );
+  };
+
 
 export default Flower;
