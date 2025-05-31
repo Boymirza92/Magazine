@@ -1,11 +1,7 @@
 "use client";
 import React from "react";
 import styled from "styled-components";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import WineCarouselcard from "./leftCard/page";
-import WineCarouselCard from "./leftCard/page";
+
 // FLOWER
 
 const NewsContainer = styled.div`
@@ -918,83 +914,8 @@ const ButtonMore = styled.button`
     transition: all 0.2s ease;
   }
 `;
-
-//CARD CONTAINER
-
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  height:43rem;
-`;
-
-const LeftCard = styled.div``;
-
-const Hot = styled.div``;
-
-const HotClick = styled.div``;
-
-const Avatar = styled.div``;
-
-const HeaderText = styled.div``;
-
-const Carousel = styled.div``;
-
-const SliderAlt = styled.div``;
-
-const ImageOne = styled.div``;
-
-const ImageTwo = styled.div``;
-
-const ImageThree = styled.div``;
-
-const RightCard = styled.div``;
-
-const Careers = styled.div``;
-
-const InfoCard = styled.div``;
-
-const IsCofee = styled.div``;
-
-const Manufaktura = styled.div``;
-
 const Flower = () => {
   
-   
-    //   return (
-    //     <LeftCard>
-    //       <Hot>
-    //         <HotClick>Hot</HotClick>
-    //       </Hot>
-    //       <Avatar>
-    //         <img src="/rec office.png" alt="Avatar" className="avatarka" />
-    //         <p className="name">By Sarah Jenkins</p>
-    //         <p className="work">Photographer</p>
-    //       </Avatar>
-    //       <HeaderText>
-    //         Readers' Choice winners: Your wine country favorites
-    //       </HeaderText>
-    //       <Carousel>
-    //         <h3>Photo carousel</h3>
-    //         <SliderAlt {...settings}>
-    //           <ImageOne>
-    //             <img src="" alt="Slide 1" />
-    //           </ImageOne>
-    //           <ImageTwo>
-    //             <img src="" alt="Slide 1" />
-    //           </ImageTwo>
-    //           <ImageThree>
-    //             <img src="" alt="Slide 1" />
-    //           </ImageThree>
-    //         </SliderAlt>
-    //       </Carousel>
-    //     </LeftCard>
-    //   );
-    // };
-
-    
     return (
       <NewsContainer>
         <FlowerImage>
@@ -1275,6 +1196,7 @@ const Flower = () => {
                   <p className="time">1 hour ago</p>
                 </TheNewText>
               </TheNew>
+              
               <Sunday>
                 <BattleImage>
                   <img src="/rec shisha.png" alt="" className="avatarka" />
@@ -1288,34 +1210,6 @@ const Flower = () => {
             </Posts>
           </Recommendet>
         </InterestingNews>
-        {/* <CardContainer>
-          <RightCard>
-            <Careers>
-              <p className="careers">CAREERS</p>
-              <h3 className="Interview">
-                Had a Job Interview but No Callback? Here’s What to Do
-              </h3>
-              <p>
-                Try to understand the culture of the company where you want to
-                work and be authentic in your interview, experts emphasize
-              </p>
-              <ButtonCareers>Read more ➡</ButtonCareers>
-            </Careers>
-            <InfoCard>
-              <IsCofee>
-                <h5 className="header"></h5>
-                <p className="info"></p>
-                <p className="data"></p>
-              </IsCofee>
-              <Manufaktura>
-                <h5 className="header"></h5>
-                <p className="info"></p>
-                <p className="data"></p>
-              </Manufaktura>
-            </InfoCard>
-          </RightCard>
-        </CardContainer> */}
-        <WineCarouselCard />
       </NewsContainer>
     );
   };
