@@ -23,26 +23,16 @@ const LeftCard = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 34.6rem;
+  width: 33.5rem;
   height: 35.6rem;
   background-image: ${(props) => `url(${props.bgImage})`};
   background-size: cover;
   background-color: rgb(135, 145, 154);
   padding: 1.5rem;
   gap: 1rem;
+  box-sizing: border-box;
   position: relative;
   border-radius: 10px;
-`;
-
-const RightCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 34.6rem;
-  height: 35.6rem;
-  background-color: #f2f6fb;
-  border-radius: 10px;
-  padding: 1.5rem;
 `;
 
 const Hot = styled.div`
@@ -92,14 +82,14 @@ const HeaderText = styled.h1`
 `;
 
 const Botton = styled.button`
-  display: flex;
-  align-items: center;
+  width: 12rem;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   background-color: #4592ff;
   border: none;
   border-radius: 50px;
   cursor: pointer;
+  margin: 2rem 10rem;
 
   span {
     color: white;
@@ -130,6 +120,130 @@ const Dot = styled.button`
   cursor: pointer;
 `;
 
+// RIGHT CARD STYLED
+
+const RightCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 34.6rem;
+  height: 35.6rem;
+  background-color: #262d33;
+  border-radius: 10px;
+`;
+
+const Careers = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-image: url("./RightCardImage.png");
+  background-size: contain;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-color: #b4d1e0;
+  width: 34.6rem;
+  height: 24rem;
+  border-radius: 10px;
+  padding: 1.5rem;
+
+  .careers {
+    color:rgb(87, 122, 140);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+  h3 {
+    width: 15rem;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+
+  .text {
+    width: 14rem;
+    font-size: 0.9rem;
+    color: #4b5157;
+    letter-spacing: 0.2px;
+  }
+  button {
+    border: none;
+    width: 8.6rem;
+    height: 2.5rem;
+    border-radius: 2rem;
+    background-color: #4592ff;
+    letter-spacing: 0.4px;
+
+    &:hover {
+      background-color: rgb(18, 117, 238);
+    }
+  }
+`;
+
+const CardInfo = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: #262d33;
+  margin-top: 2rem;
+  gap: 2rem;
+  box-size: border-box;
+
+`;
+
+const Coffee = styled.div`
+  width: 16.4rem;
+  heigth: 10.6rem;
+  color: #4b5157;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 1.5rem;
+
+  h5{
+  font-size: 1rem;
+  color: #262D33;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  }
+  .text{
+  color: #4B5157;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  }
+
+  .data{
+  color:rgb(139, 150, 161);
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  }
+`;
+
+const Manufacture = styled.div`
+  width: 16.4rem;
+  heigth: 10.6rem;
+  color: #4b5157;
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  padding: 1.5rem;
+
+  h5{
+  font-size: 1rem;
+  color: #262D33;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  }
+  .text{
+  color: #4B5157;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  }
+
+  .data{
+  color:rgb(139, 150, 161);
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+  }
+`;
+
 // === COMPONENT ===
 
 const slidesData = [
@@ -141,14 +255,14 @@ const slidesData = [
     photoCount: 22,
   },
   {
-    bgImage: "/CarrouselLeft2.png",
+    bgImage: "/popular.png",
     name: "John Carter",
     work: "Journalist",
     title: "Explore Beautiful Lakes",
     photoCount: 15,
   },
   {
-    bgImage: "/CarrouselLeft3.png",
+    bgImage: "/non.png",
     name: "Emily Park",
     work: "Blogger",
     title: "Top 10 Travel Spots for 2025",
@@ -178,14 +292,13 @@ export default function HomePage() {
               <p className="work">{currentSlide.work}</p>
             </Avatar>
             <HeaderText>{currentSlide.title}</HeaderText>
+            <Botton>
+              <img src="/BottonGalereyaIcon.png" alt="icon" />
+              <span> Watch photos {currentSlide.photoCount}</span>
+            </Botton>
           </div>
 
           <div>
-            <Botton>
-              <img src="/BottonGalereyaIcon.png" alt="icon" />
-              <span>Watch photos {currentSlide.photoCount}</span>
-            </Botton>
-
             <DotsContainer>
               {slidesData.map((_, index) => (
                 <Dot
@@ -200,41 +313,34 @@ export default function HomePage() {
       </div>
 
       <RightCard>
-        <p style={{ fontSize: "0.8rem", color: "#7a9ab1" }}>CAREERS</p>
-        <h3>Had a Job Interview but No Callback? Here’s What to Do</h3>
-        <p style={{ marginBottom: "1rem" }}>
-          Try to understand the culture of the company where you want to work
-          and be authentic in your interview, experts emphasize.
-        </p>
-        <button
-          style={{
-            background: "#005eff",
-            color: "white",
-            padding: "0.5rem 1rem",
-            borderRadius: "5px",
-            border: "none",
-          }}
-        >
-          Read more →
-        </button>
-        <div style={{ display: "flex", gap: "1rem", marginTop: "1rem" }}>
-          <div>
+        <Careers>
+          <p className="careers">CAREERS</p>
+          <h3>Had a Job Interview but No Callback? Here’s What to Do</h3>
+          <p className="text">
+            Try to understand the culture of the company where you want to work
+            and be authentic in your interview, experts emphasize.
+          </p>
+          <button>Read more →</button>
+        </Careers>
+
+        <CardInfo>
+          <Coffee>
             <h5>Is Coffee Bad for Bones?</h5>
-            <p style={{ fontSize: "0.8rem" }}>
+            <p className="text">
               Coffee drinkers may excrete more calcium, but it doesn't appear to
               weaken bones
             </p>
-            <p style={{ fontSize: "0.7rem", color: "gray" }}>Oct 15</p>
-          </div>
-          <div>
+            <p className="data">Oct 15</p>
+          </Coffee>
+          <Manufacture>
             <h5>What We Manufacture</h5>
-            <p style={{ fontSize: "0.8rem" }}>
+            <p className="text">
               A global history of the factory and the modern world that all
               should read
             </p>
-            <p style={{ fontSize: "0.7rem", color: "gray" }}>Oct 14</p>
-          </div>
-        </div>
+            <p className="data">Oct 14</p>
+          </Manufacture>
+        </CardInfo>
       </RightCard>
     </Layout>
   );
