@@ -3,13 +3,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
+
 // === STYLES ===
 
 const Layout = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
   flex-wrap: wrap;
   width: 100%;
   height: 43.1rem;
@@ -25,7 +25,7 @@ const LeftCard = styled.div`
   justify-content: space-between;
   width: 33.5rem;
   height: 35.6rem;
-  background-image: ${(props) => `url(${props.bgImage})`};
+   background-image: url(${(props) => props.$bgImage});
   background-size: cover;
   background-color: rgb(135, 145, 154);
   padding: 1.5rem;
@@ -116,7 +116,7 @@ const Dot = styled.button`
   height: 12px;
   border-radius: 50%;
   border: none;
-  background-color: ${(props) => (props.isActive ? "#333" : "#ccc")};
+  background-color: ${(props) => (props.$isActive ? "#333" : "#ccc")};
   cursor: pointer;
 `;
 
@@ -277,7 +277,7 @@ export default function HomePage() {
   return (
     <Layout>
       <div>
-        <LeftCard bgImage={currentSlide.bgImage}>
+        <LeftCard $bgImage={currentSlide.bgImage}>
           <div>
             <Hot>
               <HotClick>Hot</HotClick>
@@ -303,7 +303,7 @@ export default function HomePage() {
               {slidesData.map((_, index) => (
                 <Dot
                   key={index}
-                  isActive={index === currentIndex}
+                  $isActive={index === currentIndex}
                   onClick={() => setCurrentIndex(index)}
                 />
               ))}

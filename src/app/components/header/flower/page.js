@@ -1211,6 +1211,7 @@ const Flower = () => {
           </Recommendet>
         </InterestingNews>
       </NewsContainer>
+      
     );
   };
 

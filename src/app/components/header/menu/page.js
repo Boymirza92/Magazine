@@ -573,7 +573,7 @@ const Button = styled.button`
   cursor: pointer;
   z-index: 1;
 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* QALIN soyani qo‘shdik */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 
   &::before {
     content: "";
@@ -582,17 +582,17 @@ const Button = styled.button`
     left: -100%;
     width: 100%;
     height: 100%;
-    background-color: rgb(231, 221, 220); /* QIZIL – kesib o‘tadigan rang */
+    background-color: rgb(231, 221, 220); 
     transition: left 0.2s ease;
     z-index: 0;
   }
 
   &:hover::before {
-    left: 100%; /* Qizil rang chapdan o‘ngga o‘tib ketadi */
+    left: 100%; 
   }
   span {
     position: relative;
-    z-index: 1; /* Matn ustida ko‘rinadi */
+    z-index: 1; 
   }
 
   @media (max-width: 550px) {
