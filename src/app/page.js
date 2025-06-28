@@ -15,6 +15,7 @@ export default function Home() {
       <Flower />
       <Carousel />
       <Footer/>
+    
     </div>
   );
 }

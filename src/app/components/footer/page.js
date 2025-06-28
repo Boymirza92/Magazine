@@ -95,11 +95,22 @@ const News = styled.div`
   padding-top: 2rem;
   border-top: 5px solid red;
 
+  &:hover {
+    color: rgb(58, 74, 89);
+  }
+
   h4 {
     color: #4b5157;
     font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+    /* cursor: pointer; */
+
+    &:hover {
+      color: rgb(28, 37, 45);
+      font-size: 0.83rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -107,6 +118,11 @@ const NewLink = styled(Link)`
   color: #262d33;
   font-size: 0.7rem;
   margin-bottom: 0.3rem;
+
+  &:hover {
+    font-size: 0.71rem;
+    color: rgb(86, 86, 94);
+  }
 `;
 
 const Arts = styled.div`
@@ -123,6 +139,12 @@ const Arts = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+
+    &:hover {
+      color: rgb(28, 37, 45);
+      font-size: 0.83rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -140,6 +162,12 @@ const Travel = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+
+    &:hover {
+      color: rgb(28, 37, 45);
+      font-size: 0.83rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -157,6 +185,12 @@ const Sports = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+
+    &:hover {
+      color: rgb(28, 37, 45);
+      font-size: 0.83rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -174,6 +208,12 @@ const Tech = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+
+    &:hover {
+      color: rgb(28, 37, 45);
+      font-size: 0.83rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -191,6 +231,12 @@ const Moneys = styled.div`
     font-weight: 600;
     font-size: 0.8rem;
     margin-bottom: 1rem;
+
+    &:hover {
+      color: rgb(28, 37, 45);
+      font-size: 0.83rem;
+      cursor: pointer;
+    }
   }
 `;
 
@@ -200,21 +246,83 @@ const SocialNetwork = styled.div`
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+  width: 71rem;
+  border-top: 2px solid #d9dadb;
+  border-bottom: 2px solid #d9dadb;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 `;
 
-const SocialNavigation = styled.div``;
+const SocialNavigation = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  color: #4b5157;
+  gap: 2rem;
+  letter-spacing: 0.2px;
+  font-weight: 600;
+`;
 
-const Logo = styled.div``;
+const Logo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+  color: rgb(246, 248, 250);
+  background-color: #4592ff;
+  border-radius: 50%;
+  font-size: 1.6rem;
+  cursor: pointer;
+  &:hover {
+    background-color: #3578e5;
+  }
+`;
 
-const SocialLogo = styled.div``;
+const NetworkLink = styled.div`
+  cursor: pointer;
 
-const NetworkLink = styled.div``;
+  &:hover {
+    color: rgb(32, 37, 43);
+  }
+`;
 
+const SocialLogo = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 1rem;
+
+  a img {
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease;
+    }
+  }
+`;
 
 const AboutMe = styled.div`
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 71rem;
+  color: rgb(166, 173, 180);
+
+  .text {
+    text-align: left;
+    width: 44rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    margin-right: 2rem;
+  }
+
+  .data {
+    text-align: left;
+    font-size: 0.8rem;
+  }
 `;
 
 // ==== FOOTER COMPONENT ====
@@ -309,26 +417,33 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/fecebook.png" alt="Instagram" width="40" height="40" />
+            <img src="/fecebook.png" alt="Facebook" width="40" height="40" />
           </a>
           <a
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/twitter.png" alt="Instagram" width="40" height="40" />
+            <img src="/twitter.png" alt="Twitter" width="40" height="40" />
           </a>
           <a
             href="https://www.youtube.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="/you tube.png" alt="Instagram" width="40" height="40" />
+            <img src="/you tube.png" alt="Youtube" width="40" height="40" />
           </a>
         </SocialLogo>
       </SocialNetwork>
 
-      <AboutMe></AboutMe>
+      <AboutMe>
+        <p className="text">
+          Universal’s business concept is to offer fashion and quality at the
+          best price in a sustainable way. Universal has since it was founded in
+          2015 grown into one of the world's leading fashion companies.{" "}
+        </p>
+        <p className="data">© 2019 Universal UI Kit</p>
+      </AboutMe>
     </FooterContainer>
   );
 };

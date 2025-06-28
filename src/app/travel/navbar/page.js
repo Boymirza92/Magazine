@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import Image from "next/image";
 import { Lato } from "next/font/google";
-import Link from "next/link";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -13,14 +12,8 @@ const lato = Lato({
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { play } from "@fortawesome/free-solid-svg-icons";
-import NavIcon from "../../public/NavIcon.jpg";
-import Ozodlik from "../../public/Ozodlik.png";
-import Gitara from "../../public/gitara.png";
-import Kapalak from "../../public/kapalak.png";
-import Odam from "../../public/odam.png";
-import Yol from "../../public/yol.png";
-import Benjamin from "../../public/Benjamin.png";
-import { height } from "@fortawesome/free-solid-svg-icons/fa0";
+// import NavIcon from "@/public/NavIcon.jpg";
+// import Ozodlik from "../../public/Ozodlik.png";
 
 // Header bo'limi
 const Header = styled.div`
@@ -28,7 +21,7 @@ const Header = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 100vh;
+  height: auto;
   font-family: ${lato.style.fontFamily}, sans-serif;
   z-index: 3;
   background-color: #fff;
@@ -340,7 +333,7 @@ const Navbars = styled.div`
   align-items: center;
   flex-direction: column;
   width: 100%;
-  height: 35rem;
+  height: 3rem;
   background-color: #262d33;
   z-index: 1;
 
@@ -377,7 +370,6 @@ const Nav = styled.div`
     font-size: 1rem;
     color: #fff;
     background-color: #262d33;
-    border-bottom: 2px solid rgb(69, 70, 71);
 
     &:hover {
       color: rgb(105, 100, 112);
@@ -396,438 +388,6 @@ const Nav = styled.div`
         }
       }
     }
-  }
-`;
-
-const StyledLink = styled.a`
-  text-decoration: none;
-`;
-
-const Advertising = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 80%;
-  height: 8rem;
-  margin-top: 1rem;
-  background-color: #30363d;
-  border-radius: 0.7rem;
-  font-size: 1rem;
-  z-index: 1;
-  gap: 1rem;
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: inherit;
-    flex-wrap: wrap;
-    z-index: initial;
-    height: auto;
-  }
-`;
-
-const Music = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 17rem;
-  border-right: 3px solid #423c3c;
-  padding-right: 1rem;
-
-  @media (max-width: 768px) {
-    border: none;
-  }
-`;
-const TitleMusic = styled.p`
-  color: white;
-  padding-right: 1rem;
-`;
-const Butterfly = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 17rem;
-  border-right: 3px solid #423c3c;
-  padding-right: 1rem;
-
-  @media (max-width: 768px) {
-    border: none;
-  }
-`;
-const ButterflyTitle = styled.p`
-  padding-right: 1rem;
-  color: #fff;
-`;
-const MusicTwo = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 17rem;
-  border-right: 3px solid #423c3c;
-  padding-right: 1rem;
-
-  @media (max-width: 768px) {
-    border: none;
-  }
-`;
-const MusicTwoTitle = styled.p`
-  padding-right: 1rem;
-  color: #fff;
-`;
-const Mystery = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 17rem;
-  border-right: 3px solid #423c3c;
-  padding-right: 1rem;
-
-  @media (max-width: 768px) {
-    border: none;
-  }
-`;
-
-const MysteryTitle = styled.p`
-  padding-right: 1rem;
-  color: #fff;
-`;
-
-//RECOMMENDET
-
-const RecomendetPhoto = styled.div`
-  display: flex;
-  justify-content: space-between;
-  width: 70%;
-  height: 40rem;
-  border-radius: 0.2rem;
-  margin-top: 24rem;
-  z-index: 15;
-  position: absolute;
-  max-width: 75rem;
-  background-size: cover;
-
-  @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 20rem;
-    z-index: initial;
-    margin-top: 23.8rem;
-  }
-
-  @media (max-width: 702px) {
-    margin-top: 36.81rem;
-  }
-`;
-const Photo = styled.div`
-  margin-top: 2rem;
-  margin-left: 2rem;
-
-  .benjamin {
-    border-radius: 50%;
-  }
-
-  .link {
-    display: inline-block;
-    color: #7c5df7;
-    font-size: 0.9rem;
-    padding-top: 14rem;
-  }
-`;
-const ByBenjaminTurner = styled.div`
-  display: flex;
-`;
-const BebjaminText = styled.p`
-  color: rgb(255, 255, 255);
-  margin-left: 0.7rem;
-  font-size: 1rem;
- 
-`;
-const TextPhoto = styled.h1`
-  font-size: 3rem;
-  color: rgb(255, 255, 255);
-  margin-top: 1rem;
-
-  @media (max-width: 550px) {
-    font-size: 2rem;
-  }
-`;
-
-const Movie = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  cursor: pointer;
-`;
-const Button = styled.button`
-  width: 8rem;
-  height: 2.5rem;
-  margin-top: 2rem;
-  border-radius: 3rem;
-  position: relative;
-  color: white;
-  font-size: 1.2rem;
-  border: none;
-  background-color: #3498db;
-  overflow: hidden;
-  cursor: pointer;
-  z-index: 1;
-
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(231, 221, 220);
-    transition: left 0.2s ease;
-    z-index: 0;
-  }
-
-  &:hover::before {
-    left: 100%;
-  }
-  span {
-    position: relative;
-    z-index: 1;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 0.8rem;
-  }
-`;
-
-const IconMovie = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid #ffffff;
-  margin-left: 3rem;
-  margin-top: 2rem;
-  border-radius: 50%;
-
-  &:hover {
-    background-color: rgb(132, 161, 247);
-  }
-
-  @media (max-width: 550px) {
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.8rem;
-    margin-left: 1rem;
-    margin-top: 2rem;
-  }
-`;
-
-const MovieName = styled.p`
-  width: 20rem;
-  margin-top: 1.2rem;
-
-  @media (max-width: 550px) {
-    height: 2rem;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-  }
-`;
-
-//RecommendetForYour
-
-const RecommendetForYour = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 22%;
-  background-color: rgb(246, 227, 227);
-  color: #333;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px;
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 0.5rem;
-    border: none;
-    margin-top: 4.5rem;
-    padding: 0.5rem;
-  }
-
-  @media (max-width: 624px) {
-    margin-top: 0.5rem;
-  }
-`;
-const RecommendetParagraph = styled.p`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 5rem;
-  font-size: 0.8rem;
-  font-weight: bold;
-  border-bottom: 1px solid aqua;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    text-align: center;
-    border: none;
-    width: 100%;
-    height: 2rem;
-  }
-`;
-const Food = styled.p`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 7rem;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-bottom: 1px solid aqua;
-  color: #6e99ae;
-
-  .food {
-    font-weight: 500;
-    color: #333;
-
-    @media (max-width: 768px) {
-      text-align: start;
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: start;
-    text-align: center;
-    border: none;
-    width: 8rem;
-  }
-`;
-
-const Cars = styled.p`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 7rem;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-bottom: 1px solid aqua;
-  color: #6e99ae;
-
-  .cars {
-    font-weight: 500;
-    color: #333;
-
-    @media (max-width: 768px) {
-      text-align: start;
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: start;
-    text-align: center;
-    border: none;
-    width: 8rem;
-  }
-`;
-
-const Videos = styled.p`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 7rem;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-bottom: 1px solid aqua;
-  color: #6e99ae;
-
-  .movies {
-    font-weight: 500;
-    color: #333;
-
-    @media (max-width: 768px) {
-      text-align: start;
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: start;
-    text-align: center;
-    border: none;
-    width: 8rem;
-  }
-`;
-
-const Nfl = styled.p`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 7rem;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  border-bottom: 1px solid aqua;
-  color: #6e99ae;
-
-  .nfl {
-    font-weight: 500;
-    color: #333;
-
-    @media (max-width: 768px) {
-      text-align: start;
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: start;
-    text-align: center;
-    border: none;
-    width: 8rem;
-  }
-`;
-
-const TechReviews = styled.p`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  height: 7rem;
-  gap: 0.5rem;
-  padding-left: 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: #6e99ae;
-
-  .reviews {
-    font-weight: 500;
-    color: #333;
-
-    @media (max-width: 768px) {
-      text-align: start;
-    }
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: start;
-    text-align: center;
-    border: none;
-    width: 8rem;
   }
 `;
 
@@ -888,7 +448,14 @@ const App = () => {
           />
         </svg>
         <Subscribe className="d-flex align-items-center gap-3">
-          <Image src={NavIcon} className="Image" alt="Nav Icon" priority />
+          <Image
+            src="/NavIcon.jpg"
+            alt="Navbar Icon"
+            width={65.6} // majburiy, Next.js uchun
+            height={43.2}
+            className="NavIcon"
+            // style={{ objectFit: "cover" }} // yoki 'contain'
+          />
           <TitleSubscribe>
             Subscribe Now <br />
             <span>3 months for $19</span>
@@ -915,7 +482,13 @@ const App = () => {
         </SignIn>
       </Menu>
       <MenuTwo>
-        <Image src={Ozodlik} className="freedom" alt="Freedom.jpg" />
+        <Image
+          src="/Ozodlik.png"
+          className="freedom"
+          alt="Freedom.jpg"
+          width="99"
+          height="83"
+        />
         <TextBoston>Boston and New York Brean Brunt</TextBoston>
         <TextHeader>Universal</TextHeader>
         <Data>Monday, January 1,2018</Data>
@@ -937,9 +510,9 @@ const App = () => {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item active">
-                <StyledLink href="/travel" className="nav-link">
+                <a className="nav-link" href="#">
                   NAWS <span className="sr-only"></span>
-                </StyledLink>
+                </a>
               </li>
               <li className="nav-item active">
                 <a className="nav-link" href="#">
@@ -958,7 +531,7 @@ const App = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  TRAVEL
+                  TREVEL
                 </a>
               </li>
               <li className="nav-item">
@@ -994,134 +567,7 @@ const App = () => {
             </ul>
           </div>
         </Nav>
-        <Advertising>
-          <Music>
-            <TitleMusic>
-              25 Songs That <br /> Tell Us Whare Music Is <br /> Going
-            </TitleMusic>
-            <Image
-              src={Gitara}
-              className="picture"
-              placeholder="blur"
-              alt="gitara.jpg"
-            />
-          </Music>
-          <Butterfly>
-            <ButterflyTitle>
-              These Ancient <br /> Assassins Eat Their <br /> Own Kind
-            </ButterflyTitle>
-            <Image
-              src={Kapalak}
-              className="picture"
-              placeholder="blur"
-              alt="kapalak.jpg"
-            />
-          </Butterfly>
-          <MusicTwo>
-            <MusicTwoTitle>
-              How Do You Teach <br /> People to Love <br /> Difficult Music?
-            </MusicTwoTitle>
-            <Image
-              src={Odam}
-              className="picture"
-              placeholder="blur"
-              alt="Odam.jpg"
-            />
-          </MusicTwo>
-          <Mystery>
-            <MysteryTitle>
-              International <br />
-              Soccer's Man of <br />
-              Mystery
-            </MysteryTitle>
-            <Image
-              src={Yol}
-              className="picture"
-              placeholder="blur"
-              alt="yol.jpg"
-            />
-          </Mystery>
-        </Advertising>
       </Navbars>
-      {/* RECOMMENDET */}
-
-      <RecomendetPhoto
-        style={{
-          backgroundImage: "url('/Tog.png')",
-        }}
-      >
-        <Photo>
-          <ByBenjaminTurner>
-            <Image
-              className="benjamin"
-              src={Benjamin}
-              placeholder="blur"
-              alt="Benjamin.jpg"
-            />
-            <BebjaminText>
-              By benjamin Tunner <br />
-              <span style={{ color: "rgb(229, 218, 218)", fontSize: "0.8rem" }}>
-                Traveler
-              </span>
-            </BebjaminText>
-          </ByBenjaminTurner>
-          <a href="#" className="link">
-            DESTINATIONS
-          </a>
-          <TextPhoto>
-            In Southeast England, White <br /> Cliffs and Fish
-          </TextPhoto>
-          <Movie>
-            <Button>
-              {" "}
-              <span>Read more ➡</span>
-            </Button>
-            <IconMovie>▶</IconMovie>
-            <MovieName>
-              <br />
-              The chalk cliff of Beachy Head <br /> 18:05
-            </MovieName>
-          </Movie>
-        </Photo>
-
-        {/* RecommendetForYour */}
-        <RecommendetForYour>
-          <RecommendetParagraph>RECOMMENDET FOR YOU</RecommendetParagraph>
-          <Food>
-            FOOD
-            <span className="food">
-              For Chicken-Fried Steak, Too <br /> Much Is Just{" "}
-            </span>
-          </Food>
-          <Cars>
-            CARS
-            <span className="cars">
-              Storm Has Car Dealers Doing <br />
-              Swift Business
-            </span>
-          </Cars>
-          <Videos>
-            MOVIES
-            <span className="movies">
-              War Is Hell? In New Military <br />
-              Dramas, It’s One-Dimensional
-            </span>
-          </Videos>
-          <Nfl>
-            NFL
-            <span className="nfl">
-              11 surprising stat rankings for <br /> active NFL players
-            </span>
-          </Nfl>
-          <TechReviews>
-            TECH REVIEWS
-            <span className="reviews">
-              The bookcases you can buy online
-              <br /> and assemble yourself
-            </span>
-          </TechReviews>
-        </RecommendetForYour>
-      </RecomendetPhoto>
     </Header>
   );
 };

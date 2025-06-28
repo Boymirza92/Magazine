@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-
 // === STYLES ===
 
 const Layout = styled.div`
@@ -25,7 +24,7 @@ const LeftCard = styled.div`
   justify-content: space-between;
   width: 33.5rem;
   height: 35.6rem;
-   background-image: url(${(props) => props.$bgImage});
+  background-image: url(${(props) => props.$bgImage});
   background-size: cover;
   background-color: rgb(135, 145, 154);
   padding: 1.5rem;
@@ -148,7 +147,7 @@ const Careers = styled.div`
   padding: 1.5rem;
 
   .careers {
-    color:rgb(87, 122, 140);
+    color: rgb(87, 122, 140);
     font-size: 0.8rem;
     letter-spacing: 0.5px;
   }
@@ -187,7 +186,6 @@ const CardInfo = styled.div`
   margin-top: 2rem;
   gap: 2rem;
   box-size: border-box;
-
 `;
 
 const Coffee = styled.div`
@@ -198,49 +196,49 @@ const Coffee = styled.div`
   border-radius: 10px;
   padding: 1.5rem;
 
-  h5{
-  font-size: 1rem;
-  color: #262D33;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  h5 {
+    font-size: 1rem;
+    color: #262d33;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
-  .text{
-  color: #4B5157;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  .text {
+    color: #4b5157;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
   }
 
-  .data{
-  color:rgb(139, 150, 161);
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  .data {
+    color: rgb(139, 150, 161);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
   }
 `;
 
 const Manufacture = styled.div`
   width: 16.4rem;
-  heigth: 10.6rem;
+  height: 10.6rem;
   color: #4b5157;
   background-color: rgb(247, 247, 247);
   border-radius: 10px;
   padding: 1.5rem;
 
-  h5{
-  font-size: 1rem;
-  color: #262D33;
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  h5 {
+    font-size: 1rem;
+    color: #262d33;
+    font-weight: 600;
+    letter-spacing: 0.5px;
   }
-  .text{
-  color: #4B5157;
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  .text {
+    color: #4b5157;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
   }
 
-  .data{
-  color:rgb(139, 150, 161);
-  font-size: 0.8rem;
-  letter-spacing: 0.5px;
+  .data {
+    color: rgb(139, 150, 161);
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
   }
 `;
 
