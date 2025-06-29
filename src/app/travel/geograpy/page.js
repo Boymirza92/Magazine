@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 // === STYLES ===
@@ -8,8 +8,10 @@ const AppWropper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 70%;
+  width: 46rem;
   margin-top: 5rem;
+  font-size: 1rem;
+  color: #4b5157;
 `;
 
 const TextWrapper = styled.div`
@@ -17,7 +19,7 @@ const TextWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 20%;
+  margin-left: 13rem;
   width: 100%;
 `;
 
@@ -27,9 +29,10 @@ const TextColumn = styled.div`
   align-items: center;
   justify-content: center;
 
-  h1{
-    font-size: 5rem;
-    color:rgb(179, 115, 235);
+  h1 {
+    font-size: 5.2rem;
+    margin: -1.3rem 2px 0 0;
+    color: rgb(179, 115, 235);
   }
 `;
 
@@ -38,57 +41,132 @@ const Anderson = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 16.5rem;
+  height: 23rem;
+  border: 2px solid rgb(224, 221, 227);
   margin-left: 2rem;
   background-color: rgb(246, 238, 237);
   border-radius: 1rem;
+
   position: absolute;
-    top: 43rem;
-  `;
+  top: 43rem;
+  right: 18rem;
 
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 5rem;
+    border-top: 2px solid rgb(224, 221, 227);
+    margin-top: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+`;
+const AboutMe = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
 
-const TextContinuation = styled.div``;
+  img {
+    width: 5rem;
+    border-radius: 50%;
+    margin-top: 2rem;
+    cursor: pointer;
 
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.1s ease;
+    }
+  }
+  h5 {
+    font-weight: 700;
+    margin-top: 1.2rem;
+  }
+`;
 
-const AboutMe = styled.div``;
+const SticialMedia = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
 
-const SticialMedia = styled.div``;
+  img {
+    width: 2.5rem;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: transform 0.1s ease;
+    }
+  }
+`;
+
+const TextContinuation = styled.div`
+  h4 {
+    margin: 2rem 0;
+  }
+  p {
+    margin: 1.5rem 0;
+  }
+  .text {
+    margin-top: -1rem;
+  }
+`;
 
 // === COMPONENT ===
 
-const geograpy = () => {
+const Slider = () => {};
+
+const Geograpy = () => {
+  const images = ["/slider1.png", "/slider2.png", "/slide3.png"];
+
+  const [current, setCurrent] = useState(0);
+
+  const nextSlide = () => {
+    setCurrent((prev) => (prev + 1) % images.lengith);
+  };
+
+  const prevSlide = () => {
+    setCurrent((prev) => (prev - 1 + images.length) % images.length);
+  };
   return (
     <AppWropper>
       <TextWrapper>
         <TextColumn>
           <h1>M</h1>
-          <p>
+          <p className="text">
             any geographers are trained in toponymy and cartology, this
             is not their main preoccupation. Geographers study the space and the
             temporal database distribution of phenomena,
           </p>
-           <Anderson>
-          <AboutMe>
-            <img src="/anderson.png" alt="Anderson" />
-            <h2>Mira Anderson</h2>
-            <p>Traveler & Photographer</p>
-            <h6>82 aticles</h6>
-          </AboutMe>
-          <SticialMedia>
-            <a href="https://www.instagram.com/mira_anderson/">
-              <img src="/instagramm.png" alt="Instagram" />
-            </a>
-            <a href="https://www.facebook.com/mira_anderson/">
-              <img src="/fecebook.png" alt="Fecebook" />
-            </a>
-            <a href="https://www.twitter.com/mira_anderson/">
-              <img src="/twitter.png" alt="Twitter" />
-            </a>
-          </SticialMedia>
-          <h6>Follow on Universal</h6>
-        </Anderson>
+          <Anderson>
+            <AboutMe>
+              <img src="/olivia.png" alt="Anderson" />
+              <h5>Mira Anderson</h5>
+              <p>Traveler & Photographer</p>
+              <h6>82 aticles</h6>
+            </AboutMe>
+            <SticialMedia>
+              <a href="https://www.instagram.com/mira_anderson/">
+                <img src="/instagramm.png" alt="Instagram" />
+              </a>
+              <a href="https://www.facebook.com/mira_anderson/">
+                <img src="/fecebook.png" alt="Fecebook" />
+              </a>
+              <a href="https://www.twitter.com/mira_anderson/">
+                <img src="/twitter.png" alt="Twitter" />
+              </a>
+            </SticialMedia>
+            <h6 className="title">Follow on Universal</h6>
+          </Anderson>
         </TextColumn>
         <TextContinuation>
-          <p>
+          <p className="text">
             processes, and features as well as the interaction of humans and
             their environment. Because space and place affect a variety of
             topics, such as economics, health, climate, plants and animals,
@@ -120,10 +198,20 @@ const geograpy = () => {
             center was supposed to represent.
           </p>
         </TextContinuation>
-       
       </TextWrapper>
+      <CarouselWrapper>
+        <Arrow direction="left" onClick={prevSlide}>◀⏪</Arrow>
+        <SlideImage src="{images[current]} alt={`Slide ${current +1}`}"/>
+        <Arrow direction="right" onClick={nextSlide}>⏩▶</Arrow>
+        <Dots>
+          {images.map((_, index) =>(
+            <Dot key={index} active={index ===current} onClick={()=>setCurrent(index)}/>
+          ))}
+        </Dots>
+
+      </CarouselWrapper>
     </AppWropper>
   );
 };
 
-export default geograpy;
+export default Geograpy;

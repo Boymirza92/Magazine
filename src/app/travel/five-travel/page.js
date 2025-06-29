@@ -100,7 +100,7 @@ const Content = styled.div`
     margin-bottom: 2rem;
     color: rgba(48, 48, 182, 0.8);
   }
-  spam {
+  span {
     padding-left: 1rem;
     font-size: 0.7rem;
 
@@ -127,19 +127,19 @@ const Carousel = () => {
         <p className="subtitle">{slides[index].subtitle}</p>
         <p className="data">
           {slides[index].data}
-          <spam className="like">
+          <span className="like">
             <img src="/like icon.png" /> 555
-          </spam>
-          <spam className="comment">
+          </span>
+          <span className="comment">
             <img src="/Comment.png" /> 758
-          </spam>
+          </span>
         </p>
       </Content>
       <NavButtons>
         <NavButton onClick={goToMain}>
-          <spam>
+          <span>
             <img src="/home.png" className="home" />
-          </spam>
+          </span>
           Back to main
         </NavButton>
         <NavButton onClick={prevSlide}>← Prev</NavButton>
