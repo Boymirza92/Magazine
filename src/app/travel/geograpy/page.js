@@ -4,11 +4,13 @@ import styled from "styled-components";
 
 // === STYLES ===
 
-const AppWropper = styled.div`
+const AppWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 46rem;
+  flex-direction: column;
+  width: 100%;
+  max-width: 75rem;
   margin-top: 5rem;
   font-size: 1rem;
   color: #4b5157;
@@ -21,6 +23,7 @@ const TextWrapper = styled.div`
   justify-content: flex-start;
   margin-left: 13rem;
   width: 100%;
+  height: 100vh;
 `;
 
 const TextColumn = styled.div`
@@ -88,7 +91,7 @@ const AboutMe = styled.div`
   }
 `;
 
-const SticialMedia = styled.div`
+const SocialMedia = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -118,24 +121,77 @@ const TextContinuation = styled.div`
   }
 `;
 
+// === CAROUSEL STYLES ===
+
+const CarouselWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+`;
+
+const Arrow = styled.button`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: inherit;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  z-index: 2;
+
+  ${(props) =>
+    props.direction === "left"
+      ? "left: 10px;"
+      : props.direction === "right"
+      ? "right: 10px;"
+      : ""}
+`;
+
+const SlideImage = styled.img`
+  width: 70%;
+  height: 39rem;
+  max-width: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+`;
+
+// const Dots = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 1rem;
+// `;
+
+// const Dot = styled.button`
+//   width: 1rem;
+//   height: 1rem;
+//   margin: 0 0.4rem;
+//   border: none;
+//   background-color: ${(props) => props.active ? "#333" : "#ccc"};
+//   cursor: pointer;
+// `;
+
 // === COMPONENT ===
 
-const Slider = () => {};
-
-const Geograpy = () => {
-  const images = ["/slider1.png", "/slider2.png", "/slide3.png"];
+const Geography = () => {
+  const images = ["/carouselImage.png", "/CarrouselLeft1.png", "/gul.png"];
 
   const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % images.lengith);
+    setCurrent((prev) => (prev + 1) % images.length);
   };
 
   const prevSlide = () => {
     setCurrent((prev) => (prev - 1 + images.length) % images.length);
   };
   return (
-    <AppWropper>
+    <AppWrapper>
       <TextWrapper>
         <TextColumn>
           <h1>M</h1>
@@ -151,7 +207,7 @@ const Geograpy = () => {
               <p>Traveler & Photographer</p>
               <h6>82 aticles</h6>
             </AboutMe>
-            <SticialMedia>
+            <SocialMedia>
               <a href="https://www.instagram.com/mira_anderson/">
                 <img src="/instagramm.png" alt="Instagram" />
               </a>
@@ -161,7 +217,7 @@ const Geograpy = () => {
               <a href="https://www.twitter.com/mira_anderson/">
                 <img src="/twitter.png" alt="Twitter" />
               </a>
-            </SticialMedia>
+            </SocialMedia>
             <h6 className="title">Follow on Universal</h6>
           </Anderson>
         </TextColumn>
@@ -200,18 +256,20 @@ const Geograpy = () => {
         </TextContinuation>
       </TextWrapper>
       <CarouselWrapper>
-        <Arrow direction="left" onClick={prevSlide}>◀⏪</Arrow>
-        <SlideImage src="{images[current]} alt={`Slide ${current +1}`}"/>
-        <Arrow direction="right" onClick={nextSlide}>⏩▶</Arrow>
-        <Dots>
-          {images.map((_, index) =>(
-            <Dot key={index} active={index ===current} onClick={()=>setCurrent(index)}/>
-          ))}
-        </Dots>
-
+        <Arrow direction="left" onClick={prevSlide}>
+          <span>
+            <img src="/slideleft.png" style={{ width: "3rem" }} />
+          </span>
+        </Arrow>
+        <SlideImage src={images[current]} alt={`Slide ${current + 1}`} />
+        <Arrow direction="right" onClick={nextSlide}>
+          <span>
+            <img src="/slideright.png" style={{ width: "3rem" }} />
+          </span>
+        </Arrow>
       </CarouselWrapper>
-    </AppWropper>
+    </AppWrapper>
   );
 };
 
-export default Geograpy;
+export default Geography;
