@@ -6,11 +6,11 @@ import styled from "styled-components";
 
 const AppWrapper = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  max-width: 75rem;
+  /* max-width: 75rem; */
   margin-top: 5rem;
   font-size: 1rem;
   color: #4b5157;
@@ -20,9 +20,9 @@ const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  margin-left: 13rem;
-  width: 100%;
+  justify-content: center;
+  margin-left: 12rem;
+  width: 39rem;
   height: 100vh;
 `;
 
@@ -30,7 +30,7 @@ const TextColumn = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 
   h1 {
     font-size: 5.2rem;
@@ -38,6 +38,8 @@ const TextColumn = styled.div`
     color: rgb(179, 115, 235);
   }
 `;
+
+// == ABOUT ME ==
 
 const Anderson = styled.div`
   display: flex;
@@ -127,11 +129,12 @@ const CarouselWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   width: 100%;
-
   margin: auto;
   position: relative;
   overflow: hidden;
+  /* border-radius: 0.5rem; */
 `;
 
 const Arrow = styled.button`
@@ -147,39 +150,42 @@ const Arrow = styled.button`
 
   ${(props) =>
     props.direction === "left"
-      ? "left: 10px;"
+      ? "left: 11rem;"
       : props.direction === "right"
-      ? "right: 10px;"
+      ? "right: 11rem;"
       : ""}
 `;
 
 const SlideImage = styled.img`
-  width: 70%;
-  height: 39rem;
+  width: 80%;
+  height: 30rem;
   max-width: 100%;
-  border-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
   object-fit: cover;
 `;
 
-// const Dots = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   margin-top: 1rem;
-// `;
+const Info = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 80%;
+  border: 2px solid rgb(224, 221, 227);
 
-// const Dot = styled.button`
-//   width: 1rem;
-//   height: 1rem;
-//   margin: 0 0.4rem;
-//   border: none;
-//   background-color: ${(props) => props.active ? "#333" : "#ccc"};
-//   cursor: pointer;
-// `;
+  .text {
+margin-left: -3rem; }
+`;
 
-// === COMPONENT ===
+const Photographer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Geography = () => {
-  const images = ["/carouselImage.png", "/CarrouselLeft1.png", "/gul.png"];
+  const images = ["/carouselImage.png", "/Dengiz1.jpg", "/flover.png"];
 
   const [current, setCurrent] = useState(0);
 
@@ -267,6 +273,18 @@ const Geography = () => {
             <img src="/slideright.png" style={{ width: "3rem" }} />
           </span>
         </Arrow>
+        <Info>
+          <p className="text">
+            Geostatistics deal with quantitative data analysis, specifically the
+            application of statistical methodology
+          </p>
+          <Photographer>
+            <img src="/devid.png" alt="Photographer" />
+            <p>
+              Andrev Washington <br /> <span>Photographer</span>
+            </p>
+          </Photographer>
+        </Info>
       </CarouselWrapper>
     </AppWrapper>
   );
