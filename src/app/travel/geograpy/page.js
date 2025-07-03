@@ -172,9 +172,12 @@ const Info = styled.div`
   justify-content: space-around;
   width: 80%;
   border: 2px solid rgb(224, 221, 227);
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
 
   .text {
-margin-left: -3rem; }
+    margin-left: -3rem;
+  }
 `;
 
 const Photographer = styled.div`
@@ -182,6 +185,50 @@ const Photographer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  gap: 0.8rem;
+  border-left: 2px solid rgb(207, 202, 212);
+  padding-left: 1rem;
+
+  img {
+    width: 3rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  .phatographer {
+    padding-top: 0.5rem;
+    line-height: 1.2rem;
+
+    span {
+      font-size: 0.9rem;
+      color: rgb(156, 133, 177);
+    }
+  }
+`;
+
+// === HISTORY ===
+
+const HistoryInfo = styled.div`
+  display: flex;
+justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+`;
+
+const HistoryText = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 70%;
+
+`;
+
+const TextConainer = styled.div`
+  width: 35rem;
+`;
+
+const MaterialOnTheme = styled.div`
+width: 16.5rem
 `;
 
 const Geography = () => {
@@ -280,12 +327,63 @@ const Geography = () => {
           </p>
           <Photographer>
             <img src="/devid.png" alt="Photographer" />
-            <p>
+            <p className="phatographer">
               Andrev Washington <br /> <span>Photographer</span>
             </p>
           </Photographer>
         </Info>
       </CarouselWrapper>
+      <HistoryInfo>
+        <HistoryText>
+          <TextConainer>
+            <p>
+              The oldest known world maps date back to ancient Babylon from the
+              9th century BC. The best known Babylonian world map, however, is
+              the Imago Mundi of 600 BC. The map as reconstructed by Eckhard
+              Unger shows Babylon on the Euphrates, surrounded by a circular
+              landmass showing Assyria, Urartu and several cities, in turn
+              surrounded by a "bitter river" (Oceanus), with seven islands
+              arranged around it so as to form a seven-pointed star.
+            </p>
+            <p>
+              The accompanying text mentions seven outer regions beyond the
+              encircling ocean. The descriptions of five of them have survived.
+              In contrast to the Imago Mundi, an earlier Babylonian world map
+              dating back to the 9th century BC depicted Babylon as being
+              further north from the center of the world, though it is not
+              certain what that center was supposed to represent.
+            </p>
+            <p>
+              The ideas of Anaximander: considered by later Greek writers to be
+              the true founder of geography, come to us through fragments quoted
+              by his successors. Anaximander is credited with the invention of
+              the gnomon, the simple, yet efficient Greek instrument that
+              allowed the early measurement of latitude. Thales is also credited
+              with the prediction of eclipses. The foundations of geography can
+              be traced to the ancient cultures, such as the ancient, medieval,
+              and early modern Chinese.
+            </p>
+          </TextConainer>
+          <MaterialOnTheme>
+            <h1>Material On Theme</h1>
+            <img src="/jirafa.png" alt="Jirafa" />
+            <h2>Application of Postcolonial Theory in the Middle East</h2>
+            <p>
+              In the essays "Overstating the Arab State", by Nazih Ayubi, and
+              "Is Jordan Palestine?", by Raphael Israel, the authors deal with
+              the psychologically fragmented postcolonial identity.
+            </p>
+            <p className="comment">
+              <span>
+                <img src="/seen.png" alt="Seen" /> 1625
+              </span>
+              <span>
+                <img src="/comment.png" alt="comment" /> 1625
+              </span>
+            </p>
+          </MaterialOnTheme>
+        </HistoryText>
+      </HistoryInfo>
     </AppWrapper>
   );
 };
