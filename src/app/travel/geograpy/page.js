@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import styled from "styled-components";
+import Link from "next/link";
 
 // === STYLES ===
 
@@ -210,7 +211,8 @@ const Photographer = styled.div`
 
 const HistoryInfo = styled.div`
   display: flex;
-justify-content: center;
+  justify-content: center;
+  flex-direction: column;
   width: 100%;
   margin-top: 3rem;
 `;
@@ -218,18 +220,97 @@ justify-content: center;
 const HistoryText = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  width: 70%;
-
+  justify-content: center;
+  width: 100%;
+  gap: 5rem;
 `;
 
 const TextConainer = styled.div`
-  width: 35rem;
+  width: 36rem;
+  font-size: 1.1rem;
 `;
 
 const MaterialOnTheme = styled.div`
-width: 16.5rem
+  width: 16.5rem;
+  font-size: 1.1rem;
+  margin-top: 3rem;
+
+  h1 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  img {
+    border-radius: 0.5rem;
+    cursor: pointer;
+    width: 100%;
+    height: 11.2rem;
+
+    &:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+
+    span {
+      font-size: 0.7rem;
+      margin-right: 1.5rem;
+
+      img.seen {
+        width: 1rem;
+        height: 0.6rem;
+      }
+
+      .comment {
+        width: 1rem;
+        height: 1rem;
+      }
+    }
+  }
 `;
+
+// === NAMES OF PLACES ===
+
+const NamesOfPlaces = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+`;
+
+const GeograTitle = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 11rem; 
+  margin-left: 18.5rem;
+  gap: 3rem;
+
+
+ 
+`;
+
+const StyledHeadr = styled.h1`
+  font-size: 1.2rem;
+  width: 28.6rem;
+  height: 1rem;
+  /* margin-bottom: 13rem; */
+`;
+
+const William = styled.div``;
+
+const Styledtext = styled.div``;
+
+const Navbar = styled.nav``;
 
 const Geography = () => {
   const images = ["/carouselImage.png", "/Dengiz1.jpg", "/flover.png"];
@@ -375,14 +456,55 @@ const Geography = () => {
             </p>
             <p className="comment">
               <span>
-                <img src="/seen.png" alt="Seen" /> 1625
+                <img src="/seen.png" alt="Seen" className="seen" /> 1625
               </span>
               <span>
-                <img src="/comment.png" alt="comment" /> 1625
+                <img src="/comment.png" alt="comment" className="comment" />{" "}
+                1625
               </span>
             </p>
           </MaterialOnTheme>
         </HistoryText>
+        <NamesOfPlaces>
+          <GeograTitle>
+            <StyledHeadr>
+              Names of places... are not geography... know by heart a whole
+              gazetteer full of them would not, in itself, constitute anyone
+              a geographer. Geography has higher aims than this: it seeks to
+              classify phenomena.
+            </StyledHeadr>
+            <William>
+              <img src="/devid.png" alt="William" />
+              <p>
+                William Peterson <span>Travel Agent</span>
+              </p>
+            </William>
+          </GeograTitle>
+          <Styledtext>
+            <p>
+              The Greeks, who were the first to explore geography as both art
+              and science, achieved this through Cartography, Philosophy, and
+              Literature, or through Mathematics. There is some debate about who
+              was the first person to assert that the Earth is spherical in
+              shape, with the credit going either to Parmenides or Pythagoras.
+              Anaxagoras was able to demonstrate that the profile of the Earth
+              was circular by explaining eclipses. However, he still believed
+              that the Earth was a flat disk, as did many of his contemporaries.
+            </p>
+            <p>
+              The first rigorous system of latitude and longitude lines is
+              credited to Hipparchus. He employed a sexagesimal system that was
+              derived from Babylonian mathematics.
+            </p>
+          </Styledtext>
+          <Navbar>
+            <Link href="/#">Travel</Link>
+            <Link href="/#">Destinations</Link>
+            <Link href="/#">Nature</Link>
+            <Link href="/#">World</Link>
+            <Link href="/#">Alaska</Link>
+          </Navbar>
+        </NamesOfPlaces>
       </HistoryInfo>
     </AppWrapper>
   );
