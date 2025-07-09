@@ -938,7 +938,7 @@ const App = () => {
             <ul className="navbar-nav">
               <li className="nav-item active">
                 <StyledLink href="/travel" className="nav-link">
-                  NAWS <span className="sr-only"></span>
+                  TRAVEL <span className="sr-only"></span>
                 </StyledLink>
               </li>
               <li className="nav-item active">
@@ -958,7 +958,7 @@ const App = () => {
               </li>
               <li className="nav-item">
                 <a className="nav-link" href="#">
-                  TRAVEL
+                  NEWS
                 </a>
               </li>
               <li className="nav-item">

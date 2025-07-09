@@ -159,7 +159,7 @@ const Arrow = styled.button`
 
 const SlideImage = styled.img`
   width: 80%;
-  height: 30rem;
+  height: 35rem;
   max-width: 100%;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
@@ -291,31 +291,256 @@ const GeograTitle = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 11rem; 
+  height: 11rem;
   margin-left: 18.5rem;
   gap: 3rem;
-
-
- 
 `;
 
 const StyledHeadr = styled.h1`
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   width: 28.6rem;
   height: 1rem;
-  /* margin-bottom: 13rem; */
+  font-weight: 700;
 `;
 
-const William = styled.div``;
+const William = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 10rem;
 
-const Styledtext = styled.div``;
+  p {
+    font-size: 0.9rem;
 
-const Navbar = styled.nav``;
+    span {
+      font-size: 0.8rem;
+      color: rgb(156, 133, 177);
+    }
+  }
+
+  img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+`;
+
+const Styledtext = styled.div`
+  width: 40rem;
+  margin: 3rem 18.5rem;
+`;
+
+const Navbar = styled.nav`
+  display: flex;
+  gap: 2rem;
+  margin: 1rem 18.5rem;
+`;
+
+const NavLink = styled(Link)`
+  text-decoration: none;
+  font-size: 16px;
+  color: #444;
+  font-weight: 500;
+  border: 2px solid #d9dadb;
+  padding: 0 1rem;
+  border-radius: 4px;
+  &:hover {
+    transform: scaleX(1.05);
+    box-shadow: #444 1px 2px 2px;
+    transition: transform 0.15s ease;
+    background-color: rgb(226, 228, 229);
+    border-color: rgb(195, 219, 231);
+  }
+`;
+
+// === SHOW YOUR SUPPORT ===
+
+const ShowYourSupport = styled.div`
+  width: 100%;
+  margin-left: 18.5rem;
+  /* border-top: 1px solid; */
+
+   &::before {
+    content: "";
+    width: 50rem;
+    height: 1.5px;
+    background: #ccc;
+    margin: 3rem 0 1rem 0;
+    display: block;
+   }
+
+  h1{
+    font-size: 1.8rem;
+    font-weight: 700;
+  }
+`;
+
+const ThroughSocialMedia = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+`;
+
+const LikeIt = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 8.5rem;
+  height: 2.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(136, 130, 130);
+  border-radius: 3rem;
+  font-size: 0.9rem;
+
+  img {
+    width: 1.2rem;
+    height: 1.2rem;
+    margin-right: 0.4rem;
+
+    span {
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
+
+  &:hover {
+    transform: scaleX(1.1);
+    transition: transform 0.1s ease;
+    background-color: rgb(104, 92, 92);
+  }
+`;
+
+const Faceebook = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 8.5rem;
+  height: 2.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  background-color: #4267b2;
+  border-radius: 3rem;
+  font-size: 0.9rem;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    span {
+      font-size: 0.9rem;
+      color: white;
+    }
+  }
+
+  &:hover {
+    transform: scaleX(1.1);
+    transition: transform 0.1s ease;
+    background-color: rgb(48, 85, 158);
+  }
+`;
+
+const Twitter = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 8.5rem;
+  height: 2.5rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  background-color: rgb(111, 152, 234);
+  border-radius: 3rem;
+  font-size: 0.9rem;
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  &:hover {
+    transform: scaleX(1.1);
+    transition: transform 0.1s ease;
+    background-color: rgb(76, 129, 234);
+  }
+`;
+
+const SocialLink = styled.a`
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: rgb(253, 245, 245);
+
+  span {
+    font-size: 0.8rem;
+    color: rgb(206, 200, 200);
+  }
+`;
+
+const More = styled.div`
+  position: relative;
+  display: inline-block;
+`;
+
+const DropdownButton = styled.button`
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointor;
+
+  &:hover{
+    transform: scale(1.1);
+  }
+`;
+
+const Menu = styled.ul`
+  position: absolute;
+  top: 100%;
+  left: 0.8rem;
+  background: white;
+  padding: 8px 0;
+  list-style: none;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  z-index: 10;
+
+  
+  display: ${(props) => (props.$open ? "block" : "none")};
+`;
+
+const MenuItem = styled.li`
+  padding: 8px 16px;
+
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  a {
+    text-decoration: none;
+    color: #333333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  img {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+`;
+
+const LinkStyled = styled.a``;
 
 const Geography = () => {
   const images = ["/carouselImage.png", "/Dengiz1.jpg", "/flover.png"];
 
   const [current, setCurrent] = useState(0);
+
+  const [open, setOpen] = useState(false);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % images.length);
@@ -476,7 +701,8 @@ const Geography = () => {
             <William>
               <img src="/devid.png" alt="William" />
               <p>
-                William Peterson <span>Travel Agent</span>
+                William Peterson <br />
+                <span>Travel Agent</span>
               </p>
             </William>
           </GeograTitle>
@@ -498,13 +724,58 @@ const Geography = () => {
             </p>
           </Styledtext>
           <Navbar>
-            <Link href="/#">Travel</Link>
-            <Link href="/#">Destinations</Link>
-            <Link href="/#">Nature</Link>
-            <Link href="/#">World</Link>
-            <Link href="/#">Alaska</Link>
+            <NavLink href="/#">Travel</NavLink>
+            <NavLink href="/#">Destinations</NavLink>
+            <NavLink href="/#">Nature</NavLink>
+            <NavLink href="/#">World</NavLink>
+            <NavLink href="/#">Alaska</NavLink>
           </Navbar>
         </NamesOfPlaces>
+        <ShowYourSupport>
+          <h1>Show Your Support</h1>
+          <ThroughSocialMedia>
+            <LikeIt>
+              <SocialLink href="#">
+                <img src="/like icon.png" />
+                Like it <span>42</span>
+              </SocialLink>
+            </LikeIt>
+            <Faceebook>
+              <SocialLink href="www.faceebook.com">
+                <img src="/fecebook.png" />
+                Share <span>80</span>
+              </SocialLink>
+            </Faceebook>
+            <Twitter>
+              <SocialLink href="www.twitter.com">
+                <img src="/twitter.png" />
+                Tweet <span>33</span>
+              </SocialLink>
+            </Twitter>
+            <More>
+              <DropdownButton onClick={() => setOpen(!open)}>
+                <img src="/More.png" alt="More" />
+              </DropdownButton>
+              <Menu $open={open}>
+                <MenuItem>
+                  <LinkStyled href="www.telegramm.com">
+                    <img src="/telegram.png" alt="Telegramm" />
+                  </LinkStyled>
+                </MenuItem>
+                <MenuItem>
+                  <LinkStyled href="www.instagramm.com">
+                    <img src="/instagramm.png" alt="Instagramm" />
+                  </LinkStyled>
+                </MenuItem>
+                <MenuItem>
+                  <LinkStyled href="www.youtube.com">
+                    <img src="/you tube.png" alt="You Tube" />
+                  </LinkStyled>
+                </MenuItem>
+              </Menu>
+            </More>
+          </ThroughSocialMedia>
+        </ShowYourSupport>
       </HistoryInfo>
     </AppWrapper>
   );
