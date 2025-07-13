@@ -372,6 +372,7 @@ const ShowYourSupport = styled.div`
   h1{
     font-size: 1.8rem;
     font-weight: 700;
+    color: black;
   }
 `;
 
@@ -490,6 +491,7 @@ const DropdownButton = styled.button`
   border: none;
   border-radius: 6px;
   cursor: pointor;
+  
 
   &:hover{
     transform: scale(1.1);
@@ -506,13 +508,14 @@ const Menu = styled.ul`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   z-index: 10;
+  
 
   
   display: ${(props) => (props.$open ? "block" : "none")};
 `;
 
 const MenuItem = styled.li`
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
 
 
   &:hover {
@@ -533,7 +536,9 @@ const MenuItem = styled.li`
   }
 `;
 
-const LinkStyled = styled.a``;
+const LinkStyled = styled.a`
+  
+`;
 
 const Geography = () => {
   const images = ["/carouselImage.png", "/Dengiz1.jpg", "/flover.png"];
