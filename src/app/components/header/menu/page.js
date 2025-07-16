@@ -515,9 +515,7 @@ const RecomendetPhoto = styled.div`
     margin-top: 23.8rem;
   }
 
-  @media (max-width: 702px) {
-    margin-top: 36.81rem;
-  }
+  
 `;
 const Photo = styled.div`
   margin-top: 2rem;
@@ -532,6 +530,12 @@ const Photo = styled.div`
     color: #7c5df7;
     font-size: 0.9rem;
     padding-top: 14rem;
+
+    @media (max-width: 768px) {
+      padding-top: 1rem;
+      font-size: 0.8rem;
+      color: rgba(89, 29, 219, 1);
+    }
   }
 `;
 const ByBenjaminTurner = styled.div`
@@ -548,8 +552,9 @@ const TextPhoto = styled.h1`
   color: rgb(255, 255, 255);
   margin-top: 1rem;
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     font-size: 2rem;
+    margin-top: 0.5rem;
   }
 `;
 
@@ -558,6 +563,10 @@ const Movie = styled.div`
   align-items: center;
   gap: 1rem;
   cursor: pointer;
+
+  @media (max-width: 768px){
+    padding-top: -1rem;
+  }
 `;
 const Button = styled.button`
   width: 8rem;
@@ -566,37 +575,21 @@ const Button = styled.button`
   border-radius: 3rem;
   position: relative;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border: none;
   background-color: #3498db;
   overflow: hidden;
   cursor: pointer;
-  z-index: 1;
 
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background-color: rgb(231, 221, 220);
-    transition: left 0.2s ease;
-    z-index: 0;
+  &:hover {
+    background-color: #6435e3ff;
   }
-
-  &:hover::before {
-    left: 100%;
-  }
-  span {
-    position: relative;
-    z-index: 1;
-  }
-
-  @media (max-width: 550px) {
+  
+  @media (max-width: 768px) {
     font-size: 0.8rem;
+    width: 5.5rem;
+    height: 2rem;
+    margin-top: 0;
   }
 `;
 
@@ -616,12 +609,12 @@ const IconMovie = styled.div`
     background-color: rgb(132, 161, 247);
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     width: 2rem;
     height: 2rem;
     font-size: 0.8rem;
     margin-left: 1rem;
-    margin-top: 2rem;
+    margin-top: 0;
   }
 `;
 
@@ -629,10 +622,10 @@ const MovieName = styled.p`
   width: 20rem;
   margin-top: 1.2rem;
 
-  @media (max-width: 550px) {
+  @media (max-width: 768px) {
     height: 2rem;
     font-size: 0.8rem;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
   }
 `;
 
@@ -649,21 +642,15 @@ const RecommendetForYour = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    gap: 0.5rem;
     border: none;
-    margin-top: 4.5rem;
     padding: 0.5rem;
   }
-
-  @media (max-width: 624px) {
-    margin-top: 0.5rem;
-  }
-`;
+ `;
 const RecommendetParagraph = styled.p`
   display: flex;
   justify-content: center;
@@ -674,6 +661,7 @@ const RecommendetParagraph = styled.p`
   font-weight: bold;
   border-bottom: 1px solid aqua;
   cursor: pointer;
+  letter-spacing: 0.5px;
 
   @media (max-width: 768px) {
     text-align: center;
@@ -706,7 +694,6 @@ const Food = styled.p`
   @media (max-width: 768px) {
     display: flex;
     justify-content: start;
-    text-align: center;
     border: none;
     width: 8rem;
   }
@@ -736,7 +723,6 @@ const Cars = styled.p`
   @media (max-width: 768px) {
     display: flex;
     justify-content: start;
-    text-align: center;
     border: none;
     width: 8rem;
   }
@@ -766,7 +752,6 @@ const Videos = styled.p`
   @media (max-width: 768px) {
     display: flex;
     justify-content: start;
-    text-align: center;
     border: none;
     width: 8rem;
   }
@@ -796,7 +781,6 @@ const Nfl = styled.p`
   @media (max-width: 768px) {
     display: flex;
     justify-content: start;
-    text-align: center;
     border: none;
     width: 8rem;
   }
@@ -825,7 +809,6 @@ const TechReviews = styled.p`
   @media (max-width: 768px) {
     display: flex;
     justify-content: start;
-    text-align: center;
     border: none;
     width: 8rem;
   }
@@ -856,11 +839,11 @@ const App = () => {
               />
             </svg>
             <DropdownMenu $isVisible={isDropdownVisible}>
-              <DropdownItem>NEWS</DropdownItem>
+              <DropdownItem>TRAVEL</DropdownItem>
               <DropdownItem>OPINION</DropdownItem>
               <DropdownItem>SCINCE</DropdownItem>
               <DropdownItem>LIFE</DropdownItem>
-              <DropdownItem>TRAVEL</DropdownItem>
+              <DropdownItem>NEWS</DropdownItem>
               <DropdownItem>MONEYS</DropdownItem>
               <DropdownItem>ART&DESIGN</DropdownItem>
               <DropdownItem>SPORTS</DropdownItem>
@@ -1043,7 +1026,8 @@ const App = () => {
           </Mystery>
         </Advertising>
       </Navbars>
-      {/* RECOMMENDET */}
+
+      {/* === RECOMMENDET===*/}
 
       <RecomendetPhoto
         style={{
@@ -1073,18 +1057,17 @@ const App = () => {
           </TextPhoto>
           <Movie>
             <Button>
-              {" "}
-              <span>Read more ➡</span>
+              Read more ➡
             </Button>
             <IconMovie>▶</IconMovie>
             <MovieName>
-              <br />
               The chalk cliff of Beachy Head <br /> 18:05
             </MovieName>
           </Movie>
         </Photo>
 
-        {/* RecommendetForYour */}
+         {/* === RECOMMENDET FOR YOUR === */}
+
         <RecommendetForYour>
           <RecommendetParagraph>RECOMMENDET FOR YOU</RecommendetParagraph>
           <Food>

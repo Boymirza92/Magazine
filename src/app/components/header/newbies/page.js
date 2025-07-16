@@ -7,19 +7,31 @@ import styled from "styled-components";
 const Newbies = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   flex-wrap: wrap;
   width: 72%;
   height: 50rem;
   margin-top: 21rem;
   margin-left: 14.2%;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 20rem 1rem;
+    flex-direction: column;
+  }
 `;
 
 const Messages = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 52rem;
   gap: 1.5rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 const StyledCar = styled.div`
@@ -60,6 +72,16 @@ const StyledCar = styled.div`
     margin-left: 16rem;
     margin-top: -18.3rem;
     border-radius: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 1rem;
+    padding: 2rem;
+
+    .carImage {
+      margin-left: 30rem;
+    }
   }
 `;
 
@@ -449,6 +471,11 @@ const Columns = styled.div`
   margin-left: 6.12rem;
   border-radius: 1rem;
   margin-top: -0.6rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 20rem;
+  }
 `;
 
 const ColumsHeader = styled.h4`
@@ -647,7 +674,7 @@ const New = () => {
                   &nbsp; Even as the ride-hailing services future remem… &nbsp;
                 </span>
               </h4>
-              <img src="/sms.png" alt="Sms" className="smsicon" />{" "}
+              <img src="/Comment.png" alt="Sms" className="smsicon" />{" "}
               <p className="sms">&nbsp;342</p>
             </MessageText>
           </StyledCar>
@@ -754,7 +781,6 @@ const New = () => {
         </Aforizm>
         <Buttons>Read more</Buttons>
       </Columns>
-      
     </Newbies>
   );
 };
