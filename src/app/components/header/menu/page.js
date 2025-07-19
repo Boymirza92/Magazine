@@ -647,9 +647,21 @@ const RecommendetForYour = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    height: auto;
     border: none;
     padding: 0.5rem;
   }
+  @media (max-width: 655px) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+  }
+
+  @
  `;
 const RecommendetParagraph = styled.p`
   display: flex;

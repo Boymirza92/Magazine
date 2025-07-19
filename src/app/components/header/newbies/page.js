@@ -7,30 +7,59 @@ import styled from "styled-components";
 const Newbies = styled.div`
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  flex-direction: row;
   flex-wrap: wrap;
-  width: 72%;
+  width: 100%;
   height: 50rem;
   margin-top: 21rem;
-  margin-left: 14.2%;
-  gap: 1rem;
+  /* margin-left: 14.2%; */
+  gap: 2rem;
 
   @media (max-width: 768px) {
     width: 100%;
-    margin: 20rem 1rem;
     flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin-top: 5rem;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  @media (max-width: 655px) {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 13rem;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+`;
+
+const Left = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 52rem;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    width: 90%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 `;
 
 const Messages = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 52rem;
   gap: 1.5rem;
 
   @media (max-width: 768px) {
-    display: flex;
     flex-direction: column;
+    width: 100%;
   }
 `;
 
@@ -41,7 +70,25 @@ const StyledCar = styled.div`
   height: 23rem;
   background-color: #fff;
   border-radius: 1rem;
-  padding: 2rem;
+  /* padding: 2rem; */
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+    width: 100%;
+    justify-content: center;
+  }
+`;
+
+const CarContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const TextContent = styled.div`
+  width: 16rem;
+  height: 15rem;
+  padding: 1.5rem 2rem;
 
   .cars {
     font-size: 0.9rem;
@@ -49,7 +96,7 @@ const StyledCar = styled.div`
     letter-spacing: 0.5px;
   }
 
-  h1 {
+  .replicas {
     width: 16rem;
     height: 7rem;
     color: #262d33;
@@ -60,27 +107,38 @@ const StyledCar = styled.div`
 
   .text {
     width: 16rem;
-    height: 80px;
     color: #4b5157;
     margin-top: 1rem;
     font-weight: 400;
     font-size: 0.9rem;
   }
+`;
+
+const ImageContent = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  height: 15rem;
+  margin-left: 1rem;
+
 
   .carImage {
     width: 16rem;
-    margin-left: 16rem;
-    margin-top: -18.3rem;
     border-radius: 1rem;
   }
 
-  @media (max-width: 768px) {
-    width: 90%;
-    margin: 1rem;
-    padding: 2rem;
+  @media(max-width: 768px) {
 
-    .carImage {
-      margin-left: 30rem;
+    .carImage{
+      width: 13rem;
+    }
+  }
+  @media(max-width: 600px) {
+
+    .carImage{
+      width: 10rem;
+      height: 12rem;
     }
   }
 `;
@@ -90,9 +148,9 @@ const MessageText = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 4rem;
+  height: 3rem;
   border-top: 1px solid #ccc;
-  margin-top: 3rem;
+  margin-top: 4rem;
 
   .avatar {
     width: 2rem;
@@ -122,7 +180,7 @@ const MessageText = styled.div`
   }
   .smsicon {
     width: 1rem;
-    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
 
     &:hover {
       cursor: pointer;
@@ -131,9 +189,9 @@ const MessageText = styled.div`
     }
   }
 
-  p {
+  .sms {
     font-size: 0.7rem;
-    padding-top: 0.5rem;
+    margin-top: 1.5rem;
     color: #666;
   }
 `;
@@ -223,8 +281,6 @@ const Like = styled.div`
       transition: all 0.2s ease;
       transform: scale(1.1);
     }
-    }
-
   }
 
   .like {
@@ -243,15 +299,13 @@ const Like = styled.div`
 const MessagTwo = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 52rem;
+  width: 100%;
   gap: 1rem;
-`;
 
-const Left = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 70%;
-  gap: 2rem;
+  @media(max-width: 768px){
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const Cats = styled.div`
@@ -295,6 +349,11 @@ const Info = styled.div`
   height: 24rem;
   margin-left: 0.6rem;
   gap: 1rem;
+
+  @media(max-width: 768px){
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 const Cofee = styled.div`
@@ -465,22 +524,30 @@ const Lemon = styled.div`
 // COLUMNS
 
 const Columns = styled.div`
-  width: 12.5rem;
+  display: flex;
+  flex-direction: column;
+  width: 13.5%;
   height: 48.2rem;
   background-color: #6e99ae;
-  margin-left: 6.12rem;
   border-radius: 1rem;
-  margin-top: -0.6rem;
 
   @media (max-width: 768px) {
-    width: 100%;
-    margin-top: 20rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 16rem;
+    margin-bottom: 2rem;
+  }
+  @media (max-width: 611px) {
+   
+    margin-top: 21rem;
   }
 `;
 
 const ColumsHeader = styled.h4`
   display: flex;
   justify-content: center;
+  width: 100%;
   font-size: 1rem;
   font-weight: 500;
   color: rgb(195, 209, 222);
@@ -489,8 +556,18 @@ const ColumsHeader = styled.h4`
 `;
 
 const Aforizm = styled.div`
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+  }
+
 `;
+
 // Devid
 
 const Devid = styled.div`
@@ -656,16 +733,22 @@ const New = () => {
       <Left>
         <Messages>
           <StyledCar>
-            <p className="cars">CARS</p>
-            <h1 className="replicas">
-              The joy oblicase: <br /> A $ 5 million car <br /> for $ 50,000
-            </h1>
-            <p className="text">
-              The 31-year-old self-taught engineer and former amateur racer
-              spends his days building artful recreations of one of most iconic
-              sports cars
-            </p>
-            <img src="/auto.png" alt="Car" className="carImage" />
+            <CarContainer>
+              <TextContent>
+                <p className="cars">CARS</p>
+                <h1 className="replicas">
+                  The joy oblicase: <br /> A $ 5 million car <br /> for $ 50,000
+                </h1>
+                <p className="text">
+                  The 31-year-old self-taught engineer and former amateur racer
+                  spends his days building artful recreations of one of most
+                  iconic sports cars
+                </p>
+              </TextContent>
+              <ImageContent>
+                <img src="/auto.png" alt="Car" className="carImage" />
+              </ImageContent>
+            </CarContainer>
             <MessageText>
               <img src="/avatarka.png" alt="Avatarka" className="avatar" />
               <h4>
@@ -675,7 +758,7 @@ const New = () => {
                 </span>
               </h4>
               <img src="/Comment.png" alt="Sms" className="smsicon" />{" "}
-              <p className="sms">&nbsp;342</p>
+              <p className="sms">&nbsp;&nbsp;342</p>
             </MessageText>
           </StyledCar>
           <Popular>
@@ -690,7 +773,7 @@ const New = () => {
               <Like>
                 <p className="name">By Sarah Jencins</p>
                 <p>Sep 26 &nbsp;</p>
-                <img src="/sms1.png" alt="sms" className="message" />
+                <img src="/Comment.png" alt="sms" className="message" />
                 <p>16 &nbsp;</p>&nbsp;
                 <img src="/ola.png" alt="Like" className="like" />
                 <p>832</p>
