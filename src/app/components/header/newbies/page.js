@@ -122,21 +122,18 @@ const ImageContent = styled.div`
   height: 15rem;
   margin-left: 1rem;
 
-
   .carImage {
     width: 16rem;
     border-radius: 1rem;
   }
 
-  @media(max-width: 768px) {
-
-    .carImage{
+  @media (max-width: 768px) {
+    .carImage {
       width: 13rem;
     }
   }
-  @media(max-width: 600px) {
-
-    .carImage{
+  @media (max-width: 600px) {
+    .carImage {
       width: 10rem;
       height: 12rem;
     }
@@ -302,7 +299,7 @@ const MessagTwo = styled.div`
   width: 100%;
   gap: 1rem;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     width: 100%;
     justify-content: center;
   }
@@ -350,7 +347,7 @@ const Info = styled.div`
   margin-left: 0.6rem;
   gap: 1rem;
 
-  @media(max-width: 768px){
+  @media (max-width: 768px) {
     width: 100%;
     justify-content: center;
   }
@@ -532,14 +529,13 @@ const Columns = styled.div`
   border-radius: 1rem;
 
   @media (max-width: 768px) {
-    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     width: 16rem;
     margin-bottom: 2rem;
+    margin-top: -1rem;
   }
   @media (max-width: 611px) {
-   
     margin-top: 21rem;
   }
 `;
@@ -563,9 +559,7 @@ const Aforizm = styled.div`
   @media (max-width: 768px) {
     flex-direction: row;
     flex-wrap: wrap;
-
   }
-
 `;
 
 // Devid
@@ -725,7 +719,7 @@ const Buttons = styled.button`
   }
 `;
 
-// HTML QISMI
+// === HTML QISMI === //
 
 const New = () => {
   return (
