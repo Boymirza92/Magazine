@@ -16,6 +16,17 @@ const Layout = styled.div`
   background-color: #262d33;
   gap: 2rem;
   margin: 3rem auto;
+
+  @media (max-width: 768px) {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const Wrappaer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const LeftCard = styled.div`
@@ -32,7 +43,32 @@ const LeftCard = styled.div`
   box-sizing: border-box;
   position: relative;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 33.5rem;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 `;
+
+const LeftInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const CarouselInfo = styled.div``;
 
 const Hot = styled.div`
   display: flex;
@@ -64,12 +100,20 @@ const Avatar = styled.div`
   .name {
     font-size: 0.8rem;
     margin-top: 0.5rem;
+    color: #6a6565ff;
+    text-shadow: 0 0 0.5 rgba(0, 0, 0, 0.5);
   }
 
   .work {
     font-size: 0.7rem;
     margin-top: -1rem;
     opacity: 0.6;
+    color: #6a6565ff;
+    text-shadow: 0 0 0.5 rgba(0, 0, 0, 0.5);
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
   }
 `;
 
@@ -78,6 +122,12 @@ const HeaderText = styled.h1`
   color: white;
   font-weight: 600;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    width: 100%;
+    font-size: 1.2rem;
+  }
 `;
 
 const Botton = styled.button`
@@ -100,6 +150,13 @@ const Botton = styled.button`
 
   &:hover {
     background-color: #207cc7;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    width: 10rem;
+    font-size: 0.8rem;
+    margin: 0;
   }
 `;
 
@@ -129,6 +186,15 @@ const RightCard = styled.div`
   height: 35.6rem;
   background-color: #262d33;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 33.5rem;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 `;
 
 const Careers = styled.div`
@@ -177,6 +243,13 @@ const Careers = styled.div`
       background-color: rgb(18, 117, 238);
     }
   }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+  }
 `;
 
 const CardInfo = styled.div`
@@ -185,12 +258,16 @@ const CardInfo = styled.div`
   background-color: #262d33;
   margin-top: 2rem;
   gap: 2rem;
-  box-size: border-box;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const Coffee = styled.div`
   width: 16.4rem;
-  heigth: 10.6rem;
+  height: 10.6rem;
   color: #4b5157;
   background-color: rgb(247, 247, 247);
   border-radius: 10px;
@@ -274,9 +351,9 @@ export default function HomePage() {
 
   return (
     <Layout>
-      <div>
+      <Wrappaer>
         <LeftCard $bgImage={currentSlide.bgImage}>
-          <div>
+          <LeftInfo>
             <Hot>
               <HotClick>Hot</HotClick>
             </Hot>
@@ -294,9 +371,9 @@ export default function HomePage() {
               <img src="/BottonGalereyaIcon.png" alt="icon" />
               <span> Watch photos {currentSlide.photoCount}</span>
             </Botton>
-          </div>
+          </LeftInfo>
 
-          <div>
+          <CarouselInfo>
             <DotsContainer>
               {slidesData.map((_, index) => (
                 <Dot
@@ -306,9 +383,9 @@ export default function HomePage() {
                 />
               ))}
             </DotsContainer>
-          </div>
+          </CarouselInfo>
         </LeftCard>
-      </div>
+      </Wrappaer>
 
       <RightCard>
         <Careers>

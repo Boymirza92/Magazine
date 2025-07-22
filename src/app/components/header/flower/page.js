@@ -963,7 +963,14 @@ const RecomYou = styled.div`
   }
    @media (max-width: 768px) {
     border: none;
+    height: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 
+    h4 {
+      font-size: 1rem;
+      letter-spacing: 0.5px;
+    }
   }
 `;
 
@@ -975,11 +982,13 @@ const Posts = styled.div`
 
   @media (max-width: 768px) {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
     padding: 2rem;
+    margin-top: -2rem;
   }
 `;
 
@@ -998,8 +1007,10 @@ const Office = styled.div`
 
   @media (max-width: 768px) {
     border: none;
-    width: 100%;
+    width: 8rem;
+    height: 8rem;
     justify-content: center;
+    align-items: center;
 
   }
 `;
@@ -1025,6 +1036,18 @@ const PostText = styled.div`
     color: #aaa;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const Muzic = styled.div`
@@ -1040,8 +1063,11 @@ const Muzic = styled.div`
   }
 
    @media (max-width: 768px) {
-    border: none;
-   
+   border: none;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
 
   }
 `;
@@ -1067,6 +1093,18 @@ const MuzicText = styled.div`
     color: #aaa;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const Google = styled.div`
@@ -1082,7 +1120,11 @@ const Google = styled.div`
   }
 
    @media (max-width: 768px) {
-    border: none;
+   border: none;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
    
 
   }
@@ -1109,6 +1151,18 @@ const GooglText = styled.div`
     color: #aaa;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const Homes = styled.div`
@@ -1125,6 +1179,10 @@ const Homes = styled.div`
 
    @media (max-width: 768px) {
     border: none;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
    
 
   }
@@ -1151,6 +1209,18 @@ const HomesText = styled.div`
     color: #aaa;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const AreYou = styled.div`
@@ -1167,6 +1237,10 @@ const AreYou = styled.div`
 
    @media (max-width: 768px) {
     border: none;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
   
 
   }
@@ -1193,6 +1267,19 @@ const YouText = styled.div`
     color: #aaa;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    height: auto;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const TheNew = styled.div`
@@ -1208,8 +1295,11 @@ const TheNew = styled.div`
   }
 
    @media (max-width: 768px) {
-    border: none;
-  
+   border: none;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
 
   }
 `;
@@ -1235,6 +1325,18 @@ const TheNewText = styled.div`
     color: #aaa;
     font-size: 0.6rem;
   }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const Sunday = styled.div`
@@ -1250,20 +1352,15 @@ const Sunday = styled.div`
 
    @media (max-width: 768px) {
     border: none;
+    width: 8rem;
+    height: 8rem;
+    justify-content: center;
+    align-items: center;
   
 
   }
 
-  .text {
-    font-size: 0.7rem;
-    color: rgb(24, 30, 38);
-  }
-
-  .time {
-    margin-top: -0.5rem;
-    color: #aaa;
-    font-size: 0.6rem;
-  }
+  
 `;
 
 const BattleImage = styled.div`
@@ -1276,6 +1373,29 @@ const SundayText = styled.div`
   width: 7.5rem;
   padding-left: 0.5rem;
   letter-spacing: 0.3px;
+  
+  .text {
+    font-size: 0.7rem;
+    color: rgb(24, 30, 38);
+  }
+
+  .time {
+    margin-top: -0.5rem;
+    color: #aaa;
+    font-size: 0.6rem;
+  }
+
+  @media (max-width: 768px) {
+    text-align: start;
+    letter-spacing: 0.6px;
+    padding-top: 0.3rem;
+    
+    .time{
+      margin-top: -1rem;
+      text-align: start;
+    }
+
+  }
 `;
 
 const ButtonMore = styled.button`
@@ -1299,11 +1419,12 @@ const ButtonMore = styled.button`
 
    @media (max-width: 768px) {
     border: 1px solid #fff;
-    background-color: #6a64b5ff;
+    background-color: #7c73f9ff;
     width: 10rem;
     border-radius: 5rem;
-    height: 2rem;
-    text-align: center;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    align-items: center;
   
 
   }
