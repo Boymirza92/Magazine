@@ -261,7 +261,16 @@ const CardInfo = styled.div`
   box-sizing: border-box;
 
   @media (max-width: 768px) {
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+  @media (max-width: 383px) {
+   justify-content: center;
+   align-items: center;
   }
 `;
 
@@ -290,6 +299,13 @@ const Coffee = styled.div`
     font-size: 0.8rem;
     letter-spacing: 0.5px;
   }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 45%;
+    height: auto;
+
+  }
 `;
 
 const Manufacture = styled.div`
@@ -316,6 +332,12 @@ const Manufacture = styled.div`
     color: rgb(139, 150, 161);
     font-size: 0.8rem;
     letter-spacing: 0.5px;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 45%;
+    height: auto;
   }
 `;
 

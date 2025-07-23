@@ -18,6 +18,12 @@ const FooterContainer = styled.div`
   text-align: center;
   box-sizing: border-box;
   gap: 3rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 `;
 
 const Registration = styled.div`
@@ -25,6 +31,17 @@ const Registration = styled.div`
 
   h1 {
     color: rgb(49, 49, 51);
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    h1 {
+      font-size: 1.7rem;
+    }
   }
 `;
 
@@ -85,6 +102,14 @@ const NavigationFooter = styled.div`
   width: 71rem;
   height: 15rem;
   margin-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const News = styled.div`
@@ -112,6 +137,15 @@ const News = styled.div`
       font-size: 0.83rem;
       cursor: pointer;
     }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 6rem;
+    height: 11rem;
+    margin: 0;
+    border: none;
   }
 `;
 
@@ -147,6 +181,15 @@ const Arts = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 6rem;
+    height: 11rem;
+    margin: 0;
+    border: none;
+  }
 `;
 
 const Travel = styled.div`
@@ -169,6 +212,15 @@ const Travel = styled.div`
       font-size: 0.83rem;
       cursor: pointer;
     }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 6rem;
+    height: 11rem;
+    margin: 0;
+    border: none;
   }
 `;
 
@@ -193,6 +245,15 @@ const Sports = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 6rem;
+    height: 11rem;
+    margin: 0;
+    border: none;
+  }
 `;
 
 const Tech = styled.div`
@@ -215,6 +276,15 @@ const Tech = styled.div`
       font-size: 0.83rem;
       cursor: pointer;
     }
+  }
+
+  @media (max-width: 768px) {
+     justify-content: flex-start;
+    align-items: flex-start;
+    width: 6rem;
+    height: 11rem;
+    margin: 0;
+    border: none;
   }
 `;
 
@@ -239,6 +309,15 @@ const Moneys = styled.div`
       cursor: pointer;
     }
   }
+
+  @media (max-width: 768px) {
+     justify-content: flex-start;
+    align-items: flex-start;
+    width: 6rem;
+    height: 11rem;
+    margin: 0;
+    border: none;
+  }
 `;
 
 // === NETWORK === //
@@ -252,6 +331,12 @@ const SocialNetwork = styled.div`
   border-bottom: 2px solid #d9dadb;
   padding-top: 2rem;
   padding-bottom: 2rem;
+
+@media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
 `;
 
 const SocialNavigation = styled.div`
@@ -263,6 +348,16 @@ const SocialNavigation = styled.div`
   gap: 2rem;
   letter-spacing: 0.2px;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+   
+}
 `;
 
 const Logo = styled.div`
@@ -279,14 +374,22 @@ const Logo = styled.div`
   &:hover {
     background-color: #3578e5;
   }
+
+ 
 `;
 
 const NetworkLink = styled.div`
   cursor: pointer;
 
+
   &:hover {
     color: rgb(32, 37, 43);
   }
+
+   @media (max-width: 768px) {
+    height: auto;
+    margin-bottom: 1rem;
+}
 `;
 
 const SocialLogo = styled.div`
@@ -323,6 +426,25 @@ const AboutMe = styled.div`
   .data {
     text-align: left;
     font-size: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+
+    .text {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+
+    .data {
+      width: 100%;
+      text-align: center;
+    }
   }
 `;
 
