@@ -11,10 +11,19 @@ const AppWrapper = styled.div`
   justify-content: flex-start;
   flex-direction: column;
   width: 100%;
-  /* max-width: 75rem; */
   margin-top: 5rem;
   font-size: 1rem;
   color: #4b5157;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 48rem;
+    margin: 2rem 2rem;
+    height: auto;
+  }
 `;
 
 const TextWrapper = styled.div`
@@ -25,6 +34,13 @@ const TextWrapper = styled.div`
   margin-left: 12rem;
   width: 39rem;
   height: 100vh;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
 `;
 
 const TextColumn = styled.div`
@@ -68,6 +84,10 @@ const Anderson = styled.div`
     margin-top: 2rem;
     font-weight: 700;
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 const AboutMe = styled.div`
@@ -135,7 +155,10 @@ const CarouselWrapper = styled.div`
   margin: auto;
   position: relative;
   overflow: hidden;
-  /* border-radius: 0.5rem; */
+
+  @media (max-width: 600px) {
+    height: 25rem;
+  }
 `;
 
 const Arrow = styled.button`
@@ -155,6 +178,15 @@ const Arrow = styled.button`
       : props.direction === "right"
       ? "right: 11rem;"
       : ""}
+
+  @media (max-width: 768px) {
+    ${(props) =>
+      props.direction === "left"
+        ? "left: 5rem;"
+        : props.direction === "right"
+        ? "right: 5rem;"
+        : ""}
+  }
 `;
 
 const SlideImage = styled.img`
@@ -178,6 +210,12 @@ const Info = styled.div`
 
   .text {
     margin-left: -3rem;
+  }
+
+  @media (max-width: 768px) {
+    .text {
+      margin-left: 0;
+    }
   }
 `;
 
@@ -223,11 +261,25 @@ const HistoryText = styled.div`
   justify-content: center;
   width: 100%;
   gap: 5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 const TextConainer = styled.div`
   width: 36rem;
   font-size: 1.1rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+  }
 `;
 
 const MaterialOnTheme = styled.div`
@@ -240,7 +292,7 @@ const MaterialOnTheme = styled.div`
     margin-bottom: 1.5rem;
   }
 
-  img {
+  .jirafa {
     border-radius: 0.5rem;
     cursor: pointer;
     width: 100%;
@@ -265,14 +317,32 @@ const MaterialOnTheme = styled.div`
       margin-right: 1.5rem;
 
       img.seen {
-        width: 1rem;
-        height: 0.6rem;
+        width: 1.2rem;
+        height: 0.8rem;
       }
 
       .comment {
-        width: 1rem;
-        height: 1rem;
+        width: 1.5rem;
+        height: 1.3rem;
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 90%;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
+
+    .jirafa{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 20rem;
+      padding: 0 3rem 0 3rem;
     }
   }
 `;
@@ -285,6 +355,18 @@ const NamesOfPlaces = styled.div`
   justify-content: center;
   width: 100%;
   margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media (max-width: 500px) {
+    margin-top: 2rem;
+    
+  }
 `;
 
 const GeograTitle = styled.div`
@@ -294,6 +376,16 @@ const GeograTitle = styled.div`
   height: 11rem;
   margin-left: 18.5rem;
   gap: 3rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    gap: 0;
+  }
 `;
 
 const StyledHeadr = styled.h1`
@@ -301,6 +393,24 @@ const StyledHeadr = styled.h1`
   width: 28.6rem;
   height: 1rem;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+   
+  }
+  @media (max-width: 500px) {
+    font-size: 1.2rem;
+    margin: 0 auto;
+    padding: 0;
+
+   
+  }
 `;
 
 const William = styled.div`
@@ -323,17 +433,40 @@ const William = styled.div`
     border-radius: 50%;
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Styledtext = styled.div`
   width: 40rem;
   margin: 3rem 18.5rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 545px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
 `;
 
 const Navbar = styled.nav`
   display: flex;
   gap: 2rem;
   margin: 1rem 18.5rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1.5rem auto;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -344,6 +477,7 @@ const NavLink = styled(Link)`
   border: 2px solid #d9dadb;
   padding: 0 1rem;
   border-radius: 4px;
+
   &:hover {
     transform: scaleX(1.05);
     box-shadow: #444 1px 2px 2px;
@@ -358,21 +492,38 @@ const NavLink = styled(Link)`
 const ShowYourSupport = styled.div`
   width: 100%;
   margin-left: 18.5rem;
-  /* border-top: 1px solid; */
 
-   &::before {
+  &::before {
     content: "";
     width: 50rem;
     height: 1.5px;
     background: #ccc;
     margin: 3rem 0 1rem 0;
     display: block;
-   }
+  }
 
-  h1{
+  h1 {
     font-size: 1.8rem;
     font-weight: 700;
     color: black;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+
+  }
+  @media (max-width: 685px) {
+    h1{
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+    }
   }
 `;
 
@@ -381,6 +532,14 @@ const ThroughSocialMedia = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
 `;
 
 const LikeIt = styled.div`
@@ -491,9 +650,8 @@ const DropdownButton = styled.button`
   border: none;
   border-radius: 6px;
   cursor: pointor;
-  
 
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
 `;
@@ -508,15 +666,12 @@ const Menu = styled.ul`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-radius: 6px;
   z-index: 10;
-  
 
-  
   display: ${(props) => (props.$open ? "block" : "none")};
 `;
 
 const MenuItem = styled.li`
   padding: 0.5rem 1rem;
-
 
   &:hover {
     transform: scale(1.1);
@@ -536,9 +691,7 @@ const MenuItem = styled.li`
   }
 `;
 
-const LinkStyled = styled.a`
-  
-`;
+const LinkStyled = styled.a``;
 
 const Geography = () => {
   const images = ["/carouselImage.png", "/Dengiz1.jpg", "/flover.png"];
@@ -677,7 +830,7 @@ const Geography = () => {
           </TextConainer>
           <MaterialOnTheme>
             <h1>Material On Theme</h1>
-            <img src="/jirafa.png" alt="Jirafa" />
+            <img src="/jirafa.png" alt="Jirafa" className="jirafa" />
             <h2>Application of Postcolonial Theory in the Middle East</h2>
             <p>
               In the essays "Overstating the Arab State", by Nazih Ayubi, and

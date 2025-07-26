@@ -16,8 +16,10 @@ const slides = [
   {
     id: 2,
     text: "Destinations",
-    title: "Discover the Hidden Gems of Asia — rich culture and adventure await.",
-    subtitle: "Explore the mystic temples and vibrant streets where every step uncovers a piece of living history.",
+    title:
+      "Discover the Hidden Gems of Asia — rich culture and adventure await.",
+    subtitle:
+      "Explore the mystic temples and vibrant streets where every step uncovers a piece of living history.",
     data: "🕖Aug 6, 10:23",
     image: "/travelAsia.jpg",
   },
@@ -39,6 +41,11 @@ const CarouselContainer = styled.div`
 const Designation = styled.div`
   position: absolute;
   width: 33rem;
+
+  @media (max-width: 768px) {
+    position: static;
+    width: 20%;
+  }
 `;
 
 const IconImage = styled.img`
@@ -46,6 +53,11 @@ const IconImage = styled.img`
   top: 8.5rem;
   left: 8rem;
   width: 1.5rem;
+
+  @media (max-width: 768px) {
+    position: static;
+    margin: 12rem 3rem;
+  }
 `;
 
 const NavButtons = styled.div`
@@ -54,6 +66,22 @@ const NavButtons = styled.div`
   right: 14rem;
   display: flex;
   gap: 20px;
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 60%;
+    position: absolute;
+    right: 10;
+    }
+  @media (max-width: 580px) {
+    
+    position: absolute;
+    right: 7rem;
+    margin-top: -1rem;
+    }
 `;
 
 const NavButton = styled.button`
@@ -70,6 +98,17 @@ const NavButton = styled.button`
   &:hover {
     color: rgb(247, 233, 231);
   }
+
+  @media (max-width: 768px) {
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+  @media (max-width: 511px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 `;
 
 const Content = styled.div`
@@ -81,8 +120,9 @@ const Content = styled.div`
   h1 {
     font-size: 3rem;
     font-weight: bold;
-    color:rgb(238, 243, 244);
+    color: rgb(238, 243, 244);
   }
+
   .subtitle {
     position: absolute;
     top: 18rem;
@@ -90,20 +130,47 @@ const Content = styled.div`
     color: rgba(249, 249, 253, 0.8);
     font-size: 0.9rem;
   }
+
   .data {
     color: rgba(249, 249, 253, 0.8);
     margin-top: 10rem;
     font-size: 0.7rem;
   }
+
   .destination {
     font-size: 1rem;
     margin-bottom: 2rem;
     color: rgba(48, 48, 182, 0.8);
   }
+
   span {
     padding-left: 1rem;
     font-size: 0.7rem;
+  }
 
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 7rem;
+
+    h1 {
+      font-size: 2rem;
+      padding-top: 3rem;
+    }
+    .subtitle {
+      padding-top: -8rem;
+    }
+  }
+  @media (max-width: 511px) {
+    position: absolute;
+    left: 7rem;
+
+    h1 {
+      font-size: 2rem;
+      padding-top: 4rem;
+    }
+    .subtitle {
+      padding-top: -8rem;
+    }
   }
 `;
 

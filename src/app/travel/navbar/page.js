@@ -12,10 +12,9 @@ const lato = Lato({
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun } from "@fortawesome/free-solid-svg-icons";
 import { play } from "@fortawesome/free-solid-svg-icons";
-// import NavIcon from "@/public/NavIcon.jpg";
-// import Ozodlik from "../../public/Ozodlik.png";
 
 // Header bo'limi
+
 const Header = styled.div`
   display: flex;
   align-items: center;
@@ -24,10 +23,12 @@ const Header = styled.div`
   height: auto;
   font-family: ${lato.style.fontFamily}, sans-serif;
   z-index: 3;
+  padding-top: 1rem;
   background-color: #fff;
 
   @media (max-width: 768px) {
-    padding-top: 0.5rem;
+    padding-top: 1rem;
+    padding-bottom: 8rem;
   }
 `;
 
@@ -326,70 +327,6 @@ const TheWeather = styled.p`
   }
 `;
 
-//Navigatsiya bo'limi
-
-const Navbars = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 3rem;
-  background-color: #262d33;
-  z-index: 1;
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: auto;
-    flex-direction: column;
-    flex-wrap: wrap;
-    z-index: initial;
-    border: none;
-    margin-top: 1.2rem;
-  }
-`;
-
-const Nav = styled.div`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: #262d33;
-
-  @media (max-width: 768px) {
-    display: none;
-  }
-
-  .navbar-nav {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100%;
-    letter-spacing: 1px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #262d33;
-
-    &:hover {
-      color: rgb(105, 100, 112);
-      &:active {
-        color: rgb(51, 44, 44);
-      }
-    }
-
-    a {
-      color: #fff;
-      &:hover {
-        color: rgb(155, 151, 161);
-
-        &:active {
-          color: rgb(51, 44, 44);
-        }
-      }
-    }
-  }
-`;
 
 const App = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -496,78 +433,6 @@ const App = () => {
           <FontAwesomeIcon icon={faSun} className="Sun" /> - 23 °C
         </TheWeather>
       </MenuTwo>
-      <Navbars>
-        <Nav className="navbar navbar-expand-md navbar-light">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          ></button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  NAWS <span className="sr-only"></span>
-                </a>
-              </li>
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  OPINION <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  SCIENCE
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  LIFE
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  TREVEL
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  MONEYS
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  ART & DESIGN
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  SPORTS
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  PEOPLE
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  HEALTH
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  EDUCATION
-                </a>
-              </li>
-            </ul>
-          </div>
-        </Nav>
-      </Navbars>
     </Header>
   );
 };

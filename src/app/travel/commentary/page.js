@@ -13,6 +13,10 @@ const Post = styled.div`
   margin-top: 5rem;
   font-size: 1rem;
   color: #4b5157;
+
+  @media (max-width: 768px) {
+    margin-top: 2rem;
+  }
 `;
 
 const PostCard = styled.div`
@@ -24,6 +28,12 @@ const PostCard = styled.div`
   width: 100%;
   height: 26.5rem;
   background-color: rgb(243, 229, 229);
+
+   @media (max-width: 768px) {
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+  }
 `;
 
 const Card = styled.div`
@@ -63,6 +73,15 @@ const PostComment = styled.div`
   height: 67rem;
   color: #4b5157;
   margin: 5rem 10rem;
+
+  @media (max-width: 768px) {
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 90%;
+    margin: 2rem 0;
+    height: auto;
+  }
 `;
 
 const AddCommentariya = styled.div`
@@ -100,6 +119,22 @@ const AddCommentariya = styled.div`
       background-color: rgb(220, 226, 232);
     }
   }
+
+  @media (max-width: 768px) {
+    width: 90%;
+    /* align-items: center; */
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      width: 8rem;
+      height: 2rem;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+  }
 `;
 
 const RiyanHall = styled.div`
@@ -119,6 +154,11 @@ const LoraMarrow = styled.div`
   gap: 1rem;
   padding-top: 1rem;
   margin-left: 4.5rem;
+
+  @media (max-width: 768px){
+    margin-left: 0;
+    width: 90%;
+  }
 `;
 
 const StyledImage = styled.div`
@@ -162,6 +202,12 @@ const ButtonMore = styled.button`
   &:hover {
     background-color:  #e0d7d7ff;
   }
+
+  @media (max-width: 768px) {
+    width: 10rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+  }
 `;
 
 const SendComment = styled.div`
@@ -172,6 +218,13 @@ const SendComment = styled.div`
   background-color: #e5ddddff;
   margin-top: 3rem;
 
+@media (max-width: 768px) {
+    width: 100%;
+    margin-left: 2rem;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
 `;
 
 const StyledImg = styled.div`
@@ -180,6 +233,10 @@ const StyledImg = styled.div`
     width: 3.5rem;
     cursor: pointer;
     margin: 2rem 2rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 
@@ -190,6 +247,12 @@ const Send = styled.div`
     color: black;
     font-size: 1.1rem;
   }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: 14rem;
+    margin-left: 1rem;
+  }
 `;
 
 const BoxCommentn = styled.div`
@@ -199,6 +262,11 @@ const BoxCommentn = styled.div`
   border-radius: 5px;
   border: 1px solid #cccccc;
   cursor: text;
+
+  @media (max-width: 768px) {
+    width: 70%;
+    height: 7rem;
+  }
 `;
 
 const Submit = styled.button`
